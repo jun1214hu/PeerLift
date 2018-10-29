@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<img src="<%= @scholarship_guide.image_url %>" alt="<%= @scholarship_guide.program_name %> Image" width="50%">
+<p>
+  <strong>Program name:</strong>
+  <%= @scholarship_guide.program_name %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @scholarship_guide.image_url %>
+</p>
+
+<p>
+  <strong>Metric box1:</strong>
+  <%= @scholarship_guide.metric_box1 %>
+</p>
+
+<p>
+  <strong>Metric box2:</strong>
+  <%= @scholarship_guide.metric_box2 %>
+</p>
+
+<p>
+  <strong>Metric box3:</strong>
+  <%= @scholarship_guide.metric_box3 %>
+</p>
+
+<p>
+  <strong>Description short:</strong>
+  <%= @scholarship_guide.description_short %>
+</p>
+
+<p>
+  <strong>Description long:</strong>
+  <%= @scholarship_guide.description_long %>
+</p>
+
+<p>
+  <strong>App count:</strong>
+  <%= @scholarship_guide.app_count %>
+</p>
+
+<p>
+  <strong>Essay count:</strong>
+  <%= @scholarship_guide.essay_count %>
+</p>
+
+<p>
+  <strong>Transcript count:</strong>
+  <%= @scholarship_guide.transcript_count %>
+</p>
+
+<p>
+  <strong>Resume count:</strong>
+  <%= @scholarship_guide.resume_count %>
+</p>
+
+<p>
+  <strong>Time estimate:</strong>
+  <%= @scholarship_guide.time_estimate %>
+</p>
+
+<p>
+  <strong>Scholarship:</strong>
+  <%= @scholarship_guide.scholarship %>
+</p>
+
+<%= link_to 'Edit', edit_scholarship_guide_path(@scholarship_guide) %> |
+<%= link_to 'Back', scholarship_guides_path %>
