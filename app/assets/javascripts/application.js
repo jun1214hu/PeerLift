@@ -14,5 +14,5 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-var test = document.getElementByID("testid").value;
+var test = document.getElementByID("testid");
 alert("test " );
