@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 2018_11_01_205043) do
     t.integer "transcript_count"
     t.integer "resume_count"
     t.string "time_estimate"
-    t.integer "scholarship_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -5,19 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Program name</th>
-      <th>Image url</th>
+      <<th>Program name</th>
       <th>Metric box1</th>
-      <th>Metric box2</th>
-      <th>Metric box3</th>
       <th>Description short</th>
-      <th>Description long</th>
-      <th>App count</th>
-      <th>Essay count</th>
-      <th>Transcript count</th>
-      <th>Resume count</th>
-      <th>Time estimate</th>
-      <th>Scholarship</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,19 +15,9 @@
   <tbody>
     <% @scholarship_guides.each do |scholarship_guide| %>
       <tr>
-        <td><%= scholarship_guide.program_name %></td>
-        <td><%= scholarship_guide.image_url %></td>
+        <td><a href="/scholarship_guides/<%= scholarship_guide.id %>"><%= scholarship_guide.program_name %></a></td>
         <td><%= scholarship_guide.metric_box1 %></td>
-        <td><%= scholarship_guide.metric_box2 %></td>
-        <td><%= scholarship_guide.metric_box3 %></td>
         <td><%= scholarship_guide.description_short %></td>
-        <td><%= scholarship_guide.description_long %></td>
-        <td><%= scholarship_guide.app_count %></td>
-        <td><%= scholarship_guide.essay_count %></td>
-        <td><%= scholarship_guide.transcript_count %></td>
-        <td><%= scholarship_guide.resume_count %></td>
-        <td><%= scholarship_guide.time_estimate %></td>
-        <td><%= scholarship_guide.scholarship %></td>
         <td><%= link_to 'Show', scholarship_guide %></td>
         <td><%= link_to 'Edit', edit_scholarship_guide_path(scholarship_guide) %></td>
         <td><%= link_to 'Destroy', scholarship_guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
