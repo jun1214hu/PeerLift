@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_174051) do
+ActiveRecord::Schema.define(version: 2018_11_01_205043) do
 
   create_table "scholarship_guides", force: :cascade do |t|
     t.string "program_name"
@@ -26,14 +26,6 @@ ActiveRecord::Schema.define(version: 2018_10_28_174051) do
     t.integer "resume_count"
     t.string "time_estimate"
     t.integer "scholarship_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["scholarship_id"], name: "index_scholarship_guides_on_scholarship_id"
-  end
-
-  create_table "scholarships", force: :cascade do |t|
-    t.string "name"
-    t.string "deadline"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

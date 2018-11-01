@@ -1,2 +1,0 @@
-class Scholarship < ApplicationRecord
-end
