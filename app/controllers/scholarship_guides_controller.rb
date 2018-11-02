@@ -69,6 +69,6 @@ class ScholarshipGuidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def scholarship_guide_params
-      params.require(:scholarship_guide).permit(:program_name, :image_url, :metric_box1, :metric_box2, :metric_box3, :description_short, :description_long, :app_count, :essay_count, :transcript_count, :resume_count, :time_estimate, :scholarship_id)
+      params.require(:scholarship_guide).permit(:program_name, :image_url, :metric_box1, :metric_box2, :metric_box3, :description_short, :description_long, :app_count, :essay_count, :transcript_count, :resume_count, :time_estimate)
     end
 end

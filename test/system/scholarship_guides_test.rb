@@ -24,7 +24,6 @@ class ScholarshipGuidesTest < ApplicationSystemTestCase
     fill_in "Metric Box3", with: @scholarship_guide.metric_box3
     fill_in "Program Name", with: @scholarship_guide.program_name
     fill_in "Resume Count", with: @scholarship_guide.resume_count
-    fill_in "Scholarship", with: @scholarship_guide.scholarship_id
     fill_in "Time Estimate", with: @scholarship_guide.time_estimate
     fill_in "Transcript Count", with: @scholarship_guide.transcript_count
     click_on "Create Scholarship guide"
@@ -47,7 +46,6 @@ class ScholarshipGuidesTest < ApplicationSystemTestCase
     fill_in "Metric Box3", with: @scholarship_guide.metric_box3
     fill_in "Program Name", with: @scholarship_guide.program_name
     fill_in "Resume Count", with: @scholarship_guide.resume_count
-    fill_in "Scholarship", with: @scholarship_guide.scholarship_id
     fill_in "Time Estimate", with: @scholarship_guide.time_estimate
     fill_in "Transcript Count", with: @scholarship_guide.transcript_count
     click_on "Update Scholarship guide"
