@@ -1,0 +1,82 @@
+<%= form_with(model: scholarship_guide, local: true) do |form| %>
+  <% if scholarship_guide.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(scholarship_guide.errors.count, "error") %> prohibited this scholarship_guide from being saved:</h2>
+
+      <ul>
+      <% scholarship_guide.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :program_name %>
+    <%= form.text_field :program_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :metric_box1 %>
+    <%= form.text_field :metric_box1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :metric_box2 %>
+    <%= form.text_field :metric_box2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :metric_box3 %>
+    <%= form.text_field :metric_box3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description_short %>
+    <%= form.text_field :description_short %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description_long %>
+    <%= form.text_field :description_long %>
+  </div>
+
+  <div class="field">
+    <%= form.label :app_count %>
+    <%= form.number_field :app_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :essay_count %>
+    <%= form.number_field :essay_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transcript_count %>
+    <%= form.number_field :transcript_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :resume_count %>
+    <%= form.number_field :resume_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_estimate %>
+    <%= form.text_field :time_estimate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :scholarship_id %>
+    <%= form.text_field :scholarship_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

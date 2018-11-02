@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root 'application#hello'
+  resources :scholarship_guides
+  root 'scholarship_guides#index'
 end

@@ -1,0 +1,271 @@
+<p id="notice"><%= notice %></p>
+
+
+<div id="opportunity-navbar">
+    <div class="container">
+      <a href="<%= @scholarship_guide.id %>"><img src="<%= @scholarship_guide.image_url %>"></a>
+      <a id="menu-button"><i class="fa fa-search"></i></a>
+      <nav>
+        <ul>
+          <a id="loginMobile" href="login.html"><div>Sign Up / Login</div></a>
+          <a id="opportunities-dropdown"><li>Opportunities <i class="fa fa-caret-down"></i></li></a>
+
+          <a href=""><li>Mission</li></a>
+          <a href=""><li>Our Team</li></a>
+          <a href=""><li>Get Involved</li></a>
+          <a href=""><li>Donate</li></a>
+        </ul>
+      </nav>
+      <a id="loginBTN" href="">
+        <button>Sign Up</button>
+      </a>
+    </div>
+  </div>
+
+
+
+  <div class="body oppBody">
+    <div class="oppHeader">
+      <div class="centered"><h1><div class='loading-line loading-header'><img src="<%= @scholarship_guide.image_url %>" alt="<%= @scholarship_guide.program_name %> Image" width="100%">
+</div></h1></div>
+      <div class="flex-container">
+        <div class="grade"><h3><div class='loading-line loading-metric'><%= @scholarship_guide.metric_box1 %></div></h3></div>
+        <div class="selectivity"><h3><div class='loading-line loading-metric'><%= @scholarship_guide.metric_box2 %></div></h3></div>
+        <div class="deadline"><h3><div class='loading-line loading-metric'><%= @scholarship_guide.metric_box3 %></div></h3></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="oppPage">
+      <div class="oppDescription cd-section" id="oppDescription">
+        <h2 id="shortDesc"><h4><%= @scholarship_guide.description_short %></h4>
+          <div class='text-loading'>test2
+            <div class='loading-line'>test3</div>test4
+            <div class='loading-line'>test5</div>test6
+          </div>
+        </h2>
+        <h2 id="description"><h6><%= @scholarship_guide.description_long %><h6>
+          <div class='text-loading'>
+            <div class='loading-line'></div>
+            <div class='loading-line'></div>
+            <div class='loading-line'></div>
+            <div class='loading-line'></div>
+          </div>
+        </h2>
+        <div id="readMore">
+          <h3>Read More</h3>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+      </div>
+      <div class="oppChecks">
+        <ul>
+          <li>
+            <i class="fa fa-check-circle"></i>
+            <h3><div class='loading-line'></div></h3>
+          </li>
+          <li>
+            <i class="fa fa-check-circle"></i>
+            <h3><div class='loading-line'></div></h3>
+          </li>
+        </ul>
+      </div>
+      <div class="oppComponents" style="display: block">
+        <div class="financialAid cd-section" id="financialAid">
+          <div class="financialAidHeader header">
+            <i class="fa fa-chevron-down"></i>
+            <h1>Financial Aid</h1>
+          </div>
+          <div class="financialAidBody">
+            <h2 class="subHeader">Program Cost: </h2>
+            <h2 id="cost"><%= @scholarship_guide.metric_box1 %></h2>
+            <h2 class="subHeader">Aid Breakdown: </h2>
+            <h2 id="aidBreakdown">Scholarship awarded for college</h2>
+          </div>
+        </div>
+        <div class="faq cd-section" id="faq">
+          <div class="faqHeader header">
+            <i class="fa fa-chevron-down"></i>
+            <h1>FAQ</h1>
+          </div>
+          <div class="faqBody">
+            <div class="peerFaqHeader">
+              <h2>Peer FAQ</h2>
+            </div>
+            <div class="peerFaqBody">
+                <div class="teamMember">
+                  <div class="member-general"></div>
+                  <h2>Praneeth A.</h2>
+                  <h2 id="peerDescription">Praneeth is a junior from Pennsylvania, a 2017 USSYP Scholar, and an Eagles super-fan. He never thought he'd get to USSYP, but cares about politics and *tries* to read the news.</h2>
+                </div>
+                <div class="peerQuestions">
+                  <h2 class="question">Why apply to <%= @scholarship_guide.program_name %>?</h2>
+                  <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vestibulum vitae mollis turpis. Maecenas lorem</h2>
+                  <h2 class="question">What was the best part of your experience?</h2>
+                  <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vestibulum vitae mollis turpis. Maecenas lorem</h2>
+                  <h2 class="question">What was the most surprising part?</h2>
+                  <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vestibulum vitae mollis turpis. Maecenas lorem</h2>
+                </div>
+            </div>
+            <div class="programFaqHeader">
+              <h2>Program FAQ</h2>
+            </div>
+            <div class="programFaqBody">
+                <h2 class="question">How do I get nominated?</h2>
+                <h2>Students must be nominated by their principal. Each high school may only nominate one student</h2>
+                <h2 class="question">When is the program?</h2>
+                <h2>Washington Week is completely free of travel and attendance costs, and usually takes place within the first two weeks of March</h2>
+            </div>
+          </div>
+        </div>
+        <div class="application cd-section" id="application">
+          <div class="applicationHeader header">
+            <i class="fa fa-chevron-down"></i>
+            <h1>Application</h1>
+          </div>
+          <div class="applicationBody">
+            <i class="fa fa-clock-o"></i>
+            <h2 id="timeEstimate"><%= @scholarship_guide.time_estimate %> to complete</h2>
+            <div class="componentWrapper" id="componentWrapper">
+              <div class="essay">
+                <i class="fa fa-pencil"></i>
+                <h2><%= @scholarship_guide.essay_count %> Essays</h2>
+              </div>
+              <div class="reccomendation">
+                <i class="fa fa-envelope"></i>
+                <h2>[#] Rec Letter(s)</h2>
+              </div>
+              <div class="transcript">
+                <i class="fa fa-file-text"></i>
+                <h2><%= @scholarship_guide.transcript_count %>Transcript &amp; <%= @scholarship_guide.resume_count %>Resume</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--<div class="timeline cd-section" id="timeline">
+          <div class="timelineHeader header">
+            <i class="fa fa-chevron-down"></i>
+            <h1>Timeline</h1>
+          </div>
+          <div class="timelineBody">
+          </div>
+        </div>-->
+      </div>
+      <div class="apply">
+          <a target="_blank"><button>
+              <h1>Apply Now</h1>
+          </button></a>
+      </div>
+    </div>
+    <div class="progressBar">
+      <nav id="cd-vertical-nav">
+		<ul>
+        <li>
+          <a href="#oppDescription" data-number="1">
+            <span class="cd-dot"></span>
+            <span class="cd-label">Description</span>
+          </a>
+        </li>
+        <li>
+          <a href="#financialAid" data-number="2">
+            <span class="cd-dot"></span>
+            <span class="cd-label">Financial Aid</span>
+          </a>
+        </li>
+        <li>
+          <a href="#faq" data-number="3">
+            <span class="cd-dot"></span>
+            <span class="cd-label">FAQ</span>
+          </a>
+        </li>
+        <li>
+          <a href="#application" data-number="4">
+            <span class="cd-dot"></span>
+            <span class="cd-label">Application</span>
+          </a>
+        </li>
+        <!--<li>
+          <a href="#timeline" data-number="5">
+            <span class="cd-dot"></span>
+            <span class="cd-label">Timeline</span>
+          </a>
+        </li>-->
+        <button id="saveOpp">Save <i class="fa fa-plus-circle"></i></button>
+      </ul>
+	</nav>
+    </div>
+    </div>
+  </div>
+
+
+<p id="testid">test<p>
+
+
+<div style="margin-top:100px">
+<img src="<%= @scholarship_guide.image_url %>" alt="<%= @scholarship_guide.program_name %> Image" width="50%">
+<p>
+  <strong>Program name:</strong>
+  <%= @scholarship_guide.program_name %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @scholarship_guide.image_url %>
+</p>
+
+<p>
+  <strong>Metric box1:</strong>
+  <%= @scholarship_guide.metric_box1 %>
+</p>
+
+<p>
+  <strong>Metric box2:</strong>
+  <%= @scholarship_guide.metric_box2 %>
+</p>
+
+<p>
+  <strong>Metric box3:</strong>
+  <%= @scholarship_guide.metric_box3 %>
+</p>
+
+<p>
+  <strong>Description short:</strong>
+  <%= @scholarship_guide.description_short %>
+</p>
+
+<p>
+  <strong>Description long:</strong>
+  <%= @scholarship_guide.description_long %>
+</p>
+
+<p>
+  <strong>App count:</strong>
+  <%= @scholarship_guide.app_count %>
+</p>
+
+<p>
+  <strong>Essay count:</strong>
+  <%= @scholarship_guide.essay_count %>
+</p>
+
+<p>
+  <strong>Transcript count:</strong>
+  <%= @scholarship_guide.transcript_count %>
+</p>
+
+<p>
+  <strong>Resume count:</strong>
+  <%= @scholarship_guide.resume_count %>
+</p>
+
+<p>
+  <strong>Time estimate:</strong>
+  <%= @scholarship_guide.time_estimate %>
+</p>
+
+<p>
+  <strong>Scholarship:</strong>
+  <%= @scholarship_guide.scholarship %>
+</p>
+</div>
+
+<%= link_to 'Edit', edit_scholarship_guide_path(@scholarship_guide) %> |
+<%= link_to 'Back', scholarship_guides_path %>

@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  program_name: MyString
+  image_url: MyString
+  metric_box1: MyString
+  metric_box2: MyString
+  metric_box3: MyString
+  description_short: MyString
+  description_long: MyString
+  app_count: 1
+  essay_count: 1
+  transcript_count: 1
+  resume_count: 1
+  time_estimate: MyString
+  scholarship: one
+
+two:
+  program_name: MyString
+  image_url: MyString
+  metric_box1: MyString
+  metric_box2: MyString
+  metric_box3: MyString
+  description_short: MyString
+  description_long: MyString
+  app_count: 1
+  essay_count: 1
+  transcript_count: 1
+  resume_count: 1
+  time_estimate: MyString
+  scholarship: two
