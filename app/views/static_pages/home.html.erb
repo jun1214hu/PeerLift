@@ -2,6 +2,7 @@
 <p>Connecting high-school students to incredible opportunities</p>
 <button>Log in/Sign Up</button>
 <br>
+
 <a href="/scholarship_guides">View Scholarships</a>
 <hr>
 <!-- Button trigger modal -->
@@ -21,8 +22,17 @@
       </div>
       <div class="modal-body">
         Add your own opportunity to Peerlift
-        <p>This <a href="" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover sbody content is set in this attribute.">button</a> triggers a popover on click.</p>
+          <p>This <a href="" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover sbody content is set in this attribute.">button</a> triggers a popover on click.</p>
+          <%= form_for ScholarshipGuide.new do |form| %>
+            <p>
+              <%= form.label :Opportunity_Details %><br>
+              <%= form.text_field :program_name %>
+            </p>
 
+            <p>
+              <%= form.submit "Submit"%>
+            </p>
+          <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
