@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 ruby '2.5.3'
 
+gem 'omniauth-google-oauth2'
+
+
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem 'autoprefixer-rails'
