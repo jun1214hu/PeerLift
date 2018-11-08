@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  scholarship_id: 1
+  scholarship_name: MyString
+  essay_count: 1
+  transcript_count: 1
+  test_score_count: 1
+  test_subjects: MyString
+
+two:
+  user_id: 1
+  scholarship_id: 1
+  scholarship_name: MyString
+  essay_count: 1
+  transcript_count: 1
+  test_score_count: 1
+  test_subjects: MyString

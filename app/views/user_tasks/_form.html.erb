@@ -1,0 +1,52 @@
+<%= form_with(model: user_task, local: true) do |form| %>
+  <% if user_task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user_task.errors.count, "error") %> prohibited this user_task from being saved:</h2>
+
+      <ul>
+      <% user_task.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :scholarship_id %>
+    <%= form.number_field :scholarship_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :scholarship_name %>
+    <%= form.text_field :scholarship_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :essay_count %>
+    <%= form.number_field :essay_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transcript_count %>
+    <%= form.number_field :transcript_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :test_score_count %>
+    <%= form.number_field :test_score_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :test_subjects %>
+    <%= form.text_field :test_subjects %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

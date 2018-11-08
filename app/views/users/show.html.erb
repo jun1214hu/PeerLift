@@ -1,0 +1,98 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @user.string %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @user.string %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @user.string %>
+</p>
+
+<p>
+  <strong>Grad year:</strong>
+  <%= @user.grad_year %>
+</p>
+
+<p>
+  <strong>Integer:</strong>
+  <%= @user.integer %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @user.grade %>
+</p>
+
+<p>
+  <strong>Integer:</strong>
+  <%= @user.integer %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @user.school %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @user.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @user.state %>
+</p>
+
+<h2>Tasks</h2>
+<% @user.user_tasks.each do |user_task| %>
+  <p>
+    <strong> Scholarship ID:</strong>
+    <%= user_task.scholarship_id %>
+  </p>
+ 
+  <p>
+    <strong>Essays to do:</strong>
+    <%= user_task.essay_count %>
+  </p>
+<% end %>
+
+<h2> Add a Task </h2>
+<%= form_with(model: [ @user, @user.user_tasks.build ], local: true) do |form| %>
+  <p>
+  <%= form.label :scholarship_id %> <br>
+  <%= form.text_field :scholarship_id %>
+</p>
+  <p>
+  <%= form.label :essay_count %> <br>
+  <%= form.text_field :essay_count %>
+</p>
+<p>
+  <%= form.submit %>
+</p>
+
+<% end %>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
