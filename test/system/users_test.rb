@@ -14,12 +14,15 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "New User"
 
+    fill_in "City", with: @user.city
     fill_in "Email", with: @user.email
-    fill_in "Gender", with: @user.gender
+    fill_in "First Name", with: @user.first_name
     fill_in "Grad Year", with: @user.grad_year
-    fill_in "Grade Level", with: @user.grade_level
-    fill_in "Name", with: @user.name
+    fill_in "Grade", with: @user.grade
+    fill_in "Integer", with: @user.integer
+    fill_in "Last Name", with: @user.last_name
     fill_in "School", with: @user.school
+    fill_in "State", with: @user.state
     fill_in "String", with: @user.string
     click_on "Create User"
 
@@ -31,12 +34,15 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "Edit", match: :first
 
+    fill_in "City", with: @user.city
     fill_in "Email", with: @user.email
-    fill_in "Gender", with: @user.gender
+    fill_in "First Name", with: @user.first_name
     fill_in "Grad Year", with: @user.grad_year
-    fill_in "Grade Level", with: @user.grade_level
-    fill_in "Name", with: @user.name
+    fill_in "Grade", with: @user.grade
+    fill_in "Integer", with: @user.integer
+    fill_in "Last Name", with: @user.last_name
     fill_in "School", with: @user.school
+    fill_in "State", with: @user.state
     fill_in "String", with: @user.string
     click_on "Update User"
 

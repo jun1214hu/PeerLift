@@ -1,8 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @user.name %>
+  <strong>First name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @user.string %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.last_name %>
 </p>
 
 <p>
@@ -16,13 +26,28 @@
 </p>
 
 <p>
+  <strong>String:</strong>
+  <%= @user.string %>
+</p>
+
+<p>
   <strong>Grad year:</strong>
   <%= @user.grad_year %>
 </p>
 
 <p>
-  <strong>Grade level:</strong>
-  <%= @user.grade_level %>
+  <strong>Integer:</strong>
+  <%= @user.integer %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @user.grade %>
+</p>
+
+<p>
+  <strong>Integer:</strong>
+  <%= @user.integer %>
 </p>
 
 <p>
@@ -31,8 +56,13 @@
 </p>
 
 <p>
-  <strong>Gender:</strong>
-  <%= @user.gender %>
+  <strong>City:</strong>
+  <%= @user.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @user.state %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
