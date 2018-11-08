@@ -1,4 +1,4 @@
 class ScholarshipGuide < ApplicationRecord
   belongs_to :scholarship
-  belongs_to :user_task
+  has_many :user_task
 end

@@ -65,5 +65,34 @@
   <%= @user.state %>
 </p>
 
+<h2>Tasks</h2>
+<% @user.user_tasks.each do |user_task| %>
+  <p>
+    <strong> Scholarship ID:</strong>
+    <%= user_task.scholarship_id %>
+  </p>
+ 
+  <p>
+    <strong>Essays to do:</strong>
+    <%= user_task.essay_count %>
+  </p>
+<% end %>
+
+<h2> Add a Task </h2>
+<%= form_with(model: [ @user, @user.user_tasks.build ], local: true) do |form| %>
+  <p>
+  <%= form.label :scholarship_id %> <br>
+  <%= form.text_field :scholarship_id %>
+</p>
+  <p>
+  <%= form.label :essay_count %> <br>
+  <%= form.text_field :essay_count %>
+</p>
+<p>
+  <%= form.submit %>
+</p>
+
+<% end %>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

@@ -1,4 +1,4 @@
 class UserTask < ApplicationRecord
-	has_many :scholarship_guides
+	belongs_to :scholarship_guides
 	belongs_to :users
 end

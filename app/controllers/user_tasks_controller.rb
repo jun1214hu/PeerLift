@@ -25,7 +25,7 @@ class UserTasksController < ApplicationController
   # POST /user_tasks.json
   def create
     @user = User.find(params[:user_id])
-    @user_task = UserTask.new(user_task_params)
+    @user_task = @user.user_tasks.create(user_task_params)
     redirect_to user_path(@user)
   end 
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_07_233248) do
+ActiveRecord::Schema.define(version: 2018_11_08_015617) do
 
   create_table "scholarship_guides", force: :cascade do |t|
     t.string "program_name"
@@ -30,8 +30,6 @@ ActiveRecord::Schema.define(version: 2018_11_07_233248) do
   end
 
   create_table "user_tasks", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "scholarship_id"
     t.string "scholarship_name"
     t.integer "essay_count"
     t.integer "transcript_count"
@@ -39,7 +37,11 @@ ActiveRecord::Schema.define(version: 2018_11_07_233248) do
     t.string "test_subjects"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-end 
+    t.integer "user_id"
+    t.integer "scholarship_guide_id"
+    t.index ["scholarship_guide_id"], name: "index_user_tasks_on_scholarship_guide_id"
+    t.index ["user_id"], name: "index_user_tasks_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
@@ -52,7 +54,6 @@ end
     t.string "school"
     t.string "city"
     t.string "state"
-
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
