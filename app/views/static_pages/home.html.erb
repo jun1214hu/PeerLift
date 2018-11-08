@@ -2,4 +2,44 @@
 <p>Connecting high-school students to incredible opportunities</p>
 <button>Log in/Sign Up</button>
 <br>
+
+<a href="/auth/google_oauth2">Sign in with Google</a>
+
 <a href="/scholarship_guides">View Scholarships</a>
+<hr>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Add An Opportunity
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add Opportunities</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Add your own opportunity to Peerlift
+          <p>This <a href="" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover sbody content is set in this attribute.">button</a> triggers a popover on click.</p>
+          <%= form_for ScholarshipGuide.new do |form| %>
+            <p>
+              <%= form.label :Opportunity_Details %><br>
+              <%= form.text_field :program_name %>
+            </p>
+
+            <p>
+              <%= form.submit "Submit"%>
+            </p>
+          <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2018_11_08_015617) do
     t.datetime "updated_at", null: false
   end
 
+
   create_table "user_tasks", force: :cascade do |t|
     t.string "scholarship_name"
     t.integer "essay_count"
@@ -44,16 +45,12 @@ ActiveRecord::Schema.define(version: 2018_11_08_015617) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "string"
-    t.string "last_name"
+    t.string "provider"
+    t.string "uid"
     t.string "email"
-    t.string "grad_year"
-    t.string "integer"
-    t.string "grade"
-    t.string "school"
-    t.string "city"
-    t.string "state"
+    t.string "first_name"
+    t.string "last_name"
+
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
