@@ -2,6 +2,13 @@ source 'https://rubygems.org'
 
 ruby '2.5.3'
 
+gem 'omniauth-google-oauth2'
+
+
+gem 'bootstrap', '~> 4.1.3'
+gem 'jquery-rails'
+gem 'autoprefixer-rails'
+gem 'rails-assets-tether', source: 'https://rails-assets.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use Puma as the app server

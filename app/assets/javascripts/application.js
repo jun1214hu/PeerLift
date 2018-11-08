@@ -13,6 +13,11 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//
+//= require jquery3
+//= require tether
+//= require popper
+//= require bootstrap
 //= require_tree .
-var test = document.getElementByID("testid");
 alert("test " );
+//do I need to include boostrap sprockets?
