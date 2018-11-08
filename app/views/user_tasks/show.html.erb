@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user_task.user_id %>
+</p>
+
+<p>
+  <strong>Scholarship:</strong>
+  <%= @user_task.scholarship_id %>
+</p>
+
+<p>
+  <strong>Scholarship name:</strong>
+  <%= @user_task.scholarship_name %>
+</p>
+
+<p>
+  <strong>Essay count:</strong>
+  <%= @user_task.essay_count %>
+</p>
+
+<p>
+  <strong>Transcript count:</strong>
+  <%= @user_task.transcript_count %>
+</p>
+
+<p>
+  <strong>Test score count:</strong>
+  <%= @user_task.test_score_count %>
+</p>
+
+<p>
+  <strong>Test subjects:</strong>
+  <%= @user_task.test_subjects %>
+</p>
+
+<%= link_to 'Edit', edit_user_task_path(@user_task) %> |
+<%= link_to 'Back', user_tasks_path %>
