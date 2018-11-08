@@ -27,7 +27,7 @@ class UserTasksController < ApplicationController
     @user = User.find(params[:user_id])
     @user_task = @user.user_tasks.create(user_task_params)
     redirect_to user_path(@user)
-  end 
+  end
 
     # respond_to do |format|
     #   if @user_task.save
@@ -38,7 +38,7 @@ class UserTasksController < ApplicationController
     #     format.json { render json: @user_task.errors, status: :unprocessable_entity }
     #   end
     # end
-  
+
 
   # PATCH/PUT /user_tasks/1
   # PATCH/PUT /user_tasks/1.json
@@ -72,6 +72,6 @@ class UserTasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_task_params
-      params.require(:user_task).permit(:user_id, :scholarship_id, :scholarship_name, :essay_count, :transcript_count, :test_score_count, :test_subjects)
+      params.require(:user_task).permit(:user_id, :scholarship_guide_id, :scholarship_name, :essay_count, :transcript_count, :test_score_count, :test_subjects)
     end
 end
