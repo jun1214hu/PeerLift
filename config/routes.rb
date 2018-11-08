@@ -6,7 +6,17 @@ Rails.application.routes.draw do
   resources :scholarship_guides 
   root 'static_pages#home'
 
-  resources :user do 
+  resources :users do 
   	resources :user_tasks
-  end
+	end 
+
+  root 'home#show'
+  get 'auth/oauth2/callback' => 'auth0#callback'
+  get 'auth/failure' => 'auth0#failure'
+
+  get 'dashboard' => 'dashboard#show'
+  
 end
+
+
+

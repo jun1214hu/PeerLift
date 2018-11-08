@@ -39,6 +39,22 @@ ActiveRecord::Schema.define(version: 2018_11_07_233248) do
     t.string "test_subjects"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+end 
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "string"
+    t.string "last_name"
+    t.string "email"
+    t.string "grad_year"
+    t.string "integer"
+    t.string "grade"
+    t.string "school"
+    t.string "city"
+    t.string "state"
+
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
