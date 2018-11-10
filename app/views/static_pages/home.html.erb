@@ -1,9 +1,10 @@
 <h1>Peerlift 100</h1>
 <p>Connecting high-school students to incredible opportunities</p>
-<button>Log in/Sign Up</button>
-<br>
-
 <a href="/auth/google_oauth2">Sign in with Google</a>
+</br>
+<%= button_to 'Sign In / Sign Up', login_path, method: :get if current_user.nil? %>
+<%= button_to 'Log Out', destroy_path, method: :post if current_user %>
+</br>
 
 <a href="/scholarship_guides">View Scholarships</a>
 <hr>
@@ -43,3 +44,11 @@
     </div>
   </div>
 </div>
+
+<br>
+First is: <%= @scholarship_guides.metric_box1 %>
+</br><% if current_user %>
+	<% current_user.attributes.each do |k, v| %>
+		<b><%= k %>:</b> <%= v %> <br>
+	<% end %>
+<% end %>
