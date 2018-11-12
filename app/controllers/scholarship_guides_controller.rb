@@ -1,5 +1,6 @@
 class ScholarshipGuidesController < ApplicationController
   before_action :set_scholarship_guide, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate
 
   # GET /scholarship_guides
   # GET /scholarship_guides.json
