@@ -19,6 +19,10 @@ Rails.application.routes.draw do
 
   resources :users
 
+  #resources :users do
+  # 	resources :user_tasks
+ 	#end
+
   post 'destroy' => 'sessions#destroy', as: :destroy
 
 end
