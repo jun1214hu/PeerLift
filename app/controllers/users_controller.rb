@@ -2,7 +2,12 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate
   
+  # move this to application 
+  # change to is_authenticated
   before_action :check_user
+  # :unless => :public_case
+  # make a new function :public_case
+  # define a public page 
 
 
   # GET /users
@@ -67,8 +72,13 @@ class UsersController < ApplicationController
   end
 
   private
+  
+# check before action, except index and new, check_user is current user
 
-
+# should be protected
+# Move to application controller
+# Add --> def public_page
+# true if ['home', 'about'].includes?(request.route)
     def check_user
       if current_user != @user
         redirect_to root_url, alert: "Sorry, This Profile belongs to someone else !"
