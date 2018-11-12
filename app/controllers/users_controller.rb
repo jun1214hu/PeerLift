@@ -2,6 +2,9 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate
   
+  before_action :check_user
+
+
   # GET /users
   # GET /users.json
   def index
@@ -64,6 +67,14 @@ class UsersController < ApplicationController
   end
 
   private
+
+
+    def check_user
+      if current_user != @user
+        redirect_to root_url, alert: "Sorry, This Profile belongs to someone else !"
+      end
+    end
+    
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
