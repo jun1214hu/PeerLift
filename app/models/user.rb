@@ -2,6 +2,8 @@ class User < ApplicationRecord
 	has_many :user_tasks
 	has_many :scholarship_guides, :through => :user_tasks
 
+ 	validates :email, uniqueness: true
+
 	def self.find_or_create_from_auth_hash(auth)
 		where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
 			user.provider = auth.provider

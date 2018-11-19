@@ -6,6 +6,9 @@ require "minitest/mock"
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
+  
+  # Add factory bot
+  include FactoryBot::Syntax::Methods
 
   # Add more helper methods to be used by all tests here...
   def sign_in(user)
@@ -13,5 +16,5 @@ class ActiveSupport::TestCase
     ApplicationController.any_instance.stubs(:user_signed_in?).returns(true)
     ApplicationController.any_instance.stubs(:current_user).returns(user)
   end
-  
+
 end

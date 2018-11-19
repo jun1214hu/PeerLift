@@ -46,6 +46,13 @@ group :development, :test do
   gem 'sqlite3', '1.3.13'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '9.0.6', platform: :mri
+ 
+  # For factory bot according to https://medium.com/@lukepierotti/setting-up-rspec-and-factory-bot-3bb2153fb909
+  gem 'rspec-rails', '~> 3.6'
+
+  gem "factory_bot_rails", "~> 4.0"
+
+  gem 'faker'
 end
 
 group :development do
