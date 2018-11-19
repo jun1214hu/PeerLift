@@ -13,11 +13,14 @@ Rails.application.routes.draw do
   get 'static_pages/about'
   # get '/users/:id', to: 'users#show', as: 'user'
   resources :scholarship_guides
-  resources :user_tasks
+
 
   root 'static_pages#home'
 
-  resources :users
+  resources :users do 
+      resources :user_tasks
+    end
+
 
   #resources :users do
   # 	resources :user_tasks
