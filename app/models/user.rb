@@ -13,4 +13,12 @@ class User < ApplicationRecord
 			user.save!
 		end
 	end
+
+	validates :provider,
+	:uid,
+	:email,
+	:first_name,
+	:last_name,
+	presence: true
+	
 end

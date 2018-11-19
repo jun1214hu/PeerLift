@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ScholarshipGuidesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @scholarship_guide = scholarship_guides(:one)
+    @scholarship_guide = scholarship_guides(:valid)
   end
 
   test "should get index" do
