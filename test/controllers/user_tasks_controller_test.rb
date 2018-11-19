@@ -17,7 +17,7 @@ class UserTasksControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user_task" do
     assert_difference('UserTask.count') do
-      post user_tasks_url, params: { user_task: { essay_count: @user_task.essay_count, scholarship_id: @user_task.scholarship_id, scholarship_name: @user_task.scholarship_name, test_score_count: @user_task.test_score_count, test_subjects: @user_task.test_subjects, transcript_count: @user_task.transcript_count, user_id: @user_task.user_id } }
+      post user_tasks_url, params: { user_task: { essay_count: @user_task.essay_count, scholarship_guide_id: @user_task.scholarship_guide_id, scholarship_name: @user_task.scholarship_name, test_score_count: @user_task.test_score_count, test_subjects: @user_task.test_subjects, transcript_count: @user_task.transcript_count, user_id: @user_task.user_id } }
     end
 
     assert_redirected_to user_task_url(UserTask.last)
@@ -34,7 +34,7 @@ class UserTasksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update user_task" do
-    patch user_task_url(@user_task), params: { user_task: { essay_count: @user_task.essay_count, scholarship_id: @user_task.scholarship_id, scholarship_name: @user_task.scholarship_name, test_score_count: @user_task.test_score_count, test_subjects: @user_task.test_subjects, transcript_count: @user_task.transcript_count, user_id: @user_task.user_id } }
+    patch user_task_url(@user_task), params: { user_task: { essay_count: @user_task.essay_count, scholarship_guide_id: @user_task.scholarship_guide_id, scholarship_name: @user_task.scholarship_name, test_score_count: @user_task.test_score_count, test_subjects: @user_task.test_subjects, transcript_count: @user_task.transcript_count, user_id: @user_task.user_id } }
     assert_redirected_to user_task_url(@user_task)
   end
 

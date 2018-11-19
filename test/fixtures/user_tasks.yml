@@ -2,7 +2,7 @@
 
 one:
   user_id: 1
-  scholarship_id: 1
+  scholarship_guide_id: 1
   scholarship_name: MyString
   essay_count: 1
   transcript_count: 1
@@ -11,7 +11,7 @@ one:
 
 two:
   user_id: 1
-  scholarship_id: 1
+  scholarship_guide_id: 1
   scholarship_name: MyString
   essay_count: 1
   transcript_count: 1
