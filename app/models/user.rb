@@ -16,7 +16,6 @@ class User < ApplicationRecord
 		end
 	end
 
-
 	validates :provider,
 	:uid,
 	:email,

@@ -15,7 +15,7 @@ class UserTasksTest < ApplicationSystemTestCase
     click_on "New User Task"
 
     fill_in "Essay Count", with: @user_task.essay_count
-    fill_in "Scholarship", with: @user_task.scholarship_id
+    fill_in "Scholarship", with: @user_task.scholarship_guide_id
     fill_in "Scholarship Name", with: @user_task.scholarship_name
     fill_in "Test Score Count", with: @user_task.test_score_count
     fill_in "Test Subjects", with: @user_task.test_subjects
@@ -32,7 +32,7 @@ class UserTasksTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Essay Count", with: @user_task.essay_count
-    fill_in "Scholarship", with: @user_task.scholarship_id
+    fill_in "Scholarship", with: @user_task.scholarship_guide_id
     fill_in "Scholarship Name", with: @user_task.scholarship_name
     fill_in "Test Score Count", with: @user_task.test_score_count
     fill_in "Test Subjects", with: @user_task.test_subjects

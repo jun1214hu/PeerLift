@@ -1,16 +1,16 @@
 <h1>Tasks Dashboard</h1>
-<div> 
+<div>
 	<h3> Tasks to do </h3>
 
 </div>
 
-<div> 
+<div>
 	<h3> Tasks you've done </h3>
 
 <%= @user_tasks.each do |user_task| %>
   <p>
     <strong> Scholarship ID:</strong>
-    <%= user_task.scholarship_id %>
+    <%= user_task.scholarship_guide_id %>
   </p>
 
   <p>
@@ -19,5 +19,3 @@
   </p>
 <% end %>
 </div>
-
-
