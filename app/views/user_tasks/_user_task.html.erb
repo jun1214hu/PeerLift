@@ -1,0 +1,8 @@
+<li id="user_tasks-<%=user_tasks.id %>">
+  <%= link_to gravatar_for(user_task.user, size: 50), user_task.user %>
+  <span class="user"><%= link_to user_task.user.name, user_task.user %></span>
+  <span class="content"><%= user_task.essay_count %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(user_task.created_at) %> ago.
+  </span>
+</li>
