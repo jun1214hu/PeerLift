@@ -12,7 +12,7 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
   def sign_in(user)
-    ApplicationController.any_instance.stubs(:authenticate_user!).returns(true)
+    ApplicationController.any_instance.stubs(:authenticate).returns(true)
     ApplicationController.any_instance.stubs(:user_signed_in?).returns(true)
     ApplicationController.any_instance.stubs(:current_user).returns(user)
   end
