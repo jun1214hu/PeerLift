@@ -87,4 +87,5 @@ class ScholarshipGuideTest < ActiveSupport::TestCase
   assert_includes ScholarshipGuide.recent, scholarship_guides(:valid)
   refute_includes ScholarshipGuide.recent, scholarship_guides(:old)
   end
+  
 end
