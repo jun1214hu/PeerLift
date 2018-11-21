@@ -103,10 +103,9 @@
   <div class="row">
  <div class="col-sm-offset-5 col-sm-4 ">
 <h4> My Overview </h4>
-    <%= @scholarship_guides.metric_box1 %>
                 <table class="table table-hover table-bordered">
                     <thead>
-                   
+
                         <% if current_user %> <% current_user.attributes.each do |k, v| %>
                         <tr> <th scope="row"><%= k %>:</th> <td> <%= v %> </td> </tr>
             <% end %>
@@ -120,5 +119,3 @@
 </div>
 
 <br>
-
-
