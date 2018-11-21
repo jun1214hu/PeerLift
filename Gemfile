@@ -20,6 +20,9 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'mini_racer', platforms: :ruby
 
+gem "minitest-stub_any_instance"
+
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -48,7 +51,6 @@ group :development, :test do
   gem 'byebug', '9.0.6', platform: :mri
  
   # For factory bot according to https://medium.com/@lukepierotti/setting-up-rspec-and-factory-bot-3bb2153fb909
-  gem 'rspec-rails', '~> 3.6'
 
   gem "factory_bot_rails", "~> 4.0"
 
