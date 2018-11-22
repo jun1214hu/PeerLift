@@ -7,7 +7,8 @@ class ApplicationController < ActionController::Base
   end
 
   def user_is_admin?
-    redirect_to :login unless user_is_admin
+    flash[:notice] = "Must be an admin"
+    redirect_to request.referrer unless user_is_admin
   end
 
   def current_user

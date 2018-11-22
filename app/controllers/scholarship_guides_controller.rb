@@ -1,6 +1,7 @@
 class ScholarshipGuidesController < ApplicationController
   before_action :set_scholarship_guide, only: [:show, :edit, :update, :destroy]
   before_action :authenticate, except: [:index]
+  before_action :user_is_admin?, except: [:index, :show]
 
   # GET /scholarship_guides
   # GET /scholarship_guides.json
@@ -20,7 +21,6 @@ class ScholarshipGuidesController < ApplicationController
 
   # GET /scholarship_guides/1/edit
   def edit
-    before_action :user_is_admin?
   end
 
   # POST /scholarship_guides
