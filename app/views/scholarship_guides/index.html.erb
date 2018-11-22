@@ -59,8 +59,12 @@
         <td><%= scholarship_guide.metric_box1 %></td>
         <td><%= scholarship_guide.description_short %></td>
         <td><%= link_to 'Show', scholarship_guide %></td>
-        <td><%= link_to 'Edit', edit_scholarship_guide_path(scholarship_guide) %></td>
-        <td><%= link_to 'Destroy', scholarship_guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user %>
+          <% if current_user.attributes.slice('is_admin')["is_admin"] == 1 %>
+              <td><%= link_to 'Edit', edit_scholarship_guide_path(scholarship_guide) %></td>
+              <td><%= link_to 'Destroy', scholarship_guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
