@@ -121,7 +121,7 @@
 <br>
 
 Test:
-<% current_user.attributes.slice('isadmin').each do |k,v| %>
+<% current_user.attributes.slice('is_admin').each do |k,v| %>
 <% if v == 1 %> <%= current_user.attributes.slice('first_name')["first_name"] %> is an admin with an adminid = <%= v %> <p>test html</p>
 <% end %>
 <% end %>
