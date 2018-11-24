@@ -1,3 +1,113 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#navbar, #opportunity-navbar {
+  position: relative;
+  top: 0px;
+  background-color: #F2F1EF;
+  height: 100px;
+  width: 100%;
+  padding: 25px 12.5px;
+  z-index: 101; }
+  #navbar .container, #opportunity-navbar .container {
+    height: 100%;
+    text-align: right; }
+    #navbar .container > a, #opportunity-navbar .container > a {
+      display: inline-block;
+      width: auto;
+      height: 100%;
+      padding: 0px 12.5px 25px 12.5px;
+      font-size: 30px;
+      color: #6393ce; }
+    #navbar .container > a:first-child, #opportunity-navbar .container > a:first-child {
+      float: left; }
+  #navbar img, #opportunity-navbar img {
+    max-height: 100%; }
+  @media screen and (max-width: 1023px) {
+    #navbar nav, #opportunity-navbar nav {
+      display: none; } }
+  @media screen and (min-width: 1024px) {
+    #navbar nav, #opportunity-navbar nav {
+      display: inline-block; } }
+  #navbar ul, #opportunity-navbar ul {
+    list-style-type: none;
+    text-align: center; }
+    @media screen and (max-width: 1023px) {
+      #navbar ul li, #opportunity-navbar ul li {
+        display: block;
+        padding: 10px 0px; } }
+    @media screen and (min-width: 1024px) {
+      #navbar ul li, #opportunity-navbar ul li {
+        display: inline-block;
+        font-size: 20px;
+        padding: 15px 1vw; } }
+
+#opportunity-navbar {
+  position: fixed; }
+
+#menu-button i {
+  vertical-align: bottom; }
+@media screen and (min-width: 1024px) {
+  #menu-button {
+    display: none !important; } }
+
+@media screen and (max-width: 1024px) {
+  #opportunities-dropdown {
+    display: none !important; } }
+@media screen and (min-width: 1024px) {
+  #opportunities-dropdown {
+    display: inline-block !important; } }
+
+#opportunities-menu {
+  padding: 2.5vh 0px; }
+  #opportunities-menu a {
+    display: block;
+    float: left;
+    box-sizing: border-box; }
+    #opportunities-menu a i {
+      display: block;
+      background-color: #6393ce;
+      color: white;
+      max-height: 55px; }
+  #opportunities-menu a:hover {
+    color: #6393ce; }
+  #opportunities-menu a:hover > i {
+    background-color: #4675b8; }
+  @media screen and (max-width: 1024px) {
+    #opportunities-menu a {
+      padding: 2.5vh 7.5px !important;
+      font-size: 12px; }
+      #opportunities-menu a i {
+        padding: 1vh 15px 2vh 15px;
+        margin: 0px auto 1.5vh auto;
+        width: calc(100% - 40px);
+        border-radius: 7.5px;
+        font-size: 40px; }
+        #opportunities-menu a i img {
+          max-height: 60px; } }
+  @media screen and (min-width: 1024px) {
+    #opportunities-menu {
+      display: none;
+      background-color: #4b4b4b;
+      position: absolute;
+      width: 100vw;
+      top: 100px;
+      right: 0px;
+      padding: calc(1vh + 1vw) 0px; }
+      #opportunities-menu .column-wrapper, #opportunities-menu .footer-nav-wrapper {
+        margin: 0px -1.5px;
+        display: inline-block;
+        width: 40%; }
+      #opportunities-menu a {
+        font-size: 1vw;
+        color: white; }
+        #opportunities-menu a i {
+          font-size: 5vw;
+          margin: auto;
+          padding: 1vw 0 3vw 0;
+          border-radius: .5vw;
+          margin-bottom: calc(1vh + 1vw); }
+          #opportunities-menu a i img {
+            max-height: 75px; } }
