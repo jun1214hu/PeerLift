@@ -6,6 +6,12 @@ class ScholarshipGuidesController < ApplicationController
   # GET /scholarship_guides.json
   def index
     @scholarship_guides = ScholarshipGuide.all
+    @saved = []
+    @savedscholarships = ScholarshipGuide.where("user_id = ? AND saved = ?", current_user.id, 1)
+    @savedscholarships = RecordLog.where("user_id = ? AND saved = ?", current_user.id, 1)
+    @scholarship_guides.each do |scholarship_guide|
+      @saved << scholarship_guide
+    end
   end
 
   # GET /scholarship_guides/1

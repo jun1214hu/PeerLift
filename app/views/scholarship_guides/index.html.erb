@@ -61,11 +61,21 @@
         <td><%= link_to 'Show', scholarship_guide %></td>
         <td><%= link_to 'Edit', edit_scholarship_guide_path(scholarship_guide) %></td>
         <td><%= link_to 'Destroy', scholarship_guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Save to my Profile', record_log_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name, saved: 1, completed: 0, previous_save: 0) %></td>
+        <td><p id="test">Nothing</p>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 </div>
+
+<p><%= @saved %> <p>
+<p><%= @scholarship_guides %> <p>
+<% @saved.each do |saved| %>
+  <%= saved.program_name %>
+<% end %>
+
+
 
 <br>

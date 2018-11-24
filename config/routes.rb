@@ -27,5 +27,6 @@ Rails.application.routes.draw do
  	#end
 
   post 'destroy' => 'sessions#destroy', as: :destroy
+  post 'recordlog' => 'record_logs#create', as: :record_log
 
 end
