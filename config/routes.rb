@@ -28,5 +28,6 @@ Rails.application.routes.draw do
 
   post 'destroy' => 'sessions#destroy', as: :destroy
   post 'recordlog' => 'record_logs#create', as: :record_log
+  post 'recordlog' => 'record_logs#unsave', as: :record_unsave
 
 end
