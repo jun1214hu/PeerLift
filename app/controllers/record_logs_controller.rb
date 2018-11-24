@@ -11,6 +11,18 @@ class RecordLogsController < ApplicationController
     end
   end
 
+  def update
+    @record_log = RecordLog.where("user_id = ? AND scholarship_guide_id = ?", record_log_params[:user_id], record_log_params[:scholarship_guide_id])
+
+    respond_to do |format|
+      if @record_log.update(saved: record_log_params[:saved], previous_save: 1)
+        format.html { redirect_to request.referrer, notice: 'Record Log was successfully updated.' }
+      else
+        format.html { redirect_to request.referrer, notice: 'Record Log was not successfully updated.' }
+      end
+    end
+  end
+
   private
 
   def record_log_params

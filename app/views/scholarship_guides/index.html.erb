@@ -61,7 +61,8 @@
         <td><%= link_to 'Show', scholarship_guide %></td>
         <td><%= link_to 'Edit', edit_scholarship_guide_path(scholarship_guide) %></td>
         <td><%= link_to 'Destroy', scholarship_guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= button_to 'Unsave from my Profile', record_log_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name, saved: 1, completed: 0, previous_save: 0) %></td>
+        <td><%= button_to 'Unsave from my Profile', record_update_path(saved: 0, previous_save: 1) %></td>
+        <td><%= button_to 'Unsave 2 from my Profile', record_update_path(saved: 0, previous_save: 1), :method => :patch %></td>
       </tr>
     <% end %>
     <% @unsaved_scholarships.each do |scholarship_guide| %>
