@@ -1,0 +1,2 @@
+class SavedScholarship < ApplicationRecord
+end

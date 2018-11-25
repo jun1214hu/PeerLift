@@ -27,7 +27,12 @@ Rails.application.routes.draw do
  	#end
 
   post 'destroy' => 'sessions#destroy', as: :destroy
+
   post 'recordlog' => 'record_logs#create', as: :record_log
   patch 'recordlog' => 'record_logs#update', as: :record_update
+  post 'recordlog' => 'record_log#destroy', as: :record_destroy
+
+  post 'saved_scholarship' => 'saved_scholarships#create', as: :save_scholarship
+  delete 'saved_scholarship' => 'saved_scholarships#destroy', as: :unsave_scholarship
 
 end
