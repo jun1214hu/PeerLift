@@ -35,4 +35,7 @@ Rails.application.routes.draw do
   post 'saved_scholarship' => 'saved_scholarships#create', as: :save_scholarship
   delete 'saved_scholarship' => 'saved_scholarships#destroy', as: :unsave_scholarship
 
+  patch 'me' => 'me#complete', as: :scholarship_completed
+  patch 'me' => 'me#not_done', as: :scholarship_not_done
+
 end
