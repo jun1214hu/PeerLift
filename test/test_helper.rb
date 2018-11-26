@@ -5,6 +5,14 @@ require "minitest/mock"
 require 'minitest/autorun'
  require 'minitest/stub_any_instance'
 
+require 'capybara/poltergeist'
+
+require 'phantomjs' # <-- Not required if your app does Bundler.require automatically (e.g. when using Rails)
+Capybara.register_driver :poltergeist do |app|
+    Capybara::Poltergeist::Driver.new(app, :phantomjs => Phantomjs.path)
+end
+
+
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all

@@ -1,8 +1,9 @@
 require "application_system_test_case"
+require "test_helper"
 
 class ScholarshipGuidesTest < ApplicationSystemTestCase
   setup do
-    @scholarship_guide = scholarship_guides(:one)
+    @scholarship_guide = create(:scholarship_guide)
   end
 
   test "visiting the index" do

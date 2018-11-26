@@ -1,29 +1,25 @@
 require "application_system_test_case"
 
 class UsersTest < ApplicationSystemTestCase
-  setup do
-    @user = users(:one)
-  end
+  # setup do
+  #   @user = users(:one)
+  # end
 
-  test "visiting the index" do
-    visit users_url
-    assert_selector "h1", text: "Users"
-  end
+  # test "visiting the index" do
+  #   visit users_url
+  #   assert_selector "h1", text: "Users"
+  # end
 
   test "creating a User" do
+    # Visit the index page
     visit users_url
+
     click_on "New User"
 
-    fill_in "City", with: @user.city
     fill_in "Email", with: @user.email
     fill_in "First Name", with: @user.first_name
-    fill_in "Grad Year", with: @user.grad_year
-    fill_in "Grade", with: @user.grade
-    fill_in "Integer", with: @user.integer
     fill_in "Last Name", with: @user.last_name
-    fill_in "School", with: @user.school
-    fill_in "State", with: @user.state
-    fill_in "String", with: @user.string
+    
     click_on "Create User"
 
     assert_text "User was successfully created"
