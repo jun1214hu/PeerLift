@@ -1,11 +1,15 @@
 class ScholarshipGuidesController < ApplicationController
   before_action :set_scholarship_guide, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate
+  before_action :authenticate, except: [:index]
+  before_action :user_is_admin?, except: [:index, :show]
 
   # GET /scholarship_guides
   # GET /scholarship_guides.json
   def index
-    @scholarship_guides = ScholarshipGuide.all
+    @scholarship_references_saved = SavedScholarship.where("user_id = ?", current_user.id).pluck(:scholarship_guide_id)
+    @scholarship_references_unsaved = ScholarshipGuide.where.not(id: @scholarship_references_saved).pluck(:id)
+    @saved_scholarships = ScholarshipGuide.where(id: @scholarship_references_saved)
+    @unsaved_scholarships = ScholarshipGuide.where(id: @scholarship_references_unsaved)
   end
 
   # GET /scholarship_guides/1
