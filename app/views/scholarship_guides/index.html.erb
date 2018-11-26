@@ -53,7 +53,23 @@
   </thead>
 
   <tbody>
-    <% @scholarship_guides.each do |scholarship_guide| %>
+    <% @saved_scholarships.each do |scholarship_guide| %>
+      <tr>
+        <td><a href="/scholarship_guides/<%= scholarship_guide.id %>"><%= scholarship_guide.program_name %></a></td>
+        <td><%= scholarship_guide.metric_box1 %></td>
+        <td><%= scholarship_guide.description_short %></td>
+        <td><%= link_to 'Show', scholarship_guide %></td>
+        <td><%= link_to 'Edit', edit_scholarship_guide_path(scholarship_guide) %></td>
+        <% if current_user %>
+          <% if current_user.attributes.slice('is_admin')["is_admin"] == 1 %>
+              <td><%= link_to 'Edit', edit_scholarship_guide_path(scholarship_guide) %></td>
+              <td><%= link_to 'Destroy', scholarship_guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        <% end %>              
+        <td><%= button_to 'Unsave 2 from my Profile', unsave_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name), method: :delete %></td>
+      </tr>
+    <% end %>
+    <% @unsaved_scholarships.each do |scholarship_guide| %>
       <tr>
         <td><a href="/scholarship_guides/<%= scholarship_guide.id %>"><%= scholarship_guide.program_name %></a></td>
         <td><%= scholarship_guide.metric_box1 %></td>
@@ -66,6 +82,7 @@
               <td><%= link_to 'Destroy', scholarship_guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
         <% end %>
+        <td><%= button_to 'Save to my Profile', save_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name, completed: 0) %></td>
       </tr>
     <% end %>
   </tbody>

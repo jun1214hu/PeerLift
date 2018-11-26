@@ -6,7 +6,10 @@ class ScholarshipGuidesController < ApplicationController
   # GET /scholarship_guides
   # GET /scholarship_guides.json
   def index
-    @scholarship_guides = ScholarshipGuide.all
+    @scholarship_references_saved = SavedScholarship.where("user_id = ?", current_user.id).pluck(:scholarship_guide_id)
+    @scholarship_references_unsaved = ScholarshipGuide.where.not(id: @scholarship_references_saved).pluck(:id)
+    @saved_scholarships = ScholarshipGuide.where(id: @scholarship_references_saved)
+    @unsaved_scholarships = ScholarshipGuide.where(id: @scholarship_references_unsaved)
   end
 
   # GET /scholarship_guides/1
