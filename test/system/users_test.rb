@@ -26,32 +26,32 @@ class UsersTest < ApplicationSystemTestCase
     click_on "Back"
   end
 
-  test "updating a User" do
-    visit users_url
-    click_on "Edit", match: :first
+  # test "updating a User" do
+  #   visit users_url
+  #   click_on "Edit", match: :first
 
-    fill_in "City", with: @user.city
-    fill_in "Email", with: @user.email
-    fill_in "First Name", with: @user.first_name
-    fill_in "Grad Year", with: @user.grad_year
-    fill_in "Grade", with: @user.grade
-    fill_in "Integer", with: @user.integer
-    fill_in "Last Name", with: @user.last_name
-    fill_in "School", with: @user.school
-    fill_in "State", with: @user.state
-    fill_in "String", with: @user.string
-    click_on "Update User"
+  #   fill_in "City", with: @user.city
+  #   fill_in "Email", with: @user.email
+  #   fill_in "First Name", with: @user.first_name
+  #   fill_in "Grad Year", with: @user.grad_year
+  #   fill_in "Grade", with: @user.grade
+  #   fill_in "Integer", with: @user.integer
+  #   fill_in "Last Name", with: @user.last_name
+  #   fill_in "School", with: @user.school
+  #   fill_in "State", with: @user.state
+  #   fill_in "String", with: @user.string
+  #   click_on "Update User"
 
-    assert_text "User was successfully updated"
-    click_on "Back"
-  end
+  #   assert_text "User was successfully updated"
+  #   click_on "Back"
+  # end
 
-  test "destroying a User" do
-    visit users_url
-    page.accept_confirm do
-      click_on "Destroy", match: :first
-    end
+  # test "destroying a User" do
+  #   visit users_url
+  #   page.accept_confirm do
+  #     click_on "Destroy", match: :first
+  #   end
 
-    assert_text "User was successfully destroyed"
-  end
+  #   assert_text "User was successfully destroyed"
+  # end
 end

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
   
-  def 'should get tasks'
+  test 'should get tasks' do
     # Create a user using a FactoryBot factory
     user = create(:user)
 
