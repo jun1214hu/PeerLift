@@ -10,7 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_015617) do
+ActiveRecord::Schema.define(version: 2018_11_25_014012) do
+
+  create_table "record_logs", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "scholarship_guide_id"
+    t.string "scholarship_name"
+    t.integer "saved"
+    t.integer "completed"
+    t.integer "deleted"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["scholarship_guide_id"], name: "index_record_logs_on_scholarship_guide_id"
+    t.index ["user_id"], name: "index_record_logs_on_user_id"
+  end
+
+  create_table "saved_scholarships", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "scholarship_guide_id"
+    t.string "scholarship_name"
+    t.integer "completed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["scholarship_guide_id"], name: "index_saved_scholarships_on_scholarship_guide_id"
+    t.index ["user_id"], name: "index_saved_scholarships_on_user_id"
+  end
 
   create_table "scholarship_guides", force: :cascade do |t|
     t.string "program_name"
@@ -30,6 +54,7 @@ ActiveRecord::Schema.define(version: 2018_11_08_015617) do
   end
 
   create_table "user_tasks", force: :cascade do |t|
+    t.integer "scholarship_guide_id"
     t.string "scholarship_name"
     t.integer "essay_count"
     t.integer "transcript_count"
@@ -38,7 +63,6 @@ ActiveRecord::Schema.define(version: 2018_11_08_015617) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.integer "scholarship_guide_id"
     t.index ["scholarship_guide_id"], name: "index_user_tasks_on_scholarship_guide_id"
     t.index ["user_id"], name: "index_user_tasks_on_user_id"
   end
@@ -51,6 +75,7 @@ ActiveRecord::Schema.define(version: 2018_11_08_015617) do
     t.string "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "is_admin"
   end
 
 end

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"> Peerlift </a>
+    <a class="navbar-brand" href="/"> Peerlift </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -64,7 +64,7 @@
 
                 <table class="table table-hover table-bordered">
                     <thead>
-                   
+
                         <% if current_user %> <% current_user.attributes.each do |k, v| %>
                         <tr> <th scope="row"><%= k %>:</th> <td> <%= v %> </td> </tr>
 						<% end %>
@@ -73,3 +73,40 @@
                     </thead>
                 </table>
             </div>
+<div>
+  <h4>My Saved Scholarships:</h4>
+
+<table class="table table-hover col-md-6 offset-md-3">
+  <thead>
+    <tr>
+      <<th>User ID</th>
+      <th>Scholarship ID</th>
+      <th>Scholarship Name</th>
+      <th>Completed Status</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @completed_scholarships.each do |savedscholarship| %>
+        <tr>
+          <td><%= savedscholarship.user_id %></td>
+          <td><%= savedscholarship.scholarship_guide_id %></td>
+          <td><a href="/scholarship_guides/<%= savedscholarship.scholarship_guide_id %>"><%= savedscholarship.scholarship_name %></a></td>
+          <td><%= savedscholarship.completed %></td>
+          <td><%= button_to 'Mark as Incomplete', scholarship_not_done_path(user_id: current_user.id, scholarship_guide_id: savedscholarship.scholarship_guide_id), :method => :patch %></td>
+        </tr>
+      <% end %>
+      <% @incomplete_scholarships.each do |savedscholarship| %>
+        <tr>
+          <td><%= savedscholarship.user_id %></td>
+          <td><%= savedscholarship.scholarship_guide_id %></td>
+          <td><a href="/scholarship_guides/<%= savedscholarship.scholarship_guide_id %>"><%= savedscholarship.scholarship_name %></a></td>
+          <td><%= savedscholarship.completed %></td>
+          <td><%= button_to 'Mark as Completed', scholarship_completed_path(user_id: current_user.id, scholarship_guide_id: savedscholarship.scholarship_guide_id), :method => :patch %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+</div>
+
+test
+<%= @scholarship_references_saved %>tested

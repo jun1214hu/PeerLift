@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @scholarship_guides = ScholarshipGuide.find(1)
+    #@scholarship_guides = ScholarshipGuide.find(1)
   end
 
   def help

@@ -1,40 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"> Peerlift </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/scholarship_guides"> Opportunities <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"> About us </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"> Something else </a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    My Account
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="/auth/google_oauth2">Sign in</a>
-                    <a class="dropdown-item" href="/me">My Overview</a>
-                    <a class="dropdown-item" href="#">My Scholarships</a>
-                    <a class="dropdown-item" href="#">My Task</a>
-                    <a class="dropdown-item" href="#">My Files</a>
-                    <a class="dropdown-item"> <%= button_to 'Log Out', destroy_path, method: :post if current_user %> </a>
-                </div>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
-</nav>
+<%= render partial: 'partials/navbar' %>
 
 <div class="container-fluid text-center">
     <img src="../images/frontpage.png" style="height: 25%">
@@ -105,7 +69,7 @@
 <h4> My Overview </h4>
                 <table class="table table-hover table-bordered">
                     <thead>
-                   
+
                         <% if current_user %> <% current_user.attributes.each do |k, v| %>
                         <tr> <th scope="row"><%= k %>:</th> <td> <%= v %> </td> </tr>
             <% end %>
@@ -119,5 +83,12 @@
 </div>
 
 <br>
-
-
+<%= render partial: 'partials/footer' %>
+                       
+Test:
+<% if current_user %>
+  <% current_user.attributes.slice('is_admin').each do |k,v| %>
+  <% if v == 1 %> <%= current_user.attributes.slice('first_name')["first_name"] %> is an admin with an adminid = <%= v %> <p>test html</p>
+  <% end %>
+  <% end %>
+<% end %>
