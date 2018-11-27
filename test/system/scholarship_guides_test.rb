@@ -7,6 +7,8 @@ class ScholarshipGuidesTest < ApplicationSystemTestCase
   end
 
   test "visiting the index" do
+
+  
     visit scholarship_guides_url
     assert_selector "h1", text: "Scholarship Guides"
   end

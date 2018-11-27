@@ -1,14 +1,17 @@
 require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
-  
-  test 'should get tasks' do
-    # Create a user using a FactoryBot factory
-    user = create(:user)
+
+  setup do
+    @user = create(:user)
 
     # "Sign in"
-    sign_in user
+    sign_in @user
 
+  end
+
+  test 'should get tasks' do
+    # Create a user using a FactoryBot factory
     get users_url
     assert_response :success
     assert_includes @response.body, '<!DOCTYPE html>'

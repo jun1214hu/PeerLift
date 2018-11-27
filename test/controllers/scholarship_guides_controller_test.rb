@@ -16,13 +16,19 @@ class ScholarshipGuidesControllerTest < ActionDispatch::IntegrationTest
 # end
 
   setup do
+    #always runs first for all tests
     scholarship_guide = create(:scholarship_guide)
+    user = create(:user)
+    sign_in user
+  end
+
+  teardown do
+    sign_out
+    #runs last for all tests
+    #sign out stubbed user
   end
 
   test "should get index" do
-
-    user = create(:user)
-    sign_in user
     get scholarship_guides_url
     assert_response :success
   end
