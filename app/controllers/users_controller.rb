@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   # define a public page
 
 #check_admin for index and edit. Test by making an admin user
+  before_action :user_is_admin?, only: [:index, :edit, :destroy]
 
   # GET /users
   # GET /users.json
