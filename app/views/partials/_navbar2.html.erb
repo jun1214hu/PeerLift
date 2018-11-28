@@ -1,5 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/"> Peerlift </a>
+    <a class="navbar-brand" href="/">
+      <img src="/media/logo/grayText.png" width="170" alt="">
+    </a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -7,13 +10,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/scholarship_guides"> Opportunities <span class="sr-only">(current)</span></a>
+               <li class="nav-item">
+              <a class="nav-link dropdown-toggle" id="opportunities-nav-button" onclick="alertnow()">Opportunities</a>
+            </li>
+                <!-- <a class="nav-link" href="/scholarship_guides"> Opportunities <span class="sr-only">(current)</span></a> -->
+            <li class="nav-item">
+                <a class="nav-link" href="#"> Our Team </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"> About us </a>
+                <a class="nav-link" href="#"> Get Involved </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"> Something else </a>
+                <a class="nav-link" href="#"> Donate </a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -25,7 +33,8 @@
                     <a class="dropdown-item" href="#">My Scholarships</a>
                     <a class="dropdown-item" href="#">My Task</a>
                     <a class="dropdown-item" href="#">My Files</a>
-                    <a class="dropdown-item"> <%= button_to 'Log Out', destroy_path, method: :post if current_user %> </a>
+                    <a class="dropdown-item"> <%= link_to 'Log Out', destroy_path, method: :post if current_user %> </a>
+                        
                 </div>
             </li>
         </ul>
@@ -35,3 +44,36 @@
         </form>
     </div>
 </nav>
+
+    <div id="opportunities-menu-div" style="background-color:powderblue; display:none">
+                  <div class="col-xs-6" style="float:left;width:15%">
+                    <a href="#">
+                      <i><img src="/media/images/icons/awards.png" width=50px/></i>Awards
+                    </a>
+                  </div>
+                  <div class="col-xs-6" style="float:left;width:15%">
+                    <a href="#">
+                    <i><img src="/media/images/icons/flyins.png" width=50px/></i>College Fly-Ins
+                    </a>
+                  </div>
+                  <div class="col-xs-6" style="float:left;width:15%">
+                    <a href="#">
+                      <i><img src="/media/images/icons/internships.png" width=50px/></i>Internships
+                    </a>
+                  </div>
+                  <div class="col-xs-6" style="float:left;width:15%">
+                    <a href="#">
+                      <i><img src="/media/images/icons/scholarships.png" width=50px/></i>Awards
+                    </a>
+                  </div>
+                  <div class="col-xs-6" style="float:left;width:15%">
+                    <a href="#">
+                    <i><img src="/media/images/icons/studyAbroad.png" width=50px/></i>College Fly-Ins
+                    </a>
+                  </div>
+                  <div class="col-xs-6">
+                    <a href="#">
+                      <i><img src="/media/images/icons/summerPrograms.png" width=50px/></i>Internships
+                    </a>
+                  </div>
+              </div>
