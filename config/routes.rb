@@ -38,4 +38,8 @@ Rails.application.routes.draw do
   patch 'me' => 'me#complete', as: :scholarship_completed
   patch 'me' => 'me#not_done', as: :scholarship_not_done
 
+  post 'me' => 'me#start', as: :scholarship_start
+  delete 'me' => 'me#unsave', as: :unsave_scholarship_me
+
+
 end

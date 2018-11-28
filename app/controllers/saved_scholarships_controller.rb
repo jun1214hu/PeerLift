@@ -26,6 +26,6 @@ class SavedScholarshipsController < ApplicationController
   private
 
   def saved_scholarship_params
-    params.permit(:user_id, :scholarship_guide_id, :scholarship_name, :completed)
+    params.permit(:user_id, :scholarship_guide_id, :scholarship_name)
   end
 end

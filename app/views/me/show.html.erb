@@ -82,31 +82,47 @@
       <<th>User ID</th>
       <th>Scholarship ID</th>
       <th>Scholarship Name</th>
-      <th>Completed Status</th>
     </tr>
   </thead>
   <tbody>
-      <% @completed_scholarships.each do |savedscholarship| %>
+      <% @saved_scholarships.each do |savedscholarship| %>
         <tr>
           <td><%= savedscholarship.user_id %></td>
           <td><%= savedscholarship.scholarship_guide_id %></td>
           <td><a href="/scholarship_guides/<%= savedscholarship.scholarship_guide_id %>"><%= savedscholarship.scholarship_name %></a></td>
-          <td><%= savedscholarship.completed %></td>
-          <td><%= button_to 'Mark as Incomplete', scholarship_not_done_path(user_id: current_user.id, scholarship_guide_id: savedscholarship.scholarship_guide_id), :method => :patch %></td>
-        </tr>
-      <% end %>
-      <% @incomplete_scholarships.each do |savedscholarship| %>
-        <tr>
-          <td><%= savedscholarship.user_id %></td>
-          <td><%= savedscholarship.scholarship_guide_id %></td>
-          <td><a href="/scholarship_guides/<%= savedscholarship.scholarship_guide_id %>"><%= savedscholarship.scholarship_name %></a></td>
-          <td><%= savedscholarship.completed %></td>
-          <td><%= button_to 'Mark as Completed', scholarship_completed_path(user_id: current_user.id, scholarship_guide_id: savedscholarship.scholarship_guide_id), :method => :patch %></td>
+          <td><%= button_to 'Start Scholarship', scholarship_start_path(user_id: current_user.id, scholarship_guide_id: savedscholarship.scholarship_guide_id, scholarship_name: savedscholarship.scholarship_name, status: 1) %></td>
+          <td><%= button_to 'Unsave from my Profile', unsave_scholarship_me_path(user_id: current_user.id, scholarship_guide_id: savedscholarship.scholarship_guide_id), method: :delete %></td>
         </tr>
       <% end %>
   </tbody>
 </table>
 </div>
 
-test
-<%= @scholarship_references_saved %>tested
+<div>
+  <h4>Scholarships I'm Doing:</h4>
+
+<table class="table table-hover col-md-6 offset-md-3">
+  <thead>
+    <tr>
+      <<th>User ID</th>
+      <th>Scholarship ID</th>
+      <th>Scholarship Name</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @started_scholarships.each do |startedscholarship| %>
+        <tr>
+          <td><%= startedscholarship.user_id %></td>
+          <td><%= startedscholarship.scholarship_guide_id %></td>
+          <td><a href="/scholarship_guides/<%= startedscholarship.scholarship_guide_id %>"><%= startedscholarship.scholarship_name %></a></td>
+          <td><%= startedscholarship.status %></td>
+          <td><%= button_to 'Complete Scholarship', scholarship_not_done_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), :method => :patch %></td>
+          <td><%= button_to 'No longer doing this scholarship', scholarship_not_done_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), :method => :patch %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+</div>
+
+<% if @is_there[0] %> Is there is: <%= @is_there %> <% end %>
