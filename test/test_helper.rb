@@ -20,8 +20,10 @@ class ActiveSupport::TestCase
     ApplicationController.any_instance.stubs(:current_user).returns(user)
   end
 
-  def sign_out(user)
-    #mocha mock 
+  def sign_out
+    ApplicationController.any_instance.stubs(:authenticate).returns(false)
+    ApplicationController.any_instance.stubs(:user_signed_in?).returns(false)
+    ApplicationController.any_instance.stubs(:current_user).returns(nil)
   end
 
 end
