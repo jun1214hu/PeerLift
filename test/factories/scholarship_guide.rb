@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :scholarship_guide do
+      id { Faker::Number.number(10) }
       program_name { Faker::HarryPotter.spell }
       image_url { Faker::Internet.url }
       metric_box1 { Faker::HarryPotter.spell }
@@ -15,6 +16,7 @@ FactoryBot.define do
   end
 
   factory :random_scholarship_guide, class: ScholarshipGuide do
+      id { Faker::Number.number(10) }
       program_name { Faker::HarryPotter.spell }
       image_url { Faker::Internet.url }
       metric_box1 { Faker::HarryPotter.spell }
