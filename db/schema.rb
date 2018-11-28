@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_28_191006) do
+ActiveRecord::Schema.define(version: 2018_11_28_204223) do
 
   create_table "record_logs", force: :cascade do |t|
     t.integer "user_id"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2018_11_28_191006) do
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "aasm_state"
     t.index ["scholarship_guide_id"], name: "index_started_scholarships_on_scholarship_guide_id"
     t.index ["status"], name: "index_started_scholarships_on_status"
     t.index ["user_id"], name: "index_started_scholarships_on_user_id"

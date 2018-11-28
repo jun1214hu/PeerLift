@@ -118,7 +118,7 @@
           <td><a href="/scholarship_guides/<%= startedscholarship.scholarship_guide_id %>"><%= startedscholarship.scholarship_name %></a></td>
           <td><%= startedscholarship.status %></td>
           <td><%= button_to 'Complete Scholarship', scholarship_not_done_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), :method => :patch %></td>
-          <td><%= button_to 'No longer doing this scholarship', scholarship_not_done_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), :method => :patch %></td>
+          <td><%= button_to 'No longer doing this scholarship', unsave_scholarship_me_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), method: :delete %></td>
         </tr>
       <% end %>
   </tbody>

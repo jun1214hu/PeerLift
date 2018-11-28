@@ -27,11 +27,11 @@ class MeController < ApplicationController
   end
 
   def unsave
-    @saved_scholarship = SavedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
+    @started_scholarship = StartedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
     @log_save = RecordLog.new(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id], scholarship_name: params[:scholarship_name], deleted: 1)
     @log_save.save!
 
-    @saved_scholarship.destroy
+    @started_scholarship.destroy
     respond_to do |format|
       format.html { redirect_to request.referrer, notice: 'Saved Scholarship was successfully unsaved.' }
     end
