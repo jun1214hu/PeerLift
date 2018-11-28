@@ -6,8 +6,7 @@ class ScholarshipGuidesControllerTest < ActionDispatch::IntegrationTest
   setup do
     #always runs first for all tests
     scholarship_guide = create(:scholarship_guide)
-    user = create(:user)
-    sign_in user
+    
   end
 
   teardown do
@@ -22,24 +21,43 @@ class ScholarshipGuidesControllerTest < ActionDispatch::IntegrationTest
   # before_action :user_is_admin?, except: [:index, :show]
 
   # These pages should open for everyone :index and :show
+  # Others should assert failure
   test "should get index" do
+    user = create(:user)
+    sign_in user
+
     get scholarship_guides_url
     assert_response :success
   end
 
   test "should get show" do
+
+    user = create(:user)
+    sign_in user
+
     get scholarship_guide_url(scholarship_guides)
     assert_response :success
   end
 
   # These pages should only open for admin
-  
+  # :new, :edit, :update, :destory
+  test "should get new" do
+    user = create(:admin_user)
+    sign_in user
+    
 
+    get new_scholarship_guide_url
+    assert_response :success
+  end
 
-  # test "should get new" do
-  #   get new_scholarship_guide_url
-  #   assert_response :success
+  # test "should create scholarship_guide" do
+  #   assert_difference('ScholarshipGuide.count') do
+  #     post scholarship_guides_url, params: { scholarship_guide: { app_count: @scholarship_guide.app_count, description_long: @scholarship_guide.description_long, description_short: @scholarship_guide.description_short, essay_count: @scholarship_guide.essay_count, image_url: @scholarship_guide.image_url, metric_box1: @scholarship_guide.metric_box1, metric_box2: @scholarship_guide.metric_box2, metric_box3: @scholarship_guide.metric_box3, program_name: @scholarship_guide.program_name, resume_count: @scholarship_guide.resume_count, time_estimate: @scholarship_guide.time_estimate, transcript_count: @scholarship_guide.transcript_count } }
   # end
+
+
+
+
 
   # test "should create scholarship_guide" do
   #   assert_difference('ScholarshipGuide.count') do
