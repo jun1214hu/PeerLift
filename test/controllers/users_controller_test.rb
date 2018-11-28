@@ -10,6 +10,12 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     sign_in @user
   end
 
+  teardown do
+    sign_out
+    #runs last for all tests
+    #sign out stubbed user
+  end
+
   # These are available to the user that is not an admin [:update, :show]
  test "should show user" do
 
