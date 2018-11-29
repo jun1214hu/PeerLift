@@ -26,7 +26,18 @@ class MeController < ApplicationController
       end
   end
 
-  def unsave
+  def unsave_from_saved
+    @saved2_scholarship = SavedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
+    @log_save = RecordLog.new(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id], scholarship_name: params[:scholarship_name], deleted: 1)
+    @log_save.save!
+
+    @saved2_scholarship.destroy
+    respond_to do |format|
+      format.html { redirect_to request.referrer, notice: 'Saved Scholarship was successfully unsaved.' }
+    end
+  end
+
+  def unsave_from_started
     @started_scholarship = StartedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
     @log_save = RecordLog.new(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id], scholarship_name: params[:scholarship_name], deleted: 1)
     @log_save.save!
@@ -47,20 +58,6 @@ class MeController < ApplicationController
           format.html { redirect_to request.referrer, notice: 'Scholarship marked as completed.' }
         else
           format.html { redirect_to request.referrer, notice: 'Unable to mark scholarship as completed.' }
-        end
-      end
-    end
-
-    def not_done
-      #@record_log = RecordLog.where("user_id = ? AND scholarship_guide_id = ?", record_log_params[:user_id], record_log_params[:scholarship_guide_id])
-      @not_done_scholarship = SavedScholarship.find_by(user_id: me_params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
-
-      respond_to do |format|
-        if @not_done_scholarship.update(completed: 0)
-          @not_done_scholarship.save
-          format.html { redirect_to request.referrer, notice: 'Scholarship marked as not done.' }
-        else
-          format.html { redirect_to request.referrer, notice: 'Unable to mark scholarship as not done.' }
         end
       end
     end

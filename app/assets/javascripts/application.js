@@ -19,5 +19,4 @@
 //= require popper
 //= require bootstrap
 //= require_tree .
-alert("test " );
 //do I need to include boostrap sprockets?

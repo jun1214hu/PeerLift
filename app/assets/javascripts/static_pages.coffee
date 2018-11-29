@@ -2,10 +2,5 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
-  alert("testing " );
   $('#opportunities-nav-button').click ->
     $('#opportunities-menu-div').toggle()
-
-alertnow = ->
-  alert 'triggered'
-  return
