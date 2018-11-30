@@ -38,8 +38,7 @@ Rails.application.routes.draw do
   patch 'me' => 'me#complete', as: :scholarship_completed
 
   post 'me' => 'me#start', as: :scholarship_start
-  delete 'me' => 'me#unsave_from_started', as: :unsave_scholarship_me_started
-  delete 'me' => 'me#unsave_from_saved', as: :unsave_scholarship_me_saved
-
+  delete 'me1' => 'me#unsave_from_saved', as: :unsave_scholarship_me_saved
+  delete 'me2' => 'me#unstart', as: :unstart
 
 end
