@@ -117,6 +117,16 @@
           <td><%= startedscholarship.scholarship_guide_id %></td>
           <td><a href="/scholarship_guides/<%= startedscholarship.scholarship_guide_id %>"><%= startedscholarship.scholarship_name %></a></td>
           <td><%= startedscholarship.status %></td>
+          <% if startedscholarship.aasm_state == "in_progress" %>
+            <td><%= button_to 'Complete', complete_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id) %></td>
+          <% end %>
+          <% if startedscholarship.aasm_state == "completed" %>
+            <td><%= button_to 'Submit', submit_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id) %></td>
+            <td><%= button_to 'Back to In Progress', incomplete_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id) %></td>
+          <% end %>
+          <% if startedscholarship.aasm_state == "submitted" %>
+            <td><%= button_to 'Unsubmit', unsubmit_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id) %></td>
+          <% end %>
           <td><%= button_to 'No longer doing this scholarship', unstart_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), method: :delete %></td>
         </tr>
       <% end %>

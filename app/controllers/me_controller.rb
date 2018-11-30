@@ -48,19 +48,29 @@ class MeController < ApplicationController
     end
   end
 
-    def complete
-      #@record_log = RecordLog.where("user_id = ? AND scholarship_guide_id = ?", record_log_params[:user_id], record_log_params[:scholarship_guide_id])
-      @complete_scholarship = SavedScholarship.find_by(user_id: me_params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
-
-      respond_to do |format|
-        if @complete_scholarship.update(completed: 1)
-          @complete_scholarship.save
-          format.html { redirect_to request.referrer, notice: 'Scholarship marked as completed.' }
-        else
-          format.html { redirect_to request.referrer, notice: 'Unable to mark scholarship as completed.' }
-        end
-      end
+  def complete
+    scholarship = StartedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
+    scholarship.complete!
+    respond_to do |format|
+      format.html { redirect_to request.referrer, notice: 'Completed!' }
     end
+  end
+
+  def submit
+    scholarship = StartedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
+    scholarship.submit!
+    respond_to do |format|
+      format.html { redirect_to request.referrer, notice: 'Completed!' }
+    end
+  end
+
+  def incomplete
+    scholarship = StartedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
+    scholarship.incomplete!
+    respond_to do |format|
+      format.html { redirect_to request.referrer, notice: 'Back to In Progress!' }
+    end
+  end
 
     private
 
