@@ -1,18 +1,21 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate
-  
-  # move this to application 
+
+  # move this to application
   # change to is_authenticated
-  before_action :check_user
+  before_action :check_user, only: [:show, :edit, :update, :destroy]
   # :unless => :public_case
   # make a new function :public_case
-  # define a public page 
+  # define a public page
 
+#check_admin for index and edit. Test by making an admin user
+  before_action :user_is_admin?, only: [:index, :edit, :destroy]
 
   # GET /users
   # GET /users.json
   def index
+    #only admins should be able to do this
     @users = User.all
   end
 
@@ -29,6 +32,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    #only admins should be able to do this
   end
 
   # POST /users
@@ -72,7 +76,7 @@ class UsersController < ApplicationController
   end
 
   private
-  
+
 # check before action, except index and new, check_user is current user
 
 # should be protected
@@ -80,11 +84,11 @@ class UsersController < ApplicationController
 # Add --> def public_page
 # true if ['home', 'about'].includes?(request.route)
     def check_user
-      if current_user != @user
+      if current_user != @user #or if current_user is not an admin
         redirect_to root_url, alert: "Sorry, This Profile belongs to someone else !"
       end
     end
-    
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])

@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2018_11_30_011835) do
     t.index ["user_id"], name: "index_file_uploads_on_user_id"
   end
 
+
   create_table "record_logs", force: :cascade do |t|
     t.integer "user_id"
     t.integer "scholarship_guide_id"

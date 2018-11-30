@@ -37,6 +37,14 @@ Rails.application.routes.draw do
   delete 'saved_scholarship' => 'saved_scholarships#destroy', as: :unsave_scholarship
 
   patch 'me' => 'me#complete', as: :scholarship_completed
-  patch 'me' => 'me#not_done', as: :scholarship_not_done
+
+  post 'me' => 'me#start', as: :scholarship_start
+  delete 'me1' => 'me#unsave_from_saved', as: :unsave_scholarship_me_saved
+  delete 'me2' => 'me#unstart', as: :unstart
+
+  post 'me3' => 'me#complete', as: :complete
+  post 'me4' => 'me#incomplete', as: :incomplete
+  post 'me5' => 'me#submit', as: :submit
+  post 'me6' => 'me#unsubmit', as: :unsubmit
 
 end

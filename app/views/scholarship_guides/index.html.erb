@@ -1,11 +1,87 @@
 <%= render partial: 'partials/navbar' %>
 
-<p id="notice"><%= notice %> </p>
+<div id="filter-menu">
+      <i class="fa fa-times"></i>
+      <div class="container">
+        <h2>Scholarships</h2>
+        <form>
+          <fieldset>
+            <h3>Grade:</h3>
+            <hr>
+            <input type="radio" name="grade" value="9" id="nine"><label for="nine"><h4>9</h4></label>
+            <input type="radio" name="grade" value="10" id="ten"><label for="ten"><h4>10</h4></label>
+            <input type="radio" name="grade" value="11" id="eleven"><label for="eleven"><h4>11</h4></label>
+            <input type="radio" name="grade" value="12" id="twelve"><label for="twelve"><h4>12</h4></label>
+          </fieldset>
+          <fieldset>
+            <h3>Sort By:</h3>
+            <hr>
+            <div class="column-wrapper">
+              <ul>
+                <li><label for="deadline">Deadline</label></li>
+              </ul>
+              <ul>
+                <li><input type="checkbox" name="sortDate" value="deadline" id="deadline"><label for="deadline"><i class="fa fa-check"></i></label></li>
+              </ul>
+            </div>
+          </fieldset>
+          <fieldset>
+            <h3>Tags:</h3>
+            <hr>
+            <div class="column-wrapper">
+              <ul>
+                <li><label for="diversity"><span>Diversity </span></label></li>
+              <li><label for="low-income"><span>Low-Income </span></label></li>
+              <li><label for="service"><span>Service </span></label></li>
+                <li><label for="stem">STEM</label></li>
+        <li><label for="daca"><span>DACA </span></label></li>
+              </ul>
+              <ul>
+                <li><input type="checkbox" name="tags[]" value="diversity" id="diversity"><label for="diversity"><i class="fa fa-check"></i></label></li>
+                <li><input type="checkbox" name="tags[]" value="low-income" id="low-income"><label for="low-income"><i class="fa fa-check"></i></label></li>
+              <li><input type="checkbox" name="tags[]" value="service" id="service"><label for="service"><i class="fa fa-check"></i></label></li>
+              <li><input type="checkbox" name="tags[]" value="stem" id="stem"><label for="stem"><i class="fa fa-check"></i></label></li>
+        <li><input type="checkbox" name="tags[]" value="daca" id="daca"><label for="daca"><i class="fa fa-check"></i></label></li>
+              </ul>
+            </div>
+          </fieldset>
+          <input type="button" name="SubmitButton" value="Submit">
+        </form>
+      </div>
+    </div>
 
-<div class="container-fluid text-center">
-<h1> Scholarship Guides </h1>
 
-<table class="table table-hover col-md-6 offset-md-3">
+
+<div class="opportunity-alt">
+<div class="container main">
+  <h2 class="oppName">US Air Force ROTC</h2><i class="fa fa-plus-circle addDesktop" id="USAirForceROTC" style="display: inline;"></i>
+  <br>
+  <br>
+  <div class="flex-container">
+    <div class="grade">
+      <h3>11, 12</h3>
+    </div>
+    <div class="selectivity">
+      <h3>$18,000</h3>
+    </div>
+    <div class="deadline">
+      <h3>December 1, 2018</h3>
+    </div><input type="hidden" class="metricDate" value="2017-12-01"></div>
+    <div class="info">
+      <p>Air Force ROTC is a college program offered at more than 1,100 colleges and universities across the United States. It prepares you to become an Air Force Officer while earning a college degree. Applicants must complete a physical fitness test, a description of extracurricular activities, and an interview with Air Force personnel. Scholarships often vary by the school you enroll in.</p>
+      <h3>See More</h3>
+      <h3>See Less</h3>
+    </div>
+    <br>
+    <h2>
+      <a class="applyLink" id="USAirForceROTC" href="https://www.afrotc.com/scholarships/application" target="_blank">Apply Now<i class="fa fa-chevron-circle-right"></i></a></h2></div>
+    </div>
+
+
+ 
+
+
+  <table class="table table-hover col-md-6 offset-md-3">
   <thead>
     <tr>
       <<th>Program name</th>
@@ -51,6 +127,3 @@
   </tbody>
 </table>
 
-</div>
-
-<br>
