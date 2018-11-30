@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :file_uploads
   get 'home/index', as: 'home'
   get 'login', to: redirect('/auth/google_oauth2'), as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'

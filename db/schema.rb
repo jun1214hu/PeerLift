@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_25_014012) do
+ActiveRecord::Schema.define(version: 2018_11_30_011835) do
+
+  create_table "file_uploads", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "given_name"
+    t.string "attachment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_file_uploads_on_user_id"
+  end
 
   create_table "record_logs", force: :cascade do |t|
     t.integer "user_id"
@@ -21,6 +30,7 @@ ActiveRecord::Schema.define(version: 2018_11_25_014012) do
     t.integer "deleted"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "started"
     t.index ["scholarship_guide_id"], name: "index_record_logs_on_scholarship_guide_id"
     t.index ["user_id"], name: "index_record_logs_on_user_id"
   end
@@ -29,7 +39,7 @@ ActiveRecord::Schema.define(version: 2018_11_25_014012) do
     t.integer "user_id"
     t.integer "scholarship_guide_id"
     t.string "scholarship_name"
-    t.integer "completed"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["scholarship_guide_id"], name: "index_saved_scholarships_on_scholarship_guide_id"
@@ -51,6 +61,19 @@ ActiveRecord::Schema.define(version: 2018_11_25_014012) do
     t.string "time_estimate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "started_scholarships", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "scholarship_guide_id"
+    t.string "scholarship_name"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "aasm_state"
+    t.index ["scholarship_guide_id"], name: "index_started_scholarships_on_scholarship_guide_id"
+    t.index ["status"], name: "index_started_scholarships_on_status"
+    t.index ["user_id"], name: "index_started_scholarships_on_user_id"
   end
 
   create_table "user_tasks", force: :cascade do |t|
