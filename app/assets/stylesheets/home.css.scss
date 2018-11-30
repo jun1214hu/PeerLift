@@ -39,3 +39,6293 @@ margin:0px;
 #videoMessage img {
 	width: 70%;
 }
+
+
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700");
+@font-face {
+  font-family: 'League Spartan';
+  src: url("media/fonts/leaguespartan.otf"); }
+@font-face {
+    font-family: 'AvenirNextLTPro-Regular';
+    src: url("media/fonts/AvenirNextLTPro-Regular.otf"); }
+@font-face {
+    font-family: 'AvenirNextLTPro-Medium';
+    src: url("media/fonts/AvenirNextLTPro-Medium.otf"); }
+@font-face {
+    font-family: 'AvenirNextLTPro-Heavy';
+    src: url("media/fonts/AvenirNextLTPro-Heavy.otf"); }
+@font-face {
+    font-family: 'AvenirNextLTPro-Demi';
+    src: url("media/fonts/AvenirNextLTPro-Demi.otf"); }
+@font-face {
+    font-family: 'AvenirNextLTPro-Thin';
+    src: url("media/fonts/AvenirNextLTPro-Thin.otf"); }
+@font-face {
+    font-family: 'AvenirNextLTPro-Bold';
+    src: url("media/fonts/AvenirNextLTPro-Bold.otf"); }
+/* Color Palette */
+html, body, div, p, h1, h2, h3, h4, h5, h6, #navbar ul, #opportunity-navbar ul, .footer-section .socialmedia, .footer-nav ul, .member-general, sam, .sravya, .kassen, .jerry, .julie, .jorge, .praneeth, .micheal, .anitra {
+  padding: 0px;
+  margin: 0px; }
+
+div, #opportunities form, #opportunities form .column-wrapper > *, #opportunities form .footer-nav-wrapper > *, #opportunities form select, #opportunities form textarea {
+  box-sizing: border-box; }
+
+.header-section, .team-header-section, .getinvolved-header-section, .donate-header-section, .index-header-section {
+  height: auto;
+  min-height: 100vh;
+  width: auto;
+  min-width: 100vw; }
+
+html, body, #opportunities form .column-wrapper input[type="text"], #opportunities form .footer-nav-wrapper input[type="text"], #opportunities form select, #opportunities form textarea {
+ }
+  @media screen and (min-width: 760px) {
+    html, body, #opportunities form .column-wrapper input[type="text"], #opportunities form .footer-nav-wrapper input[type="text"], #opportunities form select, #opportunities form textarea {
+  } }
+  @media screen and (min-width: 1200px) {
+    html, body, #opportunities form .column-wrapper input[type="text"], #opportunities form .footer-nav-wrapper input[type="text"], #opportunities form select, #opportunities form textarea {
+   } }
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+html, body {
+  font-family: "Nunito Sans", sans-serif; 
+  font-weight: 400; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "League Spartan", sans-serif; 
+  font-weight: 400; }
+
+a {
+  color: #23282d;
+  text-decoration: none; }
+
+a:hover {
+  color: #6393ce; }
+
+button:focus {
+  outline: 0; }
+
+#opportunity-navbar {
+  position: relative;
+  top: 0px;
+  background-color: #F2F1EF;
+  height: 100px;
+  width: 100%;
+  padding: 25px 12.5px;
+  z-index: 101; }
+  #navbar .container, #opportunity-navbar .container {
+    height: 100%;
+    text-align: right; }
+    #navbar .container > a, #opportunity-navbar .container > a {
+      display: inline-block;
+      width: auto;
+      height: 100%;
+      padding: 0px 12.5px 25px 12.5px;
+      font-size: 30px;
+      color: #6393ce; }
+    #navbar .container > a:first-child, #opportunity-navbar .container > a:first-child {
+      float: left; }
+  #navbar img, #opportunity-navbar img {
+    max-height: 100%; }
+  @media screen and (max-width: 1023px) {
+    #navbar nav, #opportunity-navbar nav {
+      display: none; } }
+  @media screen and (min-width: 1024px) {
+    #navbar nav, #opportunity-navbar nav {
+      display: inline-block; } }
+  #navbar ul, #opportunity-navbar ul {
+    list-style-type: none;
+    text-align: center; }
+    @media screen and (max-width: 1023px) {
+      #navbar ul li, #opportunity-navbar ul li {
+        display: block;
+        padding: 10px 0px; } }
+    @media screen and (min-width: 1024px) {
+      #navbar ul li, #opportunity-navbar ul li {
+        display: inline-block;
+        font-size: 20px;
+        padding: 15px 1vw; } }
+
+#opportunity-navbar {
+  position: fixed; }
+
+#menu-button i {
+  vertical-align: bottom; }
+@media screen and (min-width: 1024px) {
+  #menu-button {
+    display: none !important; } }
+
+@media screen and (max-width: 1024px) {
+  #opportunities-dropdown {
+    display: none !important; } }
+@media screen and (min-width: 1024px) {
+  #opportunities-dropdown {
+    display: inline-block !important; } }
+
+#opportunities-menu {
+  padding: 2.5vh 0px; }
+  #opportunities-menu a {
+    display: block;
+    float: left;
+    box-sizing: border-box; }
+    #opportunities-menu a i {
+      display: block;
+      background-color: #6393ce;
+      color: white; 
+      max-height: 55px; }
+  #opportunities-menu a:hover {
+    color: #6393ce; }
+  #opportunities-menu a:hover > i {
+    background-color: #4675b8; }
+  @media screen and (max-width: 1024px) {
+    #opportunities-menu a {
+      padding: 2.5vh 7.5px !important;
+      font-size: 12px; }
+      #opportunities-menu a i {
+        padding: 1vh 15px 2vh 15px;
+        margin: 0px auto 1.5vh auto;
+        width: calc(100% - 40px);
+        border-radius: 7.5px;
+        font-size: 40px; }
+        #opportunities-menu a i img {
+          max-height: 60px; } }
+  @media screen and (min-width: 1024px) {
+    #opportunities-menu {
+      display: none;
+      background-color: #4b4b4b;
+      position: absolute;
+      width: 100vw;
+      top: 100px;
+      right: 0px;
+      padding: calc(1vh + 1vw) 0px; }
+      #opportunities-menu .column-wrapper, #opportunities-menu .footer-nav-wrapper {
+        margin: 0px -1.5px;
+        display: inline-block;
+        width: 40%; }
+      #opportunities-menu a {
+        font-size: 1vw;
+        color: white; }
+        #opportunities-menu a i {
+          font-size: 5vw;
+          margin: auto;
+          padding: 1vw 0 3vw 0;
+          border-radius: .5vw;
+          margin-bottom: calc(1vh + 1vw); }
+          #opportunities-menu a i img {
+            max-height: 75px; } }
+.opportunity-icon > div > div {
+  height: 85%;
+  margin: auto;
+  padding-top: 15%;
+}
+.awards-img {
+  content: url(media/images/icons/awards.png);
+}
+.flyins-img {
+  content: url(media/images/icons/flyins.png);
+}
+.internships-img {
+  content: url(media/images/icons/internships.png);
+}
+.scholarships-img {
+  content: url(media/images/icons/scholarships.png);
+}
+.studyabroad-img {
+  content: url(media/images/icons/studyAbroad.png);
+}
+.summerprograms-img {
+  content: url(media/images/icons/summerPrograms.png);
+}
+
+.navbar-margin {
+  margin-top: 100px; }
+
+.display-menu {
+  display: block !important;
+  height: calc(100vh - 100px);
+  width: 100vw;
+  background-color: #F2F1EF;
+  margin-left: -12.5px !important;
+  overflow-y: scroll; }
+  @media screen and (min-width: 760px) {
+    .display-menu {
+      margin: 0px calc(-5vw) !important; } }
+
+.header-section, .team-header-section, .getinvolved-header-section, .donate-header-section, .index-header-section {
+  color: white;
+  padding-top: 37.5vh;
+  position: relative; }
+  @media screen and (min-width: 760px) {
+    .header-section, .team-header-section, .getinvolved-header-section, .donate-header-section, .index-header-section {
+      padding-top: 45vh; } }
+
+@supports (display: grid) {
+  .header-section, .team-header-section, .getinvolved-header-section, .donate-header-section, .index-header-section {
+    padding-top: 0px;
+    display: grid;
+    align-content: center; } }
+.content-section, .opportunities, .mission, .picture, .no-picture, .coalition, .ambassadors, .grassroots, .representatives, .pageviews, .donation, .pledge, .opportunity, .opportunity-alt {
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding: 10vh 15px;
+  text-align: center;
+  background-color: white;
+  color: #4b4b4b; }
+
+.container {
+  margin: auto;
+  width: 100%;
+  max-width: 100%;
+  text-align: center; }
+  @media screen and (min-width: 760px) {
+    .container {
+      max-width: 90vw; } }
+  @media screen and (min-width: 1200px) {
+    .container {
+      max-width: 80vw; } }
+  .container > img {
+    margin-top: 3.5vh;
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: cover; }
+  .container h1 {
+    font-size: calc(3vh + 3vw);
+    padding: calc(0.25 * (3vh + 3vw)); }
+    @media screen and (min-width: 760px) {
+      .container h1 {
+        padding: calc(0.25 * (2vh + 2vw));
+        font-size: calc(2vh + 2vw); } }
+  .container h2 {
+    font-size: calc(2vh + 2vw);
+    padding: calc(0.33 * (2vh + 2vw)); }
+    @media screen and (min-width: 760px) {
+      .container h2 {
+        padding: calc(0.33 * (1.25vh + 1.25vw));
+        font-size: calc(1.25vh + 1.25vw); } }
+  .container h3 {
+    font-size: calc(1vh + 1.5vw);
+    padding: calc(0.5 * (1.5vh + 1.5vw)); }
+    @media screen and (min-width: 760px) {
+      .container h3 {
+        padding: calc(0.5 * (1vh + 1vw));
+        font-size: calc(1vh + 1vw); } }
+
+.scroll-arrow {
+  font-size: 50px;
+  color: inherit;
+  position: absolute;
+  bottom: 5vh; 
+  left: 50%; }
+
+.scroll-arrow:hover {
+  color: #4b4b4b; }
+
+.column-wrapper, .footer-nav-wrapper {
+  width: 100%;
+  overflow: hidden; }
+  .column-wrapper > div, .footer-nav-wrapper > div {
+    float: left; }
+
+.n-cols-2, .footer-nav, fieldset ul {
+  padding: 15px;
+  width: 50% !important; }
+
+.n-cols-3, #opportunities-menu a {
+  padding: 15px;
+  width: 33.3333333333% !important; }
+
+.n-cols-2-tablet, #opportunities form .column-wrapper h4, #opportunities form .footer-nav-wrapper h4, #opportunities form .column-wrapper input[type="text"], #opportunities form .footer-nav-wrapper input[type="text"], .tenet {
+  padding: 15px;
+  width: 100%; }
+  @media screen and (min-width: 760px) {
+    .n-cols-2-tablet, #opportunities form .column-wrapper h4, #opportunities form .footer-nav-wrapper h4, #opportunities form .column-wrapper input[type="text"], #opportunities form .footer-nav-wrapper input[type="text"], .tenet {
+      width: 50% !important; } }
+
+.n-cols-3-tablet, .opportunity-box, .member {
+  padding: 15px;
+  width: 100%; }
+  @media screen and (min-width: 760px) {
+    .n-cols-3-tablet, .opportunity-box, .member {
+      width: 33.3333333333% !important; } }
+
+.n-cols-6-tablet {
+  padding: 15px;
+  width: 100%; }
+  @media screen and (min-width: 760px) {
+    .n-cols-6-tablet {
+      width: 16.6666666667% !important; } }
+
+.footer-section {
+  padding: 5vh 15px;
+  background-color: #23282d; }
+
+#msFooter {
+    background-color: #8A8A8A;
+    padding: 0;
+    width: 100vw;
+}
+@media screen and (max-width: 760px) {
+    #msFooter{
+        width: 100vw;
+    }
+}
+
+.team-header-section {
+  background-image: url("media/backgrounds/team.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.getinvolved-header-section {
+  background-image: url("media/backgrounds/getinvolved.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.donate-header-section {
+  background-image: url("media/backgrounds/donate.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.opportunities {
+  background: white;
+  color: #737373; }
+  .opportunities h1, .opportunities h2, .opportunities h3, .opportunities h4, .opportunities h5, .opportunities h6 {
+    color: #4b4b4b; }
+
+.mission {
+  background: white;
+  color: white; }
+  .mission h1, .mission h2, .mission h3, .mission h4, .mission h5, .mission h6 {
+    color: white; }
+
+.picture {
+  background: white;
+  color: #4b4b4b; }
+  .picture h1, .picture h2, .picture h3, .picture h4, .picture h5, .picture h6 {
+    color: #4b4b4b; }
+
+.no-picture {
+  background: white;
+  color: #4b4b4b; }
+  .no-picture h1, .no-picture h2, .no-picture h3, .no-picture h4, .no-picture h5, .no-picture h6 {
+    color: #4b4b4b; }
+
+.coalition {
+  background: white;
+  color: #737373; }
+  .coalition h1, .coalition h2, .coalition h3, .coalition h4, .coalition h5, .coalition h6 {
+    color: #4b4b4b; }
+
+.ambassadors {
+  background: #6393ce;
+  color: white; }
+  .ambassadors h1, .ambassadors h2, .ambassadors h3, .ambassadors h4, .ambassadors h5, .ambassadors h6 {
+    color: white; }
+
+.grassroots {
+  background: #66cc99;
+  color: white; }
+  .grassroots h1, .grassroots h2, .grassroots h3, .grassroots h4, .grassroots h5, .grassroots h6 {
+    color: white; }
+
+.representatives {
+  background: white;
+  color: #737373; }
+  .representatives h1, .representatives h2, .representatives h3, .representatives h4, .representatives h5, .representatives h6 {
+    color: #4b4b4b; }
+
+.pageviews {
+  background: #23282d;
+  color: white; }
+  .pageviews h1, .pageviews h2, .pageviews h3, .pageviews h4, .pageviews h5, .pageviews h6 {
+    color: white; }
+
+.donation {
+  background: #6393ce;
+  color: white; }
+  .donation h1, .donation h2, .donation h3, .donation h4, .donation h5, .donation h6 {
+    color: white; }
+
+.pledge {
+  background: white;
+  color: #737373; }
+  .pledge h1, .pledge h2, .pledge h3, .pledge h4, .pledge h5, .pledge h6 {
+    color: #4b4b4b; }
+
+.awards-menu-icon {
+  color: white; }
+
+.flyins-menu-icon {
+  color: white; }
+
+.internships-menu-icon {
+  color: white; }
+
+.scholarships-menu-icon {
+  color: white; }
+
+.studyabroad-menu-icon {
+  color: white; }
+
+.summerprograms-menu-icon {
+  color: white; }
+
+.footer-section {
+  color: #aaa; }
+  .footer-section a {
+    color: white; }
+  .footer-section .socialmedia {
+    list-style-type: none; }
+    .footer-section .socialmedia a {
+      cursor: inherit; }
+    .footer-section .socialmedia a *:hover {
+      color: #6393ce;
+      cursor: pointer; }
+    .footer-section .socialmedia li {
+      display: inline-block;
+      height: 10vh;
+      padding: 0px 1vh;
+      font-size: 5vh; }
+      .footer-section .socialmedia li i {
+        position: relative;
+        bottom: 33%; }
+      .footer-section .socialmedia li img {
+        height: 100%; }
+  .footer-section p {
+    font-size: 12px; }
+    @media screen and (min-width: 760px) {
+      .footer-section p {
+        font-size: 20px; } }
+
+.footer-nav-wrapper {
+  margin: -2.5vh auto 2.5vh auto; }
+  @media screen and (min-width: 760px) {
+    .footer-nav-wrapper {
+      width: 50%;
+      max-width: 500px; } }
+
+.footer-nav {
+  text-align: left;
+  box-sizing: border-box;
+  float: left;
+  font-size: 12px; }
+  @media screen and (min-width: 760px) {
+    .footer-nav {
+      font-size: 20px; } }
+  .footer-nav ul {
+    list-style-type: none; }
+    .footer-nav ul > li {
+      font-weight: bold;
+      letter-spacing: 0.5px; }
+  .footer-nav a:hover {
+    color: #6393ce; }
+
+/* Index */
+.index-header-section > video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  z-index: 10;
+  margin-top: -37.5vh; }
+  @media screen and (min-width: 760px) {
+    .index-header-section > video {
+      margin-top: -45vh; } }
+.index-header-section > .container {
+  margin: auto;
+  z-index: 11; }
+  .index-header-section > .container > img {
+    height: 10vh; }
+  .index-header-section > .container h2 {
+    font-family: "Nunito Sans";
+    padding: 2.5vh 0px; }
+
+@supports (display: grid) {
+  .index-header-section > video {
+    margin-top: 0px; 
+    z-index: -100; } }
+.opportunity-box {
+  padding: calc(0.75vw + 0.75vh) 0px; }
+  .opportunity-box > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box; }
+
+.opportunity-box:hover {
+  background-color: #eee; }
+  .opportunity-box:hover > a > div {
+    border-color: #4675b8; }
+    .opportunity-box:hover > a > div > div {
+      background-color: #4675b8; }
+
+.opportunity-icon {
+  margin: 2.5vh auto;
+  width: 40vw;
+  height: 40vw;
+  font-size: 20vw;
+  border-radius: 50%;
+  border: 2.5px solid #6393ce;
+  background-color: transparent;
+  padding: 5px; }
+  .opportunity-icon > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; }
+  .opportunity-icon > i {
+    margin-top: 10vw; }
+  @media screen and (min-width: 760px) {
+    .opportunity-icon {
+      width: 15vw;
+      height: 15vw;
+      font-size: 7.5vw; }
+      .opportunity-icon > i {
+        margin-top: 3.75vw; } }
+  @media screen and (min-width: 1024px) {
+    .opportunity-icon {
+      width: 10vw;
+      height: 10vw;
+      font-size: 5vw; }
+      .opportunity-icon > i {
+        margin-top: 2.5vw; } }
+
+.opportunity-icon-general, .awards-icon, .flyins-icon, .internships-icon, .scholarships-icon, .studyabroad-icon, .summerprograms-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #6393ce;
+  color: white;
+  font-size: inherit; }
+  .opportunity-icon-general > i, .awards-icon > i, .flyins-icon > i, .internships-icon > i, .scholarships-icon > i, .studyabroad-icon > i, .summerprograms-icon > i {
+    margin-top: 25%; }
+
+#opportunities button {
+  background-color: #6393ce;
+  border: 0;
+  border-radius: 2vh;
+  margin: 10vh 0px 5vh 0px;
+  padding: 2vh 4vh; }
+  #opportunities button h3 {
+    color: white; }
+
+#opportunities button:hover {
+  cursor: pointer; }
+
+#opportunities form {
+  display: none;
+  position: relative;
+  background-color: #F2F1EF;
+  border-radius: 2.5vh;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 15px;
+  padding-top: 22.5px; }
+  #opportunities form > * {
+    width: 100%;
+    margin-top: 2.5vh; }
+  #opportunities #dropdowns > * {
+    width: 100%;
+    margin-top: 2.5vh; }
+  #opportunities form h4 {
+    text-align: left;
+    color: #737373; }
+  #opportunities form button {
+    width: auto;
+    margin-bottom: 2.5vh; }
+  #opportunities form .fa-times, #opportunities form span {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    width: auto;
+    font-size: 35px;
+    color: #ccc; }
+  #opportunities form span {
+    font-size: 20px;
+    top: auto;
+    bottom: 0px; }
+  #opportunities form .fa-times:hover, #opportunities form span:hover {
+    cursor: pointer;
+    color: #737373; }
+  #opportunities form .column-wrapper, #opportunities form .footer-nav-wrapper {
+    margin-top: 0px; }
+    #opportunities form .column-wrapper > *, #opportunities form .footer-nav-wrapper > * {
+      float: left; }
+    #opportunities form .column-wrapper h4, #opportunities form .footer-nav-wrapper h4 {
+      padding-left: 0px; }
+      @media screen and (min-width: 760px) {
+        #opportunities form .column-wrapper h4, #opportunities form .footer-nav-wrapper h4 {
+          width: 30% !important; } }
+    #opportunities form .column-wrapper input[type="text"], #opportunities form .footer-nav-wrapper input[type="text"] {
+      display: block;
+      background-color: inherit;
+      border: 0;
+      border-bottom: 2px solid #ccc;
+      color: #737373;
+      padding: 5px; }
+      @media screen and (min-width: 760px) {
+        #opportunities form .column-wrapper input[type="text"], #opportunities form .footer-nav-wrapper input[type="text"] {
+          width: 70% !important; } }
+    #opportunities form .column-wrapper input[type="text"]:focus, #opportunities form .footer-nav-wrapper input[type="text"]:focus {
+      outline: 0;
+      border-bottom: 2px solid #6393ce; }
+  #opportunities form select, #opportunities form textarea {
+    border: 2px solid #ccc;
+    border-radius: 1.5vh;
+    color: #4b4b4b;
+    padding: 0.5vh 1vh; }
+  #opportunities form select {
+    border: 1px solid #ccc; }
+  #opportunities form textarea {
+    height: auto;
+    min-height: 20vh; }
+  #opportunities form select:focus, #opportunities form textarea:focus {
+    outline: 0;
+    border: 2px solid #6393ce; }
+  @media screen and (min-width: 760px) {
+    #opportunities form {
+      padding: 5vh;
+      padding-top: 7.5vh; }
+      #opportunities form .fa-times {
+        top: 2vh;
+        right: 5vh; }
+      #opportunities form span {
+        bottom: 2vh;
+        right: 5vh; }
+      #opportunities form input[type="text"] {
+        margin-top: 10px; } }
+
+.mission {
+  height: calc(100vh - 100px);
+  padding: 0px; }
+
+.slide, #slide-left, #slide-right {
+  display: block;
+  position: absolute;
+  z-index: 11;
+  height: calc(100vh - 100px);
+  padding: 5vw;
+  box-sizing: border-box;
+  font-size: 50px; }
+  .slide > i, #slide-left > i, #slide-right > i {
+    position: relative;
+    top: calc(50% - 25px); }
+
+.slide:hover, #slide-left:hover, #slide-right:hover {
+  color: #23282d; }
+
+#slide-left {
+  left: 0px; }
+
+#slide-right {
+  right: 0px; }
+
+.slider, .peersoverprofit, .studentdriven, .uniqueapproach, .provencontent {
+  display: none;
+  height: 100%; }
+  .slider .container, .peersoverprofit .container, .studentdriven .container, .uniqueapproach .container, .provencontent .container {
+    height: 100%;
+    padding: 0px 15px; }
+
+.peersoverprofit {
+  background-color: #6393ce; }
+
+.studentdriven {
+  background-color: #ff9942; }
+
+.uniqueapproach {
+  background-color: #2ab88e; }
+
+.provencontent {
+  background-color: #ff605d; }
+
+.peersoverprofit {
+  display: block; }
+
+.mission-graphics {
+  display: grid;
+  height: 40%;
+  align-content: center; }
+  .mission-graphics i {
+    font-size: 34vh;
+    display: block; }
+  .mission-graphics h1 {
+    font-size: 17vh;
+    margin-bottom: -5vh; }
+  .mission-graphics h2 {
+    font-size: 3.5vh; }
+
+.mission-text {
+  height: 30%; }
+  @media screen and (min-width: 760px) {
+    .mission-text h1 {
+      font-size: 5vh; }
+    .mission-text h2 {
+      font-size: 3.5vh; }
+    .mission-text p {
+      font-size: 2.5vh; } }
+  @supports not (display: grid) {
+    .mission-text {
+      padding-top: 8.5%; }
+      @media screen and (min-width: 760px) {
+        .mission-text {
+          padding-top: 5%; } } }
+  @supports (display: grid) {
+    .mission-text {
+      display: grid;
+      align-content: center; } }
+
+/* Our Team */
+.member h5 {
+  color: #6393ce; }
+.member p {
+  font-size: .65em;
+  margin-top: 2.5px; }
+@media screen and (max-width: 760px) {
+  .member h5 {
+    font-size: 16px; }
+  .member h6 {
+    font-size: 14px; }
+  .member p {
+    font-size: 12px; } }
+
+@supports (display: flex) {
+  .member > div {
+    display: flex;
+    align-items: center;
+    justify-content: center; } }
+.member > div a {
+  color: white;
+  font-size: 5vh; }
+  @media screen and (min-width: 760px) {
+    .member > div a {
+      font-size: 3.5vh; } }
+.member > div a:hover, .member > div a:active {
+  color: white; }
+.member > div i {
+  display: none;
+  padding: 2.5vh; }
+  @media screen and (min-width: 760px) {
+    .member > div i {
+      padding: 1vh; } }
+.member > div .fa-twitter:hover, .member > div .fa-twitter:active {
+  color: #0084b4; }
+.member > div .fa-facebook:hover, .member > div .fa-facebook:active {
+  color: #3B5998; }
+.member > div .fa-linkedin:hover, .member > div .fa-linkedin:active {
+  color: #0077B5; }
+.member > div .fa-instagram:hover, .member > div .fa-instagram:active {
+  color: #4675b8; }
+.member > div .fa-envelope:hover, .member > div .fa-envelope:hover {
+  color: #4675b8; }
+.member > div:hover i, .member > div:active i {
+  display: inline-block; }
+
+.member-general, .sam, .sravya, .kassen, .jerry, .julie, .jorge, .praneeth, .micheal, .anitra {
+  margin: 2.5vh auto;
+  width: 80vw;
+  height: 80vw;
+  font-size: 40vw;
+  border-radius: 50%;
+  border: 10px solid #eee; }
+  .member-general > img, .sam > img, .sravya > img, .kassen > img, .jerry > img, .julie > img, .jorge > img, .praneeth > img, .micheal > img, .anitra > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; }
+  .member-general > i, .sam > i, .sravya > i, .kassen > i, .jerry > i, .julie > i, .jorge > i, .praneeth > i, .micheal > i, .anitra > i {
+    margin-top: 20vw; }
+  @media screen and (min-width: 760px) {
+    .member-general, .sam, .sravya, .kassen, .jerry, .julie, .jorge, .praneeth, .micheal, .anitra {
+      width: 20vw;
+      height: 20vw;
+      font-size: 10vw; }
+      .member-general > i, .sam > i, .sravya > i, .kassen > i, .jerry > i, .julie > i, .jorge > i, .praneeth > i, .micheal > i, .anitra > i {
+        margin-top: 5vw; } }
+  @media screen and (min-width: 1024px) {
+    .member-general, .sam, .sravya, .kassen, .jerry, .julie, .jorge, .praneeth, .micheal, .anitra {
+      width: 17.5vw;
+      height: 17.5vw;
+      font-size: 8.75vw; }
+      .member-general > i, .sam > i, .sravya > i, .kassen > i, .jerry > i, .julie > i, .jorge > i, .praneeth > i, .micheal > i, .anitra > i {
+        margin-top: 4.375vw; } }
+
+.sam {
+  background: url("media/images/team/sam.png");
+  background-size: cover; }
+
+.sam:hover, .sam:active {
+  background: linear-gradient(rgba(99, 147, 206, 0.8), rgba(99, 147, 206, 0.8)), url("media/images/team/sam.png");
+  background-size: cover; }
+
+.sravya {
+  background: url("media/images/team/sravya.png");
+  background-size: cover; }
+
+.sravya:hover, .sravya:active {
+  background: linear-gradient(rgba(99, 147, 206, 0.8), rgba(99, 147, 206, 0.8)), url("media/images/team/sravya.png");
+  background-size: cover; }
+
+.kassen {
+  background: url("media/images/team/kassen.png");
+  background-size: cover; }
+
+.kassen:hover, .kassen:active {
+  background: linear-gradient(rgba(99, 147, 206, 0.8), rgba(99, 147, 206, 0.8)), url("media/images/team/kassen.png");
+  background-size: cover; }
+
+.jerry {
+  background: url("media/images/team/jerry.png");
+  background-size: cover; }
+
+.jerry:hover, .jerry:active {
+  background: linear-gradient(rgba(99, 147, 206, 0.8), rgba(99, 147, 206, 0.8)), url("media/images/team/jerry.png");
+  background-size: cover; }
+
+.julie {
+  background: url("media/images/team/julie.png");
+  background-size: cover; }
+
+.julie:hover, .julie:active {
+  background: linear-gradient(rgba(99, 147, 206, 0.8), rgba(99, 147, 206, 0.8)), url("media/images/team/julie.png");
+  background-size: cover; }
+
+.jorge {
+  background: url("media/images/team/jorge.png");
+  background-size: cover; }
+
+.jorge:hover, .jorge:active {
+  background: linear-gradient(rgba(99, 147, 206, 0.8), rgba(99, 147, 206, 0.8)), url("media/images/team/jorge.png");
+  background-size: cover; }
+
+.praneeth {
+  background: url("media/images/team/praneeth.png");
+  background-size: cover; }
+
+.praneeth:hover, .praneeth:active {
+  background: linear-gradient(rgba(99, 147, 206, 0.8), rgba(99, 147, 206, 0.8)), url("media/images/team/praneeth.png");
+  background-size: cover; }
+
+.micheal {
+  background: url("media/images/team/micheal.png");
+  background-size: cover; }
+
+.micheal:hover, .micheal:active {
+  background: linear-gradient(rgba(99, 147, 206, 0.8), rgba(99, 147, 206, 0.8)), url("media/images/team/micheal.png");
+  background-size: cover; }
+
+.anitra {
+  background: url("media/images/team/anitra.png");
+  background-size: cover; }
+
+.anitra:hover, .anitra:active {
+  background: linear-gradient(rgba(99, 147, 206, 0.8), rgba(99, 147, 206, 0.8)), url("media/images/team/anitra.png");
+  background-size: cover; }
+
+.divider {
+  width: calc(100% - 30px); }
+
+/* Get Involved */
+.get-involved-padding, .coalition, .ambassadors, .grassroots {
+  padding-bottom: 15vh; }
+
+.getinvolved-icon, .ambassadors-icon, .grassroots-icon {
+  margin: 2.5vh auto;
+  width: 80vw;
+  height: 80vw;
+  font-size: 40vw;
+  border-radius: 50%;
+  border: 10px solid white; }
+  .getinvolved-icon > img, .ambassadors-icon > img, .grassroots-icon > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; }
+  .getinvolved-icon > i, .ambassadors-icon > i, .grassroots-icon > i {
+    margin-top: 20vw; }
+  @media screen and (min-width: 760px) {
+    .getinvolved-icon, .ambassadors-icon, .grassroots-icon {
+      width: 40vh;
+      height: 40vh;
+      font-size: 20vh; }
+      .getinvolved-icon > i, .ambassadors-icon > i, .grassroots-icon > i {
+        margin-top: 10vh; } }
+  @media screen and (min-width: 1024px) {
+    .getinvolved-icon, .ambassadors-icon, .grassroots-icon {
+      width: 40vh;
+      height: 40vh;
+      font-size: 20vh; }
+      .getinvolved-icon > i, .ambassadors-icon > i, .grassroots-icon > i {
+        margin-top: 10vh; } }
+  .getinvolved-icon + button, .ambassadors-icon + button, .grassroots-icon + button {
+    border: 0px;
+    border-radius: 2vh;
+    box-shadow: 2.5px 2.5px 2.5px #23282d;
+    margin: 2.5vh 0px;
+    padding: 1vh;
+    width: calc(15vw + 15vh); }
+
+.ambassadors-icon {
+  background-color: #BFD7F4;
+  color: #265EA1; }
+  .ambassadors-icon + button {
+    background-color: #265EA1; }
+  .ambassadors-icon + button:hover {
+    background-color: #BFD7F4; }
+    .ambassadors-icon + button:hover h2 {
+      color: #265EA1; }
+
+.grassroots-icon {
+  background-color: #C7F4DD;
+  color: #279E62; }
+  .grassroots-icon + button {
+    background-color: #279E62; }
+  .grassroots-icon + button:hover {
+    background-color: #C7F4DD; }
+    .grassroots-icon + button:hover h2 {
+      color: #279E62; }
+
+/* Donate */
+@supports not (display: grid) {
+  .donate-header-section {
+    padding-top: 30vh; }
+    @media screen and (min-width: 760px) {
+      .donate-header-section {
+        padding-top: 37.5vh; } } }
+.donate-header-section p {
+  margin: 5vh 0px 2.5vh 0px; }
+
+#donate-button {
+  background-color: white;
+  border: 0px;
+  border-radius: 5vh;
+  padding: 2.5vh; }
+  #donate-button > input {
+    display: block;
+    width: 20vh; }
+
+a[href="#donate"] {
+  position: absolute;
+  top: 167vh;
+  right: -3.5vh;
+  z-index: 11;
+  transform: rotate(270deg); }
+  a[href="#donate"] > button {
+    background-color: #F2F1EF;
+    opacity: 0.9;
+    border: 0px;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    box-shadow: 0 0 0.5vh #737373;
+    color: #6393ce;
+    font-family: 'League Spartan';
+    font-size: 2.5vh;
+    padding: 1vh; }
+
+.pledge form button {
+  background-color: white;
+  border: 0px; }
+
+.pledge form button:hover {
+  cursor: pointer; }
+
+.donate-icon {
+  margin: 2.5vh auto;
+  width: 80vw;
+  height: 80vw;
+  font-size: 40vw;
+  border-radius: 50%;
+  border: 10px solid #F2F1EF; }
+  .donate-icon > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; }
+  .donate-icon > i {
+    margin-top: 20vw; }
+  @media screen and (min-width: 760px) {
+    .donate-icon {
+      width: 40vh;
+      height: 40vh;
+      font-size: 20vh; }
+      .donate-icon > i {
+        margin-top: 10vh; } }
+  @media screen and (min-width: 1024px) {
+    .donate-icon {
+      width: 40vh;
+      height: 40vh;
+      font-size: 20vh; }
+      .donate-icon > i {
+        margin-top: 10vh; } }
+
+.tenet {
+  padding: 1.5vh 2.5vw; }
+  .tenet h2 {
+    color: #6393ce; }
+
+#opportunity-navbar + .body {
+  padding-top: 100px; }
+
+@media screen and (max-width: 1023px), screen and (orientation: portrait) {
+  .body > button {
+    position: fixed;
+    top: 67vh;
+    left: -8.25vh;
+    z-index: 11;
+    transform: rotate(90deg);
+    opacity: 0.9;
+    border: 0px;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    box-shadow: 0 0 0.5vh #737373;
+    background-color: #F2F1EF;
+    color: #4b4b4b;
+    font-family: 'League Spartan';
+    font-size: 2.5vh;
+    letter-spacing: .5px;
+    padding: 1vh 3.5vh;
+    width: 20vh; } }
+@media screen and (min-width: 1024px) {
+  .body > button {
+    display: none; } }
+
+@media screen and (max-width: 1023px), screen and (orientation: portrait) {
+  #filter-button {
+    background-color: #4b4b4b;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 100px;
+    height: 55px; }
+  #filter-button i {
+      margin-left: 1.5vh; }
+  #opportunity-navbar + .body {
+    padding-top: 155px; } }
+@media screen and (min-width: 1024px) {
+  #filter-button {
+      display: none; } }
+
+#filter-menu {
+  position: fixed;
+  z-index: 100;
+  left: 0px;
+  top: 70px;
+  height: calc(100vh - 70px);
+  max-height: calc(100vh - 70px);
+  overflow-y: scroll;
+  width: 25%;
+  color: #aaa;
+  padding: 5vh 0px;
+  background-color: #23282d; }
+  #filter-menu a {
+    color: white; }
+  @media screen and (max-width: 1023px), screen and (orientation: portrait) {
+    #filter-menu {
+      display: none;
+      width: 100vw; } }
+
+@media screen and (max-width: 1023px), screen and (orientation: portrait) {
+  #filter-menu > .fa-times {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 35px;
+    color: white; } }
+@media screen and (min-width: 1024px) {
+  #filter-menu > .fa-times {
+    display: none; } }
+
+#filter-menu form {
+  text-align: left; }
+  #filter-menu form fieldset {
+    border: 0px; }
+  #filter-menu form h3 {
+    padding-bottom: 1vh; }
+  #filter-menu form hr {
+    margin: 0px;
+    border: 1px solid #aaa; }
+
+label:hover {
+  cursor: pointer; }
+
+input[name="grade"], input[name="tags[]"], input[name="sortDate"] {
+  display: none;
+}
+input[name="grade"] + label, input[name="tags[]"] + label, input[name="sortDate"] + label {
+  display: inline-block;
+  background-color: white;
+  color: #6393ce;
+  border-radius: 20%;
+  width: 24px;
+  height: 24px;
+  text-align: center; }
+  @media screen and (min-width: 760px) {
+    input[name="grade"] + label, input[name="tags[]"] + label, input[name="sortDate"] + label {
+      width: 30px !important;
+      height: 30px !important; } }
+  @media screen and (min-width: 1200px) {
+    input[name="grade"] + label, input[name="tags[]"] + label, input[name="sortDate"] + label {
+      width: 36px !important;
+      height: 36px !important; } }
+  input + label i {
+    vertical-align: middle; }
+  input + label .fa-check {
+    display: none; }
+
+input:checked + label {
+  background-color: #6393ce;
+  color: white; }
+  input:checked + label .fa-check {
+    display: inline-block; }
+
+input[name="grade"] + label {
+  width: 30px;
+  height: 30px;
+  border-radius: 20%;
+  margin: 2vh 1vh 1vh 1vh; }
+  @media screen and (min-width: 760px) {
+    input[name="grade"] + label {
+      width: 36px;
+      height: 36px; } }
+  @media screen and (min-width: 1200px) {
+    input[name="grade"] + label {
+      width: 42px;
+      height: 42px; } }
+  input[name="grade"] + label h4 {
+    display: inline-block;
+    margin-top: 20%; }
+
+fieldset ul {
+  float: left;
+  padding: 1vh 0px 1vh 15px;
+  margin: 0px;
+  box-sizing: border-box;
+  list-style-type: none; }
+  fieldset ul li {
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 32px; }
+    @media screen and (min-width: 760px) {
+      fieldset ul li {
+        height: 40px; } }
+    @media screen and (min-width: 1200px) {
+      fieldset ul li {
+        height: 48px; } }
+
+input[type="button"] {
+  display: block;
+  margin: 3.5vh auto 50px auto;
+  width: 100%;
+  max-width: 300px;
+  padding: 2.5vh 0px;
+  background-color: white;
+  color: #6393ce;
+  font-family: 'League Spartan';
+  font-size: 24px;
+  border: 0;
+  border-radius: 1vh; }
+  @media screen and (min-width: 1024px) {
+    input[type="button"] {
+      display: none; } }
+
+.opportunity, .opportunity-alt {
+  padding: 5vh 0px;
+  color: white;
+  background-color: #6393ce;
+  overflow: auto; }
+  .opportunity a, .opportunity-alt a {
+    color: white; }
+  .opportunity i, .opportunity-alt i {
+    margin-left: 0.5em; }
+
+.opportunity a:hover, .opportunity-alt a:hover {
+  text-decoration: underline; }
+
+.opportunity > .container, .opportunity-alt > .container {
+  padding: 0px 15px; }
+  @media screen and (min-width: 1024px) {
+    .opportunity > .container, .opportunity-alt > .container {
+      width: 75%;
+      float: right;
+      padding: 0px 5vw; } }
+
+.opportunity-alt {
+  background-color: #4675b8; }
+
+@supports (display: flex) {
+  .flex-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 0px 1vh; } }
+
+.grade, .selectivity, .deadline {
+  border-radius: 1vh;
+  width: calc(33.33% - 1.5vh); }
+
+@supports not (display: flex) {
+  .flex-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 0px .75vh; }
+
+  .grade, .selectivity, .deadline {
+    float: left;
+    margin: 0px .75vh; } }
+.grade {
+  background-color: #9a86c5; }
+
+.selectivity {
+  background-color: #d59bc9; }
+
+.deadline {
+  background-color: #fbb4c8; }
+
+.info {
+  background-color: #BFD7F4;
+  border-radius: 1vh;
+  margin: 2vh 1vh 7.5px 1vh;
+  padding: 2vh; }
+  .info p {
+    color: #23282d;
+    text-align: left;
+    height: auto;
+    max-height: 15vh;
+    overflow-y: hidden; }
+  .info h3 {
+    color: #4675b8;
+    padding: 15px 0px 0px 0px; }
+  .info h3:last-child {
+    display: none; }
+  @media screen and (min-width: 760px) {
+    .info p {
+      text-align: justify;
+      max-height: none;
+      overflow-y: auto; }
+    .info h3 {
+      display: none; } }
+
+.see-more {
+  max-height: none !important;
+  overflow-y: auto !important; }
+
+
+/* Logins */
+.addOpp {
+  background-color: #499b5d;
+  float: right;
+  color: white;
+  position: absolute;
+  width: 50%;
+  left: -50%;
+  text-align: center;
+}
+.addOpp > i {
+  margin-top: 70%;
+  font-size: 10vh;
+}
+.oppWrapper {
+  display: flex;
+}
+.oppWrapper > div {
+  padding-bottom: 100%;
+  margin-bottom: -97%;
+}
+#opportunitiesWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.swipeInstructions {
+  position: fixed;
+  top: 35%;
+  color: white;
+  text-align: center;
+  display: none;
+  padding: 0 2vh;
+}
+.swipeInstructions button {
+  background-color: #6393ce;
+  border: 0;
+  border-radius: 1vh;
+  margin: 5vh 0px 5vh 0px;
+  padding: 2vh 10vh;
+  color: white;
+}
+
+.loginPrompt {
+  position: fixed;
+  top: 35%;
+  color: white;
+  text-align: center;
+  display: none;
+  padding: 1vh 2vh;
+}
+.loginPrompt #signUp {
+  background-color: #6393ce;
+  border: 0;
+  border-radius: 1vh;
+  margin: 5vh 0px 0px 0px;
+  padding: 3vh 15vh;
+  color: white;
+}
+.loginPrompt #notNow {
+  background-color: #4b4b4b;;
+  border: 0;
+  border-radius: 1vh;
+  margin: 2vh 0px 5vh 0px;
+  padding: 1.5vh 7vh;
+  color: white;
+}
+
+.saved {
+  position: fixed;
+  top: 30%;
+  color: white;
+  text-align: center;
+  display: none;
+  padding: 0 2vh;
+}
+.saved button {
+  background-color: #4b4b4b;;
+  border: 0;
+  border-radius: 1vh;
+  margin: 2vh 0px 5vh 0px;
+  padding: 1.5vh 7vh;
+  color: white;
+}
+.saved img {
+  max-height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.container a button {
+  background-color: #6393ce;
+  border: 0;
+  border-radius: 1vh;
+  color: white;
+  padding: 1vh 4vh;
+  font-size: calc(1vh + 1vw);
+  font-family: 'League Spartan';
+}
+button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 9px 0 rgba(0,0,0,.2);
+  box-shadow: 0 2px 9px 0 rgba(0,0,0,.2);
+  -webkit-transform: translateY(-1px) scale(1.01);
+  transform: translateY(-1px) scale(1.01);
+}
+@media screen and (max-width: 1024px) {
+  #loginBTN {
+      display: none !important;
+  }
+  .myOpportunities {
+    padding: 0 15px 10vh 15px;
+  }
+  .signUpDiv ul h3 {
+      font-size: calc(1.60vh + 1.60vw);
+  }
+  .signUpDiv {
+      padding: 0 15px 10vh 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #loginMobile div {
+    display: none !important; 
+  } 
+  .myOpportunities {
+    padding: 10vh 15px;
+  }
+  .signUpDiv .fa-caret-down {
+    display: none !important; 
+  }
+  .signUpDiv {
+      padding: 10vh 15px;
+  }
+}
+
+.signUpDiv .fa-caret-down {
+  display: block;
+  font-size: 5vh;
+  padding: 25px;
+}
+
+#loginMobile div {
+  background-color: #4b4b4b;
+  color: white;
+  padding: 20px 0;
+  font-family: "League Spartan";
+}
+
+.oppWrapper h2 {
+  display: inline;
+}
+.oppWrapper .fa-plus-circle {
+  display: none;
+  font-size: 5vh;
+}
+.oppWrapper .fa-check-circle {
+  font-size: 5vh;
+  color: #b0db8e;
+}
+
+#watchlist h3 {
+  color: #6393ce;
+  font-size: calc(1.5vh + 1.5vw);
+}
+#watchlist h3:hover {
+  cursor: pointer;
+  color: #4e77aa;
+}
+
+.watchItem {
+  background-color: #6393ce;
+  color: white;
+  border-radius: 2vh;
+  padding: 2vh;
+  margin: 5vh 0;
+}
+@media screen and (min-width: 1024px) {
+  .watchItem {
+      position: relative;
+      width: 75%;
+      left: 12.5%;
+  }
+}
+.watchItem img {
+  max-height: 60px;
+}
+.watchItem h4 {
+  font-family: "Nunito Sans";
+}
+.watchItem i {
+  position: absolute;
+  right: 4vh;
+  font-size: 3vh;
+}
+@media screen and (min-width: 760px) and (max-width: 1024px) {
+  .watchItem i {
+      right: 8vh;
+  }
+}
+
+#noOpps {
+  display: none;
+}
+.emptyOpp h2 {
+  font-family: "Nunito Sans";
+}
+.emptyOpp a {
+  color: #6393ce
+}
+.emptyOpp {
+  position: relative;
+  display: inline-block;
+  border: 5px solid #6393ce;
+  border-radius: 15px;
+  padding: 5vh;
+  margin-top: 5vh;
+}
+.emptyOpp::before {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 70%;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+  top: -5px;
+  left: 15%;
+}
+.emptyOpp::after {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 70%;
+  width: 100%;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  top: 15%;
+  left: -5px;
+}
+#signOut {
+  background-color: #4b4b4b;
+  border: 0;
+  border-radius: 1vh;
+  color: white;
+  padding: 1vh 4vh;
+  margin-top: 5vh;
+  font-size: calc(1vh + 1vw);
+  font-family: 'League Spartan';
+}
+#editProfile {
+  background-color: #6393ce;
+  border: 0;
+  border-radius: 1vh;
+  color: white;
+  padding: 1vh 4vh;
+  margin-top: 5vh;
+  font-size: calc(1vh + 1vw);
+  font-family: 'League Spartan';
+}
+
+.signUpDiv ul {
+  list-style-type: none;
+  text-align: left;
+  text-align: center;
+  padding: 0;
+}
+.signUpDiv ul i {
+  color: #6393ce;
+  font-size: 5vh;
+  display: inline-block;
+  padding: 1vh 1vh 1vh 0;
+}
+.signUpDiv ul h3 {
+  display: inline-block;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: calc(1.15vh + 1.15vw);
+  padding: 2vh 0;
+  vertical-align: super;
+}
+.signUpDiv h2 {
+  font-family: "Nunito Sans", sans-serif;
+}
+.signUpDiv h1 {
+  font-size: calc(2.5vh + 2.5vw);
+}
+
+.google-button:hover {
+  background: #d6d7d8;
+}
+.google-button {
+  height: 75px;
+  border-width: 0;
+  background: #f2f2f2;
+  color: #737373;
+  border-radius: 5px;
+  white-space: nowrap;
+  box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.05);
+  transition-property: background-color, box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+  padding: 0 20px;
+  margin: 15px 0;
+
+  &:focus,
+  &:hover {
+    box-shadow: 1px 4px 5px 1px rgba(0,0,0,0.1);
+  }
+
+  &:active {
+    background-color: #e5e5e5;
+    box-shadow: none;
+    transition-duration: 10ms;
+  }
+}
+.google-button__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 8px 0 8px 8px;
+  width: 25px;
+  height: 25px;
+  box-sizing: border-box;
+}
+.google-button__text {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 24px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Roboto',arial,sans-serif;
+}
+
+
+/* opportunity pages */
+  .oppBody {
+      padding-top: 100px !important;
+  }
+  .oppPage > div {
+    margin-bottom: 7vh;
+    text-align: left;
+  }
+  .oppImage {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: contrast(60%);
+  }
+  .oppHeader {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 7vh;
+    background-color: #6393ce;
+    min-height: 300px;
+  }
+  .oppHeader .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .oppHeader .flex-container h3 {
+    padding: calc(0.5 * (1.5vh + 1.5vw));
+  }
+  .oppHeader .flex-container {
+    position: absolute;
+    top: 90%;
+    right: 0;
+    left: 0;
+  }
+
+  .oppChecks ul {
+    list-style-type: none;
+    padding-left: calc(3vh + 0.33 * (2vh + 2vw));
+  }
+  .oppChecks i {
+    font-size: 3vh;
+    color: #787e82 !important;
+    padding-right: 1vh;
+  }
+  .oppChecks h3 {
+    display: inline !important;
+    color: #8a8c91 !important;
+    padding-right: 2vh;
+    font-family: "Nunito Sans", sans-serif !important;
+  }
+
+  .oppDescription {
+    padding-left: 3vh;
+    margin: 3vh 0 4vh 0 !important;
+  }
+  .oppDescription h2 {
+    color: #5d5f60;
+    padding-bottom: 2vh;
+  }
+  .oppDescription #description {
+    font-family: "Nunito Sans", sans-serif;
+    display: none;
+  }
+  .oppDescription h3 {
+    font-size: calc(1.5vh + 1.5vw);
+    color: #8a8c91;
+    display: inline;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+  }
+  .oppDescription i {
+    font-size: 3vh;
+    color: #6393ce;
+  }
+
+  .oppComponents {
+    padding-left: 3vh;
+  }
+  .oppComponents > div {
+    margin-bottom: 3vh;
+  }
+  .oppComponents h1 {
+    display: inline;
+    color: #5d5f60;
+  }
+  .oppComponents i {
+    color: #6393ce;
+    font-size: 5vh;
+    margin-right: 1vh;
+  }
+
+  .apply {
+    text-align: center !important;
+  }
+  .apply button {
+    background-color: #6393ce;
+    border: 0;
+    border-radius: 1vh;
+    padding: 2vh 4vh;
+    width: 90%
+  }
+  .apply button h1 {
+    color: white;
+  }
+
+  .applicationBody {
+    margin: 3vh 0;
+  }
+  .applicationBody > h2 {
+    display: inline;
+  }
+  .applicationBody > i {
+    color: #d59bc9;
+  }
+  .applicationBody h2 {
+    color: #8a8c91;
+    vertical-align: super;
+  }
+  .componentWrapper {
+    margin-top: 5vh;
+    overflow: hidden;
+  }
+  .componentWrapper > div {
+    width: 50%;
+    text-align: center;
+    float: left;
+    margin-bottom: 5vh;
+  }
+  .componentWrapper > div:hover {
+      transform: scale(1.1);
+  }
+  /*.componentWrapper > div:last-child {
+    float:none;
+    position: relative;
+    top: 50%;
+    left: 25%;
+  }*/
+  .componentWrapper i {
+    font-size: 17vh;
+    margin-bottom: 2vh;
+  }
+
+  .faqBody > div > i {
+    margin: 1vh 0 0 5vh;
+  }
+  .programFaqBody > h2, .peerFaqBody > h2, .peerQuestions > h2 {
+    margin: 1vh 0 0 0;
+  }
+  .faqBody > .header > h2{
+    display: inline;
+    color: #5d5f60;
+  }
+  .programFaqBody h2 {
+    color: #5d5f60;
+    font-family: "Nunito Sans", sans-serif;
+  }
+  .question {
+    font-weight: 700;
+  }
+  .peerFaqBody h2, .peerQuestions > h2 {
+    color: #5d5f60;
+    font-family: "Nunito Sans", sans-serif;
+  }
+  .peerFaqHeader, .programFaqHeader {
+    color: #5d5f60;
+    text-align: center;
+    margin-top: 3vh;
+  }
+
+  .financialAidBody h2 {
+    color: #5d5f60;
+    font-family: "Nunito Sans", sans-serif;
+  }
+  .financialAidBody .subHeader {
+    color: #6393ce;
+    font-family: "League Spartan", sans-serif;
+    margin-top: 3vh;
+  }
+
+  .teamMember h2 {
+    color: #6393ce;
+    font-family: "League Spartan", sans-serif;
+    text-align: center;
+  }
+  .teamMember .member-general {
+    background: url("media/images/team/praneeth.png");
+    background-size: cover;
+  }
+
+  .components {
+    margin: 2vh 0;
+    color: #5d5f60;
+    text-align: center;
+  }
+  .components .container {
+      margin-top: 100px;
+  }
+  .components .container > div {
+    display: none;
+    margin-top: 7vh;
+  }
+
+  .components i {
+    color: #6393ce;
+    font-size: 17vh;
+    padding: 2vh 0;
+  }
+  .components .componentSub i {
+    color: #d59bc9;
+    font-size: 5vh;
+    margin: 2vh 0;
+  }
+  .components .componentSub h2 {
+    color: #8a8c91;
+    display: inline;
+  }
+  .componentInfo {
+    text-align: left;
+  }
+  .componentInfo > h2 {
+    color: #6393ce;
+    margin-left: 3vh;
+  }
+  .componentInfo ul {
+    margin: 0 0 5vh 0;
+  }
+  .componentInfo ul h2 {
+    font-family: "Nunito Sans", sans-serif;
+  }
+  .components .goBack {
+    margin-left: 2vh;
+    text-align: left;
+  }
+  .components .goBack i {
+    font-size: 5vh;
+  }
+  .components .goBack h3 {
+    display: inline;
+    vertical-align: super;
+    font-size: calc(1.5vh + 1.5vw);
+  }
+  .components .fa-times {
+    position: absolute;
+    top: 115px;
+    right: 15px;
+    font-size: 35px;
+  }
+
+  @media screen and (max-width: 1024px) {
+      .oppPage {
+        margin-top: 10vh;
+      }
+      .oppHeader .flex-container h3 {
+        font-size: calc(1.5vh + 1.5vw);
+      }
+      .oppChecks h3 {
+          font-size: 1.17em;
+      }
+      .applicationBody {
+        display: none;
+      }
+      .timelineBody {
+        display: none;
+      }
+      .faqBody {
+        display: none;
+      }
+      .financialAidBody {
+        display: none;
+      }
+      #peerDescription {
+        display: none;
+      }
+      .applicationBody {
+        text-align: center;
+      }
+      .applicationBody h2 {
+        font-size: calc(1.75vh + 1.75vw);
+      }
+      .progressBar {
+          display: none;
+      }
+  }
+  @media screen and (min-width: 1024px) {
+      .oppPage {
+          width: 66.66%;
+          float: left;
+      }
+      .progressBar {
+          width: 33.33%;
+          float: left;
+      }
+      .oppHeader + .container {
+          overflow: hidden;
+          display: flex;
+          position: relative;
+      }
+      .oppDescription #shortDesc {
+          font-size: calc(1.5vh + 1.5vw);
+      }
+      .oppDescription #readMore {
+          display: none;
+      }
+      .oppDescription #description {
+          display: block;
+      }
+      .oppDescription {
+        margin: 3vh 0 0 0 !important;
+      }
+
+      .flex-container > div {
+          width: calc(33.33% - 5vw);
+      }
+
+      .oppChecks h3 {
+          font-size: calc(1vh + 1.5vw);
+      }
+
+      .header i {
+          display: none;
+      }
+
+      .oppComponents > div {
+          margin-top: 10vh;
+      }
+
+      .faqHeader h1 {
+          display: none;
+      }
+      .peerFaqHeader, .programFaqHeader {
+          text-align: left;
+      }
+      .peerFaqHeader h2, .programFaqHeader h2 {
+        padding: calc(0.25 * (2vh + 2vw));
+        font-size: calc(2vh + 2vw);
+      }
+      .programFaqHeader h2 {
+        margin-top: 7vh;
+      }
+
+      .teamMember {
+          margin: 3vh 0 5vh 0;
+      }
+      .teamMember > div {
+          margin: 0 3vh 0 0;
+          float: left;
+      }
+      .teamMember > h2 {
+          display: none;
+      }
+      #peerDescription {
+        display: block;
+        color: #5d5f60;
+        font-family: "Nunito Sans", sans-serif;
+        text-align: left;
+      }
+
+      .componentWrapper i {
+        font-size: 15vh;
+        margin-bottom: 2vh;
+      }
+      .componentWrapper > div {
+        width: 25%;
+      }
+
+      .oppDescription, .faq, .financialAid, .application {
+          padding-top: 25px;
+      }
+  }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 99;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 10% auto 2% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 60%;
+        border-radius: 3vh;
+    }
+
+
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        margin-right: 1vw;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .signInClose:hover,
+    .signInClose:focus {
+        color: black !important;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    #signInModal .modal-content {
+      margin: 10% auto 2% 30vw;
+      text-align: center;
+    }
+    #signInModal .signInClose {
+      color: #aaa;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    #signInModal h2 {
+      color: #5d5f60;
+      margin: 3vh 3vw;
+    }
+    #signInModal h3 {
+      color: #5d5f60;
+      font-family: "Nunito Sans", sans-serif;
+    }
+
+
+
+
+    #cd-vertical-nav {
+      position: absolute;
+      padding-left: 10vh;
+      top: 1%;
+      bottom: auto;
+      z-index: 1;
+    }
+    #cd-vertical-nav li {
+      text-align: right;
+    }
+    .no-touch #cd-vertical-nav a {
+      display: inline-block;
+      /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    #cd-vertical-nav a:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    #cd-vertical-nav a span {
+      float: left;
+      display: inline-block;
+    }
+    #cd-vertical-nav a:hover span {
+      transform: scale(1.1);
+    }
+    #cd-vertical-nav a:hover .cd-label {
+      opacity: 1;
+    }
+    #cd-vertical-nav a.is-selected .cd-dot {
+      background-color: #6393ce;
+    }
+    #cd-vertical-nav .cd-dot {
+      position: relative;
+      top: 11px;
+      height: 20px;
+      width: 20px;
+      border-style: solid;
+      border-color: #6393ce;
+      border-radius: 50%;
+      background-color: white;
+    }
+    #cd-vertical-nav .cd-label {
+      position: relative;
+      margin-right: 10px;
+      padding: 1vh 3vh;
+      color: 5d5f60;
+      font-size: 14px;
+      font-size: 3vh;
+      color: #5d5f60;
+      font-family: "Nunito Sans", sans-serif;
+    }
+
+    .progressBar ul {
+        list-style: none;
+    }
+  .progressBar button {
+    background-color: #6393ce;
+    border: 0;
+    border-radius: .5vh;
+    color: white;
+    margin-top: 3vh;
+    padding: 1vh 3vw;
+    font-size: calc(1vh + 1vw);
+    font-family: 'League Spartan'; 
+  }
+
+    .loading-line {
+      height: 10px;
+      margin: 10px;
+      animation: pulse 2s infinite ease-in-out;
+    }
+    .loading-header {
+      width: 40vw;
+      display: inline-block;
+      height: 30px;
+    }
+    li .loading-line {
+      display: inline-flex;
+      width: 50%;
+    }
+    
+    .text-loading > .loading-line:last-child {
+      width: 40%;
+    }
+
+    @keyframes pulse {
+      0% {
+          background-color: rgba(128, 128, 128, 0.1)
+      }
+      50% {
+          background-color: rgba(128, 128, 128, 0.3)
+      }
+      100% {
+          background-color: rgba(128, 128, 128, 0.1)
+      }
+    }
+
+/* starting microscholarship stuff*/
+.slantHeader{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  /* 	justify-content: center; */
+  margin-top: 50px;
+  overflow: hidden;
+}
+.MSTextContainer {
+    width: 80vw;
+    height: auto;
+    margin-left: 5vw;
+    margin-top: 10vh;
+}
+h1.slantedHeaderText{
+    font-size: 1.5em;
+    color: white;
+    font-style: normal;
+    top: 20vh;
+    left: 70vw;
+    z-index: 3;
+    padding-top: 13vh;
+    padding-left: 10vw;
+    padding-right: none;
+    margin-right: none;
+    transform: skew(20deg);
+}
+h2.slantedHeaderDescription{
+    font-family: 'AvenirNextLTPro-Medium';
+    font-size: 0.8em;
+    transform: skew(20deg);
+    left: 70vw;
+    color: white;
+    z-index: 3;
+    padding-top: 5vh;
+    padding-left: 14vw;
+    padding-right: none;
+    margin-right: none;
+}
+.msHeaderText{
+    font-family: 'League Spartan';
+    font-size: 1.5em;
+    left: 70vw;
+    color: #6B6969;
+    z-index: 3;
+    margin-left: 10vw;
+    margin-top: 10vh;
+    margin-right: 5vw;
+}
+.msDescripText{
+    font-family: 'AvenirNextLTPro-Medium';
+    font-size: 1em;
+    color: #6B6969;
+    z-index: 3;
+    margin-left: 10vw;
+    margin-top: 5vh;
+    margin-right: 5vw;
+    line-height: 1.5em;
+    letter-spacing: 0.04em;
+}
+#scholarHeader {
+    transform: skewY(5deg);
+    font-size: 2em;
+    text-align: center;
+}
+#scholarDescrip {
+    transform: skewY(5deg);
+    text-align: center;
+    font-size: 1.5em;
+    top: -5;
+    padding-left: 12vw;
+    padding-top: 0;
+} 
+#scholarButton {
+    transform: skewY(5deg);
+    float: center;
+    margin-left: 35vw;
+    margin-top: 8vh;
+    border-radius: 10px;
+}
+
+button.MSgetStarted {
+    width: 20vw;
+    height: 7vh;
+    font-size: 1em;
+    font-family: 'AvenirNextLTPro-Medium';
+    background: linear-gradient(to right, #63E099, #77EBA9);
+    border-radius: 30px;
+    border: 0.5vh;
+    margin-top: 5vh;
+    margin-left: 17vw;
+    padding-left: 1vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: white;
+    box-shadow: 1px 1px 1px 1px #6B6969;
+    transform: skew(20deg);
+    z-index: 5;
+}
+.slantedBlue {
+    border: none;
+    padding: none;
+    margin: none;
+    position: relative;
+    width: 150%;
+    height: 80vh;
+    background: #70B0FF;
+    overflow: hidden;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    top: 0;
+    left: -10vw;
+    padding-left: 4vw;
+    z-index: 2;
+    display: flex;
+}
+.scholarSlant {
+    border: none;
+    padding: auto;
+    margin: auto;
+    margin-top: -5vh;
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    background: #70B0FF;
+    transform: skewY(-5deg);
+    -webkit-transform: skewY(-5deg);
+    -moz-transform: skewY(-5deg);
+    -o-transform: skewY(-5deg);
+    top: -5vh;
+    z-index: 5;
+}
+.yellowSlant {
+    border: none;
+    padding: auto;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(to left, #FFD843, #FFC300);
+    transform: skewY(-2deg);
+    -webkit-transform: skewY(-10deg);
+    -moz-transform: skewY(-10deg);
+    -o-transform: skewY(-10deg);
+    top: 30vh;
+    z-index: -1;
+}
+.slantedBluePseudo {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
+  -webkit-transform: skew(20deg);
+  -moz-transform: skew(20deg);
+  -o-transform: skew(20deg); 
+}
+.slantedStudent {
+    position: absolute;
+    border: none;
+    padding-right: 0;
+    margin: none;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    width: 50%;
+}
+#slantedStudentImg {
+    width: 100%;
+    height: 80vh;
+    margin-left: -25vw;
+    background-size: cover;
+    object-fit: cover;
+    background-image: url(/media/images/msinstagram.jpg);
+    position: relative;
+}
+
+.craftSteps{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  /* 	justify-content: center; */
+  margin-top: -12vh;
+  overflow: hidden;
+}
+.slantedCraftBlue {
+    border: none;
+    padding: none;
+    margin: none;
+    position: relative;
+    width: 55vw;
+    height: 73vh;
+    background: #70B0FF;
+    overflow: hidden;
+    -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
+    top: 0;
+    left: -10vw;
+    z-index: 2;
+    display: flex;
+}
+.threeSteps {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    width: 20vw;
+    height: 40vh;
+    left: 0;
+    bottom: 5vh;
+    justify-content: space-around;
+    padding-top: 2vh;
+    margin-right: 2vw;
+}
+.MSicon {
+    width: 10vw;
+    height: 9vw;
+    padding-top: 0vh;
+    margin-left: 2.8vw;
+    padding-left: none;
+    display: flex;
+}
+.stepsLabel {
+    font-size: 1em;
+    text-align: center;
+    font-family: 'League Spartan';
+    color: #737373;
+}
+.stepDetails{
+    font-family: 'AvenirNextLTPro-Medium';
+    font-size: 0.6em;
+    color: #737373;
+    text-align: center;
+}
+.provideMotherFlex{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5vw;
+}
+.provideFlexBox{
+    display: flex;
+    flex-direction: column;
+    padding-right: 5vw;
+    padding-top: 4vh;
+}
+.provideIcon {
+    width: 2vw;
+    height: 2vw;
+    margin-left: 1vw;
+    margin-top: 1vw;
+    display: block;
+    padding-right: 1vw;
+}
+.provideDescrip{
+    font-family: 'AvenirNextLTPro-Medium';
+    font-size: 0.5em;
+    color: #737373;
+    text-align: center;
+    margin-left: 0vw;
+    display: block;
+    padding-top: 3vh;
+    height: 5vh;
+}
+.provideDescripLaunch{
+    font-family: 'AvenirNextLTPro-Medium';
+    font-size: 0.5em;
+    color: #737373;
+    text-align: center;
+    margin-left: 0vw;
+    display: block;
+    padding-top: 3vh;
+    height: 5vh;
+}
+.MSarrow img {
+    width: 2vw;
+    height: 2vw;
+    margin-right: 2vw;
+}
+#craftText {
+    margin: none;
+    padding-left: 7vw;
+    padding-top: 7vh;
+    top: 20vh;
+    width: 80%;
+}
+#craftDescription {
+    margin: none;
+    padding-left: 9vw;
+    padding-top: 2vh;
+}
+.greenSlantContainer {
+    display: flex;
+    overflow: hidden; /* key to hiding one side of parallelogram */
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0;
+}
+.greenSlant {
+    border: none;
+    padding-right: 0;
+    margin: none;
+    position: relative;
+    width: auto;
+    height: 70vh;
+    background: #63E099;
+    overflow: hidden;
+    transform-origin: bottom right;
+    -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
+    top: 0;
+    right: -20vw;
+    z-index: 2;
+    display: flex;
+}
+.MSTextContainer2 {
+    width: 80vw;
+    height: auto;
+}
+#chooseWinner{
+    margin-left: 23vw;
+    margin-top: 10vh;
+   padding-top: 5vh;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    z-index: 4;
+    height: 10vh;
+    width: 30vw;
+    display: flex;
+}
+#chooseDescription {
+    margin-left: 25vw;
+    margin-right: 20vw;
+    margin-top: 0vh;
+    padding-left: 0;
+    padding-right: 0;
+    height: 5vh;
+    z-index: 3;
+    padding-top: 0;
+    display: flex;
+}
+
+.winIcon{
+    z-index: 49;
+    display: flex;
+}
+.winIcon > img {
+    width: auto;
+    height: 70vh;
+    margin-right: -50vw;
+}
+h1.faqHeader{
+    color: #737373;
+    margin-left: 10vw;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: none;
+}
+/* .faqGrid {
+    display: grid;
+    grid-row-gap: 20vw;
+    grid-column-gap: 5vh;
+    grid-template-areas: "a c"
+                         "b d"
+                         "e f";
+    margin-top: 5vh;
+    margin-left: 10vw;
+    border: 2px solid red;
+} */ 
+.faqMotherFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* 	justify-content: center; */
+    margin-top: 0;
+    width: 100vw;
+    margin-left: 2vw;
+    margin-bottom: 15vh;
+}
+.faqFlexContainer {
+    padding-top: 0;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+button.faqCollapsible {
+    background-color: white;
+    color: #737373;
+    cursor: pointer;
+    padding: 1.5vh 4vh 1.5vh 4vh;
+    width: 35vw;
+    text-align: center;
+    outline: none;
+    font-size: 0.8em;
+    font-family: 'AvenirNextLTPro-Medium';
+    display: flex;
+    margin-top: 5vh;
+    box-shadow: 0.15px 0.15px 0.15px 0.15px #737373;
+    border: none;
+    position: relative;
+}
+
+.faqAnswer {
+    padding: 2vh 2vh;
+    width: 35vw;
+    display: none;
+    background-color: #fcfcfc;
+    font-size: 0.7em;
+    font-family: 'AvenirNextLTPro-Medium';
+    box-shadow: 0.15px 0.15px 0.15px 0.15px #737373;
+    color: #737373;
+}
+.downArrowBlue {
+    font-size: 30px !important;
+    bottom: 20%;
+    position: absolute;
+    right: 5%;
+    color: #70B0FF;
+}
+.downArrowGreen {
+    font-size: 30px !important;
+    bottom: 20%;
+    position: absolute;
+    right: 5%;
+    color: #63E099;
+}
+.downArrowYellow {
+    font-size: 30px !important;
+    bottom: 20%;
+    position: absolute;
+    right: 5%;
+    color: #FFD843;
+}
+.downArrowPurple {
+    font-size: 30px !important;
+    bottom: 20%;
+    position: absolute;
+    right: 5%;
+    color: #9A88C5;
+}
+.gradClass {
+    background: url(media/images/bottom@2x.png);
+    height: 40vh;
+    background-size: cover;
+}
+.gradClass > img {
+    position: absolute;
+    height: 35vh;
+    width: 100vw;
+    object-fit: cover;
+}
+#scholarGradClass {
+    transform: skewY(-5deg);
+    height: 50vh;
+    margin-bottom: -10vh;
+    margin-top: 10vh;
+}
+.scholarshipHero {
+    font-family: "League Spartan";
+    width: 50vw;
+    margin-left: 5vw;
+    color: white;
+    padding-top: 5vh;
+}
+.MSgetStarted2{
+    width: 20vw;
+    height: 7vh;
+    font-size: 1em;
+    font-family: 'AvenirNextLTPro-Medium';
+    background: linear-gradient(to right, #63E099, #77EBA9);
+    border-radius: 30px;
+    border: 0.5vh;
+    margin-left: 10vw;
+    padding-left: 1vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: white;
+    box-shadow: 1px 1px 1px 1px #6B6969;
+}
+#overflow-hidden {
+  overflow-x: hidden;
+}
+
+/* onboarding */
+.progressWrapper, .progressWrapper2 {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 999;
+  top: 5vh;
+}
+.progressWrapper2 {
+  display: none;
+}
+
+.microProgress > div {
+  width: 24.5%;
+  display: inline-block;
+  text-align: center;
+  padding: 2vh 0;
+}
+.microProgress2 > div {
+  width: 49%;
+  text-align: center;
+  padding: 2vh 0;
+  display: inline-block;
+}
+
+.microProgress>div:hover, .microProgress2>div:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 9px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, .2);
+  -webkit-transform: translateY(-1px) scale(1.01);
+  transform: translateY(-1px) scale(1.01);
+}
+
+.microProgress h4, .microProgress2 h4, .searchFilter h4 {
+  color: #737373;
+  font-family: 'AvenirNextLTPro-Medium';
+}
+
+.formProgress, .formProgress2 {
+  background-color: #eff0f2;
+  height: 10px;
+}
+
+.formProgress>div, .formProgress2>div {
+  height: 10px;
+  background-color: #70B0FF;
+  width: 0%;
+}
+
+.criteriaBox i {
+  font-size: 20px !important;
+  bottom: 30%;
+  position: absolute;
+  right: 10%;
+}
+
+#interests {
+  margin-left: 2vw;
+  width: 80% !important;
+  display: inline-block;
+  color: #6B6969;
+  font-size: 1em;
+  height: 36px;
+}
+    
+.ethMenu .active {
+  background-color: #9A88C5 !important;
+  color: white;
+}
+
+.genderMenu .active {
+    background-color: #FFD843 !important;
+    color: white;
+}
+
+.criteriaBox .fa-check {
+  color: #b0db8e;
+}
+
+.onboardingCriteria,
+.onboardingApplication,
+.onboardingDescription,
+.onboardingDescription2,
+.onboardingPreview,
+.onboardingPersonal,
+.onboardingPayment,
+.onboardingCongrats {
+  margin: 15vh 0;
+  position: relative;
+  height: 100%;
+}
+
+.onboardingApplication video {
+  height: 45vh;
+  width: 20vw;
+  margin: 0 auto;
+  display: block;
+}
+
+.onboardingApplication .videoProfile {
+  height: 7vh;
+  width: 7vh;
+  background: url(media/images/team/praneeth.png);
+  background-size: cover !important;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  margin-right: 2vw;
+}
+.scholarshipInfo .videoProfile {
+  height: calc(6vh + 6vw);
+  width: calc(6vh + 6vw);
+  background: url(media/images/team/sravya.png);
+  background-size: cover !important;
+  border-radius: 50%;
+  margin-right: 2vw;
+}
+
+.subVideo {
+  width: 20vw;
+  background-color: white;
+  margin: 0 auto;
+  padding: 3vh 0;
+  margin-bottom: 3vh;
+}
+
+.subVideo p {
+  font-size: 0.8em;
+  display: inline;
+  font-family: 'AvenirNextLTPro-Medium';
+  color: #737373;
+}
+
+.subVideo+h2 {
+  color: #737373;
+  font-family: 'AvenirNextLTPro-Medium';
+  font-size: 0.8em;
+  word-spacing: 0.1em;
+  letter-spacing: 0.04em;
+  line-height: 1.8em;
+  margin-top: 4vh;
+  width: 20vw;
+  margin: 0 auto;
+}
+
+.microInfo {
+  background-color: #FBFBFB;
+  width: 33%
+}
+
+.microWizard {
+  width: 66%;
+  overflow: auto;
+}
+.profileBody > .microWizard {
+  margin-bottom: 5vh;
+
+}
+
+.onboarding, .studentOnboarding {
+  display: flex;
+}
+
+.microTips {
+  margin: 0 7vw;
+  color: #737373;
+  font-family: 'AvenirNextLTPro-Medium';
+  font-size: 0.8em;
+  word-spacing: 0.1em;
+  letter-spacing: 0.04em;
+  line-height: 1.8em;
+  background-color: white;
+  padding: calc(2vh + 2vw);
+  /* background-color: white; */
+  box-shadow: 0.15px 0.15px 0.15px 0.15px;
+  position: fixed;
+}
+
+#stanfordMicroTips {
+    margin-top: 10vh;
+}
+
+#datepicker {
+  max-width: 450px;
+  height: 350px;
+  width: 100%;
+  margin: 5vh auto;
+}
+.donorText > h1, .donorText > h2 {
+  padding: 0.25vh 0;
+  width: 20vw;
+}
+
+.eligibilityText > h2 {
+  margin-top: 5vh;
+  margin-left: 5vw;
+}
+.videoPromptHeader {
+  font-family: 'AvenirNextLTPro-Medium';
+  color: #6B6969;
+  font-size: 1em;
+  letter-spacing: 0em;
+  margin-top: 7vh;
+  margin-left: 5vw;
+}
+
+.reqOption > i {
+  float: right;
+  color: #63E099;
+}
+h1.criteriaHeader {
+    color: #6B6969;
+    font-size: 1.3em;
+    width: 75%;
+    margin: 5vh auto;
+}
+h1.scholarshipHeader {
+    color: #6B6969;
+    font-size: 1em;
+    width: 75%;
+    margin-top: 5vh;
+}
+h2.criteriaDescription{
+    color: #737373;
+    font-family: 'AvenirNextLTPro-Medium';
+    font-size: 0.7em;
+    word-spacing: 0.1em;
+    letter-spacing: 0.04em;
+    line-height: 1.8em;
+    margin-left: 10vw;
+    padding-right: 3vw;
+    margin-top: 1vh;
+}
+div.criteriaFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 5vh;
+    margin-left: 10vw;
+}
+.applicationDetails .criteriaFlex {
+  margin: 1vh 0 1vh 5vw; 
+}
+.criteriaBox {
+    background-color: white;
+    color: #737373;
+    cursor: pointer;
+    padding: 1.5vh 4vh 1.5vh 4vh;
+    width: 20vw;
+    text-align: center;
+    outline: none;
+    font-size: 0.8em;
+    font-family: 'AvenirNextLTPro-Medium';
+    display: flex;
+    margin-right: 5vw;
+    box-shadow: 0.15px 0.15px 0.15px 0.15px #737373;
+    border-radius: 3vh;
+    border: 1px transparent;
+    position: relative;
+}
+i.criteriaPlus {
+    font-size: 30px !important;
+    bottom: 10%;
+    position: absolute;
+    right: 5%;
+    color: #70B0FF;
+}
+div.intendedMajor{
+    background-color: white;
+    color: #737373;
+    padding: 3.5vh 4vh 1.5vh 4vh;
+    width: 45vw;
+    text-align: center;
+    outline: none;
+    font-size: 0.8em;
+    font-family: 'AvenirNextLTPro-Medium';
+    display: flex;
+    margin-left: 10vw;
+    margin-top: 5vh;
+    box-shadow: 0.15px 0.15px 0.15px 0.15px #737373;
+    border: none;
+}
+input.imajorForm{
+    margin-left: 2vw;
+    width: 60%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #737373;
+    display: inline-block;
+    color: #6B6969;
+    font-size: 1em;
+}
+.onboardingSection .imajorForm {
+  width: 90%;
+}
+div.interestBox {
+    background-color: white;
+    color: #737373;
+    cursor: pointer;
+    padding: 1.5vh 4vh 1.5vh 4vh;
+    width: 45vw;
+    text-align: center;
+    outline: none;
+    font-size: 0.8em;
+    font-family: 'AvenirNextLTPro-Medium';
+    display: flex;
+    margin-top: 5vh;
+    margin-left: 10vw;
+    border-radius: 3vh;
+    box-shadow: 1px 1px 1px 1px #6B6969 !important;
+    position: relative;
+}
+.interestBox:hover {
+    border: none;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px lightgray;
+}
+.chooseGender {
+    position: relative;
+    display: inline-block;
+}
+
+.genderMenu, .ethMenu {
+    display: none;
+    background-color: #f9f9f9;
+    margin-left: 10vw;
+    width: 45vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.genderOptions, .ethOptions {
+    color: #737373;
+    font-family: 'AvenirNextLTPro-Regular';
+    font-size: 0.6em;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 45vw;
+    background-color: white;
+    border-bottom: 2px solid #ccc;
+}
+
+.genderOptions:hover, .ethOptions:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.2);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.2);
+  -webkit-transform: translateY(-0.1px) scale(1.0);
+  transform: translateY(-0.1px) scale(1.0);
+}
+
+.learnLink {
+    color: #70B0FF;
+}
+.learnLink:hover{
+    color: #6B6969;
+}
+h2.promptText{
+    font-family: 'AvenirNextLTPro-Medium';
+    color: #6B6969;
+    font-size: 0.8em;
+    letter-spacing: 0em;
+    margin-left: 10vw;
+    margin-top: 5vh;
+}
+h2.promptDirections {
+    font-family: 'AvenirNextLTPro-Medium';
+    color: #737373;
+    font-size: 0.8em;
+    word-spacing: 0.1em;
+    letter-spacing: 0.04em;
+    line-height: 1.8em;
+    margin-left: 10vw;
+    margin-top: 3vh;
+}
+.donorQuestion{
+    background-color: white;
+    color: #737373;
+    padding: 1vh 1vh 1vh 1vh;
+    width: 45vw;
+    height: 15vh;
+    outline: none;
+    font-size: 0.8em;
+    font-family: 'AvenirNextLTPro-Medium';
+    line-height: 3vh;
+    display: flex;
+    margin: 5vh 0 1vh 10vw;
+    box-shadow: 0.15px 0.15px 0.15px 0.15px #737373;
+    border: none;
+}
+.applicationDetails .donorQuestion {
+  margin: 2vh 0 1vh 5vw !important;
+}
+div.backnextFlex{
+    display: flex;
+    overflow: hidden; /* key to hiding one side of parallelogram */
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5vh;
+    bottom: 0;
+    float: right;
+}
+.MSback {
+    margin-right: 3vw;
+    background-color: #6B6969;
+    color: white;
+    width: 6vw;
+    height: 5vh;
+    font-family: 'AvenirNextLTPro-Thin';
+    font-size: 0.7em;
+}
+.createAnother{
+    margin-left: 5vw;
+    background-color: #6B6969;
+    color: white;
+    width: 15vw;
+    height: 4vh;
+    font-family: 'AvenirNextLTPro-Regular';
+    font-size: 0.7em;
+    display: inline-block;
+}
+.MSnext {
+    background-color: #6393CE;
+    color: white;
+    width: 6vw;
+    height: 5vh;
+    font-family: 'AvenirNextLTPro-Thin';
+    font-size: 0.7em;
+}
+.previewFilter {
+    width: 25vw;
+    height: 5vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-right: 5vw;
+    padding-top: 1vh;
+    font-family: 'AvenirNextLTPro-Regular';
+    font-size: 0.5em;
+    background-color: white;
+    border: 1px #6B6969;
+    border-radius: 2vh;
+    box-shadow: 0px 1px 1px 1px #737373;
+    text-align: center;
+}
+.previewFilter:hover {
+    border: 1px #6B6969;
+    box-shadow: 0px 1px 1px 1px #737373;
+}
+.browseScholarships{
+    margin-left: 5vw;
+    margin-bottom: 2vh;
+    background-color: #6393CE;
+    color: white;
+    height: 4vh;
+    font-family: 'AvenirNextLTPro-Regular';
+    font-size: 0.7em;
+    display: inline-block;
+}
+h2.amountText {
+    font-family: 'AvenirNextLTPro-Medium';
+    color: #6B6969;
+    font-size: 1em;
+    letter-spacing: 0em;
+    margin-left: 10vw;
+    margin-top: 5vh;
+}
+h2.timelineText {
+    font-family: 'AvenirNextLTPro-Medium';
+    color: #6B6969;
+    font-size: 1em;
+    letter-spacing: 0em;
+    margin-left: 10vw;
+    margin-top: 5vh;
+}
+h2.amountDirections{
+    font-family: 'AvenirNextLTPro-Regular';
+    font-style: italic;
+    color: #737373;
+    font-size: 0.6em;
+    word-spacing: 0.1em;
+    letter-spacing: 0.04em;
+    line-height: 1.8em;
+    margin-left: 10vw;
+    margin-top: 1vh;
+}
+.slideContainer {
+    width: 100%;
+    margin: 5vh 0 10vh 10vw;
+}
+
+.MSslider {
+    -webkit-appearance: none;
+    width: 25%;
+    margin-left: 10vw;
+    height: 1vh;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.MSslider:hover {
+    opacity: 1;
+}
+
+.MSslider::-webkit-MSslider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+.MSslider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+/*preview page*/
+.grayBar {
+    width: 50vw;
+    height: 3vh;
+    background-color: #6B6969;
+    background-color: #6B6969;
+    margin-left: 5vw;
+}
+.grayBarText {
+    display: inline-block;
+    margin-right: 5vw;
+    margin-left: 5vw;
+}
+.howViewText {
+    color: white;
+    font-family: 'AvenirNextLTPro-Regular';
+    font-size: 0.6em;
+}
+.makeEditsText{
+    color: white;
+    font-family: 'AvenirNextLTPro-Regular';
+    font-size: 0.7em;
+}
+.donorHeader {
+    margin: 5vh;
+    padding-bottom: 2vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 30px 30px 30px 30px;
+    -webkit-box-shadow: 0.5px 0.5px 0.5px 0.5px #737373;
+    -moz-box-shadow: 0.5px 0.5px 0.5px 0.5px #737373;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #737373;
+}
+div.donorImage {
+    margin-left: 2vw;
+    margin-top: 5vh;
+    margin-right: 5vw;
+}
+img.donorImage {
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    display: flex;
+    margin-left: 2vw;
+}
+.donorText {
+    width: 25vw;
+    height: auto;
+    margin-left: 5vw;
+}
+.favoriteScholarship {
+    background-color: #6393CE;
+    color: white;
+    width: 10vw;
+    height: 5vh;
+    font-family: 'AvenirNextLTPro-Regular';
+    font-size: 0.7em;
+    border-radius: 10px 10px 10px 10px;
+    letter-spacing: 0.1em;
+}
+div.eligibilityReqs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+div.MSReq {
+    display: flex;
+    flex-direction: column;
+}
+h2.reqCategory {
+    font-family: 'AvenirNextLTPro-Regular';
+    font-size: 0.5em;
+    color: #737373;
+    margin-left: 5vw;
+    margin-bottom: 0;
+    margin-top: 3vh;
+}
+div.reqOption {
+    font-family: 'AvenirNextLTPro-Regular';
+    font-size: 0.5em;
+    color: #737373;
+    width: 12vw;
+    text-align: center;
+    border: none;
+    box-shadow: 0.15px 0.15px 0.15px 0.15px #737373;
+    padding: 1.5vh 1vh 1.5vh 1vh;
+    margin-top: -2vh;
+    margin-left: 4vw;
+    border-radius: 20px 20px 20px 20px;
+    background-color: white;
+    letter-spacing: 0.05em;
+}
+h2.upToText {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 0.5em;
+    color: #737373;
+    letter-spacing: 0.05em;
+    margin-top: 2vh;
+    margin-left: 5vw;
+}
+h2.platformText {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 0.6em;
+    color: #696B6B;
+    letter-spacing: 0.05em;
+    margin-left: 4vw;
+    padding-top: 1vh;
+}
+.platformCheck {
+    color: #70B0FF;
+    font-size: 2em !important;
+}
+#dollarSign {
+    color: #70B0FF;
+}
+#videoPromptBox {
+    margin: 1vh auto 5vh;
+    width: 90%;
+    height: auto;
+    margin-bottom: 5vh;
+    border-radius: 30px 30px 30px 30px;
+    -webkit-box-shadow: 0.5px 0.5px 0.5px 0.5px #737373;
+    -moz-box-shadow: 0.5px 0.5px 0.5px 0.5px #737373;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #737373;
+    font-size: 0.8em;
+    font-family: "AvenirNextLTPro-Regular";
+    color: #737373;
+    padding: 3.5vh 4vh 1.5vh 4vh;
+    text-align: center;
+    outline: none;
+}
+#messageBox {
+    margin: 2vh auto 5vh;
+    width: 90%;
+    height: auto;
+    border-radius: 30px 30px 30px 30px;
+    font-size: 0.8em;
+    font-family: "AvenirNextLTPro-Regular";
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: #737373;
+    padding: 3.5vh 4vh 1.5vh 4vh;
+    text-align: center;
+    outline: none;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #737373
+}
+div.messageImage {
+    margin-top: 2vh;
+}
+img.messageImage {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    display: flex;
+}
+h2.donorMessage {
+    font-family: 'AvenirNextLTPro-Medium';
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    margin-left: 2vw;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+.messageLeftMother {
+    display: flex;
+    flex-direction: column;
+}
+.donorCaption {
+    margin-top: 1vh;
+    height: auto;
+    margin-bottom: 5vh;
+    margin-left: 0;
+    border-radius: 30px 30px 30px 30px;
+    font-size: 0.6em;
+    font-family: "AvenirNextLTPro-Regular";
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+h1.previewText {
+    margin-top: 30vh;
+    font-family: 'League Spartan';
+    font-size: 1em;
+    color: #6B6969;
+    margin-left: 4vw;
+}
+h2#voilaText{
+    margin-left: 4vw;
+    width: auto;
+    height: auto;
+}
+.previewFees {
+    margin-left: 4vw;
+    margin-top: 5vh;
+    background-color: white;
+    border: 1px solid #737373;
+    width: 25vw;
+}
+h2#scholarshipFee {
+  margin-top: 2vh;
+}
+h2#scholarshipFee, h2#platformFee{
+    margin-left: 3vw;
+}
+.platformFeeQuestion{
+    
+}
+.totalFee{
+    width: 25vw;
+    background-color: white;
+    border: 1px solid #737373;
+    border-top: none;
+    margin-left: 4vw;
+}
+h2.totalText {
+    margin-left: 3vw;
+    padding: 2vh 0;
+    font-family: 'AvenirNextLTPro-Demi';
+    font-size: 1em;
+    color: #6B6969;
+}
+button.confirmCreate{
+    margin-left: 4vw;
+    margin-top: 5vh;
+    width: 25vw;
+    height: 7vw;
+    background-color: #63E099;
+    color: white;
+}
+h2#ccText{
+    font-size: 1em;
+    color: white;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-left: 2vw;
+    text-align: center;
+    
+}
+.loginInput {
+    margin-left: 10vw;
+    margin-top: 2vh;
+    margin-left: 10vw;
+}
+input.yourEmail {
+    width: 60%;
+    box-sizing: border-box;
+    border: 0.5px solid #C4C4C4;
+    display: inline-block;
+    color: #6B6969;
+    font-size: 0.6em;
+    font-family: 'AvenirNextLTPro-Regular';
+    padding: 1.5vh 2vh 1vh 2vh;
+}
+div.horizontalDivider{
+    display: flex;
+    flex-direction: row;
+}
+hr.MShorizontal{
+    margin-top: 3.8vh;
+    margin-left: 10vw; 
+    width: 15vw;
+    margin-right: 0;
+}
+h2#horizontalOr{
+    font-family: 'AvenirNextLTPro-Thin'; 
+    font-size: 0.5em; 
+    color: #737373;
+    margin-top: 3vh;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+div.MSgoogle {
+    margin-left: 10vw;
+    margin-top: 2vh;
+    margin-left: 10vw;
+    margin-bottom: 5vh;
+}
+button.MSgoogle {
+    width: 60%;
+    box-sizing: border-box;
+    border: 0.5px solid #C4C4C4;
+    display: inline-block;
+    color: #6B6969;
+    font-size: 0.6em;
+    font-family: 'AvenirNextLTPro-Regular';
+    padding: 1.5vh 2vh 1vh 2vh;
+    margin-top: 0;
+}
+.winBox{
+    margin: 20vh 0 2vh 4vw;
+    background-color: white;
+    border: 1px solid #C4C4C4;
+    width: 27vw;
+    height: 23vw;
+}
+img.winBoxIcon {
+    width: 25vw;
+    height: auto;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+.donationContext250 {
+    margin-top: 5vh;
+    margin-left: 3vw;
+    margin-bottom: -8vh;
+    background-color: white;
+    border: 1px #6B6969;
+    box-shadow: 0px 1px 1px 1px #737373;
+    height: 25vh;
+    width: 16vw;
+    display: none;
+}
+.donationContext500 {
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-bottom: -8vh;
+    background-color: white;
+    border: 1px #6B6969;
+    box-shadow: 0px 1px 1px 1px #737373;
+    height: 25vh;
+    width: 16vw;
+    display: none;
+}
+.donationContext750 {
+    margin-top: 5vh;
+    margin-left: 17vw;
+    margin-bottom: -8vh;
+    background-color: white;
+    border: 1px gray;
+    box-shadow: 0px 1px 1px 1px #737373;
+    height: 25vh;
+    width: 16vw;
+    display: none;
+}
+.donationContext1000 {
+    margin-top: 5vh;
+    margin-left: 25vw;
+    margin-bottom: -8vh;
+    background-color: white;
+    border: 1px gray;
+    box-shadow: 0px 1px 1px 1px #737373;
+    height: 25vh;
+    width: 16vw;
+    display: none;
+}
+.donationContext1250 {
+    margin-top: 5vh;
+    margin-left: 32vw;
+    margin-bottom: -8vh;
+    background-color: white;
+    border: 1px gray;
+    box-shadow: 0px 1px 1px 1px #737373;
+    height: 25vh;
+    width: 16vw;
+    display: none;
+}
+.donationContext1500 {
+    margin-top: 5vh;
+    margin-left: 40vw;
+    margin-bottom: -8vh;
+    background-color: white;
+    border: 1px gray;
+    box-shadow: 0px 1px 1px 1px #737373;
+    height: 25vh;
+    width: 16vw;
+    display: none;
+}
+.turnGreen {
+    background-color: green;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .donationContext250 {
+    margin-top: 5vh;
+    margin-bottom: -8vh;
+    background-color: white;
+    border: 1px solid #70B0FF;
+    border-radius: 0.8vh;
+    box-shadow: 0px 1px 1px 1px #737373;
+    height: 45vh;
+    width: 80vw;
+    margin-left: 10vw;
+    display: none;
+}
+.donationContext500 {
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-bottom: -8vh;
+    background-color: white;
+    border: 1px solid #63E099;
+    border-radius: 0.8vh;
+    box-shadow: 0px 1px 1px 1px #737373;
+    height: 45vh;
+    width: 80vw;
+    display: none;
+}
+.donationContext750 {
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-bottom: -8vh;
+    background-color: white;
+    border-radius: 0.8vh;
+    border: 1px solid #FFD843;
+    box-shadow: 0px 1px 1px 1px #737373;
+    height: 45vh;
+    width: 80vw;
+    display: none;
+}
+.donationContext1000 {
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-bottom: -8vh;
+    background-color: white;
+    border: 1px solid #ffb7cb;
+    border-radius: 0.8vh;
+    box-shadow: 0px 1px 1px 1px #737373;
+    height: 45vh;
+    width: 80vw;
+    display: none;
+}
+.donationContext1250 {
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-bottom: -8vh;
+    background-color: white;
+    border: 1px gray;
+    border-radius: 0.8vh;
+    box-shadow: 0px 1px 1px 1px #737373;
+    height: 45vh;
+    width: 80vw;
+    display: none;
+}
+.donationContext1500 {
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-bottom: -8vh;
+    background-color: white;
+    border: 1px gray;
+    border-radius: 0.8vh;
+    box-shadow: 0px 1px 1px 1px #737373;
+    height: 45vh;
+    width: 80vw;
+    display: none;
+}
+    .provideDescrip {
+        font-size: 1em;
+        width: 85vw;
+        margin-left: 0vw;
+    }
+    .provideDescripLaunch {
+        font-size: 1em;
+        width: 85vw;
+        margin-left: 0vw;
+    }
+    .provideIcon {
+        width: 10vw;
+        height: 10vw;
+        margin-left: 2vw;
+        margin-top: 1vh;
+    }
+    .aSupporter a img {
+    width: 35vw;
+    margin-top: 5vw;
+}
+    .tryCreating {
+        display: block;
+        margin-left: 0vw !important;
+    }
+}
+
+/* Slider */
+
+.slideContainer .range {
+  position: relative;
+  width: 550px;
+  height: 5px;
+  background: linear-gradient(to right, #63E099 0%, #63E099 40%, #fff 40%, #fff 100%);
+}
+
+.slideContainer .range input {
+  width: 100%;
+  position: absolute;
+  top: 2px;
+  height: 0;
+  -webkit-appearance: none;
+}
+.slideContainer .range input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  margin: -8px 0  0;
+  border-radius: 50%;
+  background: #63E099;
+  cursor: pointer;
+  border: 0 !important;
+}
+.slideContainer .range input::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  margin: -8px 0  0;
+  border-radius: 50%;
+  background: #63E099;
+  cursor: pointer;
+  border: 0 !important;
+}
+.slideContainer .range input::-ms-thumb {
+  width: 18px;
+  height: 18px;
+  margin: -8px 0  0;
+  border-radius: 50%;
+  background: #63E099;
+  cursor: pointer;
+  border: 0 !important;
+}
+.slideContainer .range input::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #b2b2b2;
+}
+.slideContainer .range input::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #b2b2b2;
+}
+.slideContainer .range input::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #b2b2b2;
+}
+.slideContainer .range input:focus {
+  background: none;
+  outline: none;
+}
+.slideContainer .range input::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.range-labels {
+  margin: 18px -41px 0;
+  padding: 0;
+  list-style: none;
+}
+.range-labels li {
+  position: relative;
+  float: left;
+  width: 105.29px;
+  text-align: center;
+  color: #b2b2b2;
+  font-size: 14px;
+  cursor: pointer;
+}
+.range-labels li::before {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  left: 0;
+  content: "";
+  margin: 0 auto;
+  width: 9px;
+  height: 9px;
+  background: #b2b2b2;
+  border-radius: 50%;
+}
+.range-labels .active {
+  color: #63E099;
+}
+.range-labels .selected::before {
+  background: #63E099;
+}
+.range-labels .active.selected::before {
+  display: none;
+}
+
+.googleButtonDiv {
+  text-align: center;
+  margin: 5vh 0;
+}
+
+.onboardingGoogle {
+  width: 75%;
+}
+
+.chooseFilter {
+    border-radius: 5px 5px 10px 10px;
+    margin: 5vh 7vw 0 7vw;
+    padding: 1vh 0;
+    height: 40vh;
+    box-shadow: 0px 1px 1px 1px #737373;
+    border-top: 5px solid #7CB7FF;
+    text-align: center;
+}
+.starFilter {
+    text-align: center;
+    padding-left: 1.7vw;
+}
+.starFilterOptions{
+    margin-top: 2vh;
+}
+.starRating{
+    margin-left: 1.5vw !important;
+    display: flex;
+}
+.ratingStar {
+    color: #FFFAAF;
+    font-size: 0.8em; 
+}
+
+.starBox {
+    width: 3vh;
+    height: 3vh; 
+    /* background-color: linear-gradient(to right, #FFD843, #FFC300); */
+    border-radius: 5px;
+    background-color: #FFD843;
+    margin-left: 1vw;
+}
+
+.filterText {
+    color: #737373;
+    font-family: 'AvenirNextLTPro-Medium';
+    font-size: 0.7em;
+    word-spacing: 0.1em;
+    letter-spacing: 0.04em;
+    line-height: 1.8em;
+}
+ .filterCriteriaFlex {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    width: auto;
+    height: auto;
+    margin-top: 3vh;
+} 
+.filterCriteriaName.chosen{
+    color: white;
+    background-color: #FFD843;
+}
+.filterCriteriaName{
+    color: gray;
+    font-size: 0.5em;
+    border-radius: 5px 5px 5px 5px;
+    background-color: white;
+    box-shadow: none;
+    padding: 1vh 0;
+    margin: 1vh 1vw;
+    width: 85%;
+}
+.chooseApplicant{
+    width: 15vw;
+    height: 40vh;
+    display: inline-block;
+    margin: 5vh 3vw 0 0;
+    border-radius: 5px 5px 10px 10px;
+    box-shadow: 0px 1px 1px 1px #737373;
+    overflow: auto;
+    position: relative;
+}
+.chooseApplicant:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0 2px 9px 0 rgba(0,0,0,.2);
+    box-shadow: 0 2px 9px 0 rgba(0,0,0,.2);
+    -webkit-transform: translateY(-1px) scale(1.01);
+    transform: translateY(-1px) scale(1.01);
+}
+.currentlySignedIn {
+  color: #737373;
+  font-family: 'AvenirNextLTPro-Medium';
+  font-size: 1em;
+  word-spacing: 0.1em;
+  letter-spacing: 0.04em;
+  line-height: 1.8em;
+  margin-left: 10vw;
+  padding-right: 3vw;
+}
+
+.signOutCenter {
+  text-align: center;
+}
+
+#signInToAnother {
+  background-color: #4b4b4b;
+  border: 0;
+  border-radius: 1vh;
+  color: white;
+  padding: 1vh 4vh;
+  margin: 5vh 0;
+  font-size: calc(1vh + 1vw);
+  font-family: 'AvenirNextLTPro-Medium';
+}
+.applicationPic {
+    height: 75%;
+    width: 15vw;
+    display: grid;
+    background-color: #d4d6d8;
+}
+
+.profile .videoProfile {
+  height: 10vh;
+  width: 10vh;
+  background: url(media/images/team/sravya.png);
+  background-size: cover !important;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  margin-right: 2vw;
+}
+.applicationInfo .videoProfile {
+  height: 5vh;
+  width: 5vh;
+  background: url(media/images/team/sravya.png);
+  background-size: cover !important;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  margin-right: 2vw;
+}
+.applicationInfoBig .videoProfile {
+  height: 8vh;
+  width: 8vh;
+  background: url(media/images/team/sravya.png);
+  background-size: cover;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  margin-right: 2vw;
+}
+
+.applicationInfo {
+  margin: 1vh 0 1vh 1vw;
+}
+
+.fiveStars {
+  text-align: center;
+  margin-top: 1.5vh;
+}
+
+.fill-star {
+  color: #FFD843;
+  margin-right: 0.3vw;
+}
+.applicationDetails .fill-star:hover, .applicationDetails .empty-star:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.2);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.2);
+  -webkit-transform: translateY(-0.1px) scale(1.0);
+  transform: translateY(-0.1px) scale(1.0);
+}
+
+.empty-star {
+  color: #d4d6d8;
+  margin-right: 0.3vw;
+}
+
+.applicationInfo p {
+    font-size: 0.7em;
+    display: inline;
+    font-family: 'AvenirNextLTPro-Medium';
+    color: #737373;
+}
+.applicationInfoBig p {
+    font-size: 1.2em;
+    display: inline;
+    font-family: 'AvenirNextLTPro-Medium';
+    color: #737373;
+}
+.applicationInfo .applicantCaption {
+  display: block !important;
+  font-size: 0.6em !important;
+}
+.applicationInfoBig .applicantCaption {
+  display: block !important;
+  font-size: 0.8em !important;
+  line-height: 5vh;
+}
+
+.applicationVideo {
+  height: 50vh;
+}
+
+.videoWrapper {
+  width: 100%;
+  text-align: center;
+  background-color: #6B6969;
+  border-radius: 3vh 3vh 0 0;
+}
+#applicationDetailsModal > .modal-content {
+    padding: 0;
+}
+
+.applicationInfoBig {
+  margin: 2vh 5vw;
+  display: inline-block;
+  width: 40%;
+}
+
+.clickableStars {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 4.5vh;
+}
+.clickableStars > i {
+  font-size: calc(1.5vh + 1.5vw) !important;
+}
+
+.whyINeed {
+    font-family: 'AvenirNextLTPro-Medium';
+    color: #6B6969;
+    font-size: 1em;
+    letter-spacing: 0em;
+    margin-left: 5vw;
+    margin-top: 5vh;
+}
+
+.applicationDetails {
+  margin: 2vh 0 5vh 0;  
+}
+
+/* student onboarding */ 
+
+h2.likelyWin {
+    color: #737373;
+    font-family: 'AvenirNextLTPro-Bold';
+    font-size: 0.7em;
+    word-spacing: 0.1em;
+    letter-spacing: 0.04em;
+    line-height: 1.8em;
+    margin-left: 10vw;
+    padding-right: 3vw;
+    margin-top: 4vh;
+}
+.questionBold {
+  color: #737373;
+  font-family: 'AvenirNextLTPro-Bold';
+  font-size: 0.9em;
+  word-spacing: 0.1em;
+  letter-spacing: 0.04em;
+  line-height: 1.8em;
+  display: inline;
+}
+.profilePic{
+    margin-left: 7vw;
+    margin-top: 5vh;
+    border-radius: 50%;
+    width: 15vw;
+    height: 15vw;
+}
+.googlePhoto{ 
+    margin-left: 10vw;
+    width: 25vw;
+    border: 1px solid gray;
+    text-align: center;
+    color: #737373;
+    font-family: 'AvenirNextLTPro-Medium';
+    font-size: 0.7em;
+    word-spacing: 0.1em;
+    letter-spacing: 0.04em;
+    line-height: 1.8em;
+    margin-left: 10vw;
+    padding: 1vh 0;
+    margin-top: 4vh;
+    position: relative;
+}
+.criteriaBox > input {
+  font-size: 20px !important;
+  bottom: 35%;
+  position: absolute;
+  right: 10%;
+}
+.googlePhoto > input {
+  font-size: 20px !important;
+  bottom: 35%;
+  position: absolute;
+  right: 5%;
+}
+
+
+.needCheckBoxes {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.lowIncomeGender {
+    display: flex;
+    flex-direction: column;
+}
+#lowIncome {
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px #6B6969;
+}
+
+.SOcheckBox {
+    display: flex;
+    width: 2vw;
+    height: 2vw;
+    background-color: white;
+}
+
+.onboardingHeader {
+    font-family: 'AvenirNextLTPro-Medium';
+    color: #6B6969;
+    font-size: 1em;
+    letter-spacing: 0em;
+    margin-left: 10vw;
+    margin-top: 8vh;
+}
+
+.criteriaDropdownText {
+  color: #737373;
+  font-family: 'AvenirNextLTPro-Medium';
+  font-size: 0.7em !important;
+  word-spacing: 0.1em;
+  letter-spacing: 0.04em;
+  line-height: 1.8em;
+}
+.criteriaFilters .criteriaDropdownText {
+  margin-left: 3vw;
+}
+
+.criteriaDropdown select {
+  height: 5vh;
+}
+
+.criteriaDropdown {
+  margin-bottom: 5vh;
+}
+
+.interestSelect {
+  margin-left: 10vw;
+  margin-top: 2vh;
+}
+.academicSelect {
+  margin-left: 10vw;
+  margin-top: 2vh;
+}
+
+.interestBTN {
+  background-color: white;
+  color: #737373;
+  cursor: pointer;
+  padding: 1.5vh 4vh 1.5vh 4vh;
+  text-align: center;
+  outline: none;
+  font-size: 0.8em;
+  font-family: 'AvenirNextLTPro-Medium';
+  margin: 1vh 1vw 0 0 !important;
+  box-shadow: 0.15px 0.15px 0.15px 0.15px #737373;
+  border: none;
+  border-radius: 3vh;
+}
+.interestBTN.chosen {
+  background-color: #63E099 !important;
+  color: white !important;
+}
+.mobileNext {
+  display: none;
+}
+.criteriaDescription > a:hover {
+  cursor: pointer;
+  color: #70B0FF
+}
+.criteriaDescription > a {
+  color: #6393ce;
+}
+.onboardingSection {
+  display: block;
+}
+.onboardingSection ~ .onboardingSection {
+  display: none;
+}
+.mobileNext > button, .desktopNext > button {
+  border: 0;
+  border-radius: 1vh;
+  color: white;
+  padding: 1vh 4vh;
+  font-size: calc(1vh + 1vw);
+  font-family: 'AvenirNextLTPro-Demi';
+}
+.mobileNext > .continue, .mobileNext > .finish, .desktopNext > button {
+  background-color: #6393ce;
+}
+.desktopNext {
+  display: block;
+  margin: 5vh 10vw 5vh 0;
+  float: right;
+}
+
+@media screen and (max-width: 1024px) {
+  .studentOnboarding > .microWizard {
+    width: 100%;
+  }
+  .studentOnboarding > .microInfo {
+    display: none;
+  }
+  .mobileNext {
+    display: block;
+    margin: 5vh 10vw 5vh 0;
+    float: right;
+  }
+  .desktopNext {
+    display: none;
+  }
+  .mobileNext > .back {
+    background-color: #6B6969;
+  }
+  .onboardingHeader {
+    color: #6B6969;
+    margin-left: 10vw;
+    font-size: 1.7em;
+    font-family: "League Spartan", sans-serif;
+    width: 90%;
+    margin: 5vh auto;
+  }
+  .interestBTN {
+    width: 48% !important;
+  }
+  .interestSelect {
+    margin-left: 2vw;
+  }
+  div.intendedMajor {
+    width: 90%;
+    margin: 5vh auto;
+  }
+  .googlePhoto {
+    width: 90%;
+    margin: 5vh auto;
+  }
+  .onboardingSection > .criteriaFlex {
+    margin: 0;
+    display: block;
+  }
+  .onboardingSection div.criteriaBox {
+    margin: 2vh auto;
+    width: 90%;
+  }
+  .onboardingSection .criteriaBox {
+    width: 100%;
+    margin:  auto;
+  }
+  .criteriaDropdown {
+    margin-bottom: 2vh;
+    width: 90%;
+    margin: 2vh auto;
+  }
+  .onboardingSection .criteriaHeader {
+    width: 90%;
+    margin: 5vh auto;
+  }
+}
+
+.interests, .academics {
+  margin: 1vh 0 1vh 5vw;
+}
+.academicInterests > .interest, .activities > .interest {
+  background-color: white;
+  color: #737373;
+  cursor: pointer;
+  padding: 1.5vh 4vh 1.5vh 4vh;
+  width: 15vw;
+  text-align: center;
+  outline: none;
+  font-size: 0.8em;
+  font-family: 'AvenirNextLTPro-Medium';
+  display: inline-block;
+  margin-right: 3vw;
+  margin-top: 1vh;
+  border: none;
+  box-shadow: 0.15px 0.15px 0.15px 0.15px;
+  border-radius: 3vh;
+}
+.interests > .interest, .academics > .interest {
+  background-color: white;
+  color: #737373;
+  cursor: pointer;
+  padding: 1.5vh 4vh 1.5vh 4vh;
+  width: 20vw;
+  text-align: center;
+  outline: none;
+  font-size: 0.8em;
+  font-family: 'AvenirNextLTPro-Medium';
+  display: inline-block;
+  margin-right: 5vw;
+  margin-top: 1vh;
+  border: none;
+  box-shadow: 0.15px 0.15px 0.15px 0.15px;
+}
+
+.searchFilter {
+  text-align: center;
+  box-shadow: 0.15px 0.15px 0.15px 0.15px;
+}
+.searchFilter > div {
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0.15px 0.15px 0.15px 0.15px;
+  border-radius: 3vh;
+  padding: 1vh 0;
+  margin: 1vh 1vw;
+  width: 25vh;
+}
+
+.microscholarships {
+  width: 75%;
+  background-color: white;
+  margin: 10vh auto;
+}
+.profileMiddle > div {
+  padding-left: 5vh
+}
+.profileMiddle {
+  width: 75%;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 10vh;
+}
+
+
+
+.microscholarshipShort {
+    border-radius: 5px 5px 10px 10px;
+    margin: 10vh 7vw 0 7vw;
+    box-shadow: 0px 1px 1px 1px #737373;
+    border-top: 5px solid #7CB7FF;
+    text-align: center;
+}
+
+.side-gray {
+  width: 12.5%;
+  background-color: #FBFBFB;
+}
+
+.searchBody {
+  display:flex;
+}
+.applyBody {
+  display:flex;
+  margin-top: 100px;
+}
+.profileBody {
+  display:flex;
+  margin-top: 100px;
+}
+.profileBody > div > div {
+  padding-left: 5vw;
+}
+
+.scholarshipInfoText > h1 {
+  color: #6B6969;
+  font-size: 1.2em;
+  margin: 1vh 0;
+}
+.scholarshipInfo {
+  display: flex;
+  margin: 2vh 0 2vh 5vw;
+}
+
+#scholarshipAmount {
+  color: #7CB7FF;
+  font-size: 1em;
+  margin: 1vh 0;
+}
+
+#scholarshipDate {
+  color: #737373;
+  font-family: 'AvenirNextLTPro-Medium';
+  font-size: 0.8em;
+  word-spacing: 0.1em;
+  letter-spacing: 0.04em;
+  line-height: 1.8em;
+  padding-right: 3vw;
+  margin-top: 1vh;
+}
+
+.scholarshipInfoText {
+  text-align: left;
+}
+
+.microscholarshipInfo {
+  background-color: #FBFBFB;
+  overflow: auto;
+  margin-top: 0
+}
+
+.scholarshipExpand {
+  border: 0;
+  border-radius: 1vh;
+  color: white;
+  padding: 1vh 4vh;
+  margin-bottom: 2vh;
+  font-size: calc(1vh + 1vw);
+  font-family: 'AvenirNextLTPro-Demi';
+  background-color: #6393ce;
+}
+
+
+
+.collegeSub {
+  background-color: white;
+  border-bottom: .15px solid #737373;
+  position: fixed;
+  width: 100%;
+}
+
+.searchWrapper {
+  height: 60px;
+  top: 12vh !important;
+}
+
+.academicFilterBTN.chosen, .interestFilterBTN.chosen {
+  background-color: #70B0FF !important;
+  color: white !important;
+}
+.academicFilterBTN, .interestFilterBTN {
+  background-color: white;
+  color: #737373;
+  cursor: pointer;
+  padding: 1.5vh 0;
+  font-size: 0.8em;
+  font-family: 'AvenirNextLTPro-Medium';
+  margin: 1vh 1.5vw 3vh 1.5vw;
+  box-shadow: 0.15px 0.15px 0.15px 0.15px #737373;
+  border: none;
+  border-radius: 3vh;
+}
+.academicFilterBTN {
+  width: 20vh;
+}
+.interestFilterBTN {
+  width: 27vh;
+}
+
+.academicFilter, .interestFilter {
+  margin: 12vh 17vw 5vh 17vw;
+  text-align: center;
+}
+
+
+.price-range-slider {
+  margin: 14vh 20vw 10vh 20vw;
+}
+
+.value {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin: 0 0 0 -20px;
+  width: 40px;
+  text-align: center;
+  display: block;
+  font-weight: normal;
+  font-family: Verdana,Arial,sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.price-range-both.value {
+  width: 100px;
+  margin: 0 0 0 -50px;
+  top: 26px;
+}
+
+.price-range-both {
+  display: none; 
+}
+
+.value i {
+  font-style: normal;
+}
+.personalFilter {
+  margin: 15vh 20vw 5vh 20vw;
+}
+
+@media screen and (max-width: 1024px) {
+  .filterBarMobile {
+    background-color: #4b4b4b;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 55px;
+    top: 0
+  }
+  .searchWrapper {
+    display: none;
+  }
+  .side-gray {
+    display:none;
+  }
+  .microscholarships {
+    width:100%
+  }
+  .interests > .interest, .academics > .interest {
+    width: 90%;
+    margin: 0.5vh auto;
+  }
+  .interests, .academics {
+    margin: 1vh 0 1vh 0vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .filterBarMobile {
+      display: none; 
+  } 
+}
+
+.videoQuestion {
+  background-color: white;
+  color: #737373;
+  cursor: pointer;
+  padding: 1.5vh 4vh 1.5vh 4vh;
+
+  text-align: left;
+  outline: none;
+  font-size: 0.8em;
+  font-family: 'AvenirNextLTPro-Medium';
+  margin: 3vh 7vw;
+  border: none;
+  border-radius: 3vh;
+  box-shadow: 0.15px 0.15px 0.15px 0.15px;
+}
+
+.questionText, .noteText {
+  color: #737373;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-size: 0.9em;
+  word-spacing: 0.1em;
+  letter-spacing: 0.04em;
+  line-height: 1.8em;
+  display: inline;
+}
+
+#searchFilterMobile > div {
+  top: 0;
+}
+#searchFilterMobile > #filter-button {
+  background-color: #626262;
+  top: 12vh;
+}
+#searchFilterMobile > #filter-menu {
+  height: 100vh;
+  max-height: 100vh;
+  background-color: white;
+}
+#searchFilterMobile input[type="button"] {
+  background-color: #626262;
+  color: white
+}
+#searchFilterMobile .fa-times {
+  color: #626262;
+}
+
+
+.interestBoxFilter {
+  background-color: white;
+  color: #737373;
+  cursor: pointer;
+  padding: 1.5vh 4vh 1.5vh 4vh;
+  text-align: center;
+  outline: none;
+  font-size: 0.8em;
+  font-family: 'AvenirNextLTPro-Medium';
+  display: flex;
+  margin-top: 5vh;
+  box-shadow: 0.15px 0.15px 0.15px 0.15px #737373;
+  border: none;
+  position: relative;
+  width: 90%;
+  margin: 2.5vh auto;
+}
+
+
+
+.criteriaFilterDropdown {
+  width: 90%;
+  margin: auto;
+}
+.criteriaFilter {
+  width: 90%;
+  margin: 2.5vh auto;
+}
+
+.criteriaFilters {
+  margin-top: 5vh;
+  text-align: left;
+}
+.microInfoBackground{
+    width: 100%;
+    height: 100%;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    padding-bottom: 3vh;
+    background-image: url("/media/backgrounds/Group4@2x.png");
+    background-size: 135%, 135%;
+    background-repeat: repeat;
+}
+#simpleMicroBackground{
+    margin-top: -15vh;
+}
+.donorChooseHeader {
+    color: #6B6969;
+    font-size: 1.2em;
+    margin: 8vh 10% 1vh 10%;
+    text-align: left;
+}
+
+.donorChooseText {
+  font-family: 'AvenirNextLTPro-Medium';
+  color: #6B6969;
+  font-size: 1em;
+  margin: 1vh 10%;
+  text-align: left;
+}
+
+.noFavorites {
+  text-align: center !important;
+  margin: 7vh 0;
+}
+
+.noApps {
+  text-align: center !important;
+  margin: 7vh 0;
+}
+
+.chooseApplicant .fa-heart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 35px;
+}
+.applicationInfoBig .fa-heart:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 9px 0 rgba(0,0,0,.2);
+  box-shadow: 0 2px 9px 0 rgba(0,0,0,.2);
+  -webkit-transform: translateY(-1px) scale(1.01);
+  transform: translateY(-1px) scale(1.01);
+}
+.applicationInfoBig .fa-heart {
+  margin-left: 2vw;
+  font-size: 30px;
+}
+
+.heartFill {
+  color: #FF8585;
+}
+.heartEmpty {
+  color: #d4d6d8;
+}
+
+.allApplications, .favorites {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+}
+
+.awardDropdownBox{
+    position: absolute;
+    top: 73%;
+    margin-left: 30vw;
+}
+.awardDropdownContent {
+    position: absolute;
+    margin-top: 0;
+    background-color: white;
+    z-index: 999;
+    box-shadow: 0.15px 0.15px 0.15px 0.15px;
+    padding-left: 2vh;
+    width: 100%;
+}
+.awardDropdownContent > a {
+    display: block;
+    color: #737373;
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 0.8em;
+    height: 5vh;
+}
+.awardDropdownContent > a:hover {
+    color: #70B0FF;
+}
+#awardScholarship {
+    background-color: #6393ce;
+    border: 0;
+    border-radius: 1vh;
+    color: white;
+    padding: 1vh 2vh;
+    font-size: calc(1vh + 1vw);
+    font-family: 'AvenirNext-Bold';
+}
+.questionDropdownBox, .amountDropdownBox{
+    margin-top: 5vh;
+    margin-bottom: 55vh;
+    margin-left: 10vw;
+}
+.questionDropdownBTN {
+    background-color: white;
+    color: #737373;
+    position: relative;
+    cursor: pointer;
+    padding: 1.5vh 4vh 1.5vh 4vh;
+    width: 45vw;
+    text-align: center;
+    outline: none;
+    font-size: 0.8em;
+    font-family: 'AvenirNextLTPro-Medium';
+    display: flex;
+    margin-top: 5vh;
+    border-radius: 3vh 3vh 3vh 3vh;
+    box-shadow: 1px 1px 1px 1px #6B6969;
+}
+.questionDropdownBTN1, .questionDropdownBTN2, .questionDropdownBTN3, .questionDropdownBTN4  {
+    background-color: white;
+    color: #737373;
+    cursor: pointer;
+    padding: 1.5vh 4vh 1.5vh 4vh;
+    width: 45vw;
+    text-align: center;
+    outline: none;
+    font-size: 0.8em;
+    font-family: 'AvenirNextLTPro-Medium';
+    display: none;
+    margin-top: 5vh;
+    border-radius: 3vh 3vh 0vh 0vh;
+    box-shadow: 0.15px 0.15px 0.15px 0.15px #737373;
+}
+.amountDropdownBTN {
+    background-color: white;
+    color: #737373;
+    cursor: pointer;
+    padding: 1.5vh 4vh 1.5vh 4vh;
+    width: 20vw;
+    text-align: center;
+    outline: none;
+    font-size: 0.8em;
+    font-family: 'AvenirNextLTPro-Medium';
+    display: flex;
+    margin-top: 5vh;
+    border-radius: 3vh 3vh 3vh 3vh;
+    box-shadow: 1px 1px 1px 1px #6B6969 !important;
+    position: relative;
+}
+.amountDropdown250, .amountDropdown500, .amountDropdown750, .amountDropdown1000, .amountDropdown1250, .amountDropdown1500 {
+    background-color: white;
+    color: #737373;
+    cursor: pointer;
+    padding: 1.5vh 4vh 1.5vh 4vh;
+    width: 20vw;
+    text-align: center;
+    outline: none;
+    font-size: 0.8em;
+    font-family: 'AvenirNextLTPro-Medium';
+    display: none;
+    margin-top: 5vh;
+    border-radius: 3vh 3vh 0vh 0vh;
+    box-shadow: 0.15px 0.15px 0.15px 0.15px #737373;
+    z-index: 999;
+}
+.questionOpenBTN {
+    background-color: white;
+    color: #737373;
+    cursor: pointer;
+    padding: 1.5vh 4vh 1.5vh 4vh;
+    width: 45vw;
+    text-align: center;
+    outline: none;
+    font-size: 0.8em;
+    font-family: 'AvenirNextLTPro-Medium';
+    display: flex;
+    margin-top: 5vh;
+    border-radius: 3vh 3vh 0vh 0vh;
+    box-shadow: 0.15px 0.15px 0.15px 0.15px #737373;
+}
+.amountOpenBTN {
+    background-color: white;
+    color: #737373;
+    cursor: pointer;
+    padding: 1.5vh 4vh 1.5vh 4vh;
+    width: 20vw;
+    text-align: center;
+    outline: none;
+    font-size: 0.8em;
+    font-family: 'AvenirNextLTPro-Medium';
+    display: flex;
+    margin-top: 5vh;
+    border-radius: 3vh 3vh 0vh 0vh;
+    box-shadow: 0.15px 0.15px 0.15px 0.15px #737373;
+}
+.questionDropdownContent {
+    position: absolute;
+    margin-top: 0;
+    background-color: white;
+    z-index: 10;
+    box-shadow: 0.15px 0.15px 0.15px 0.15px;
+    width: 45vw;
+    border-radius: 0vh 0vh 3vh 3vh;
+}
+.amountDropdownContent {
+    position: absolute;
+    margin-top: 0;
+    background-color: white;
+    z-index: 10;
+    box-shadow: 0.15px 0.15px 0.15px 0.15px;
+    width: 20vw;
+    border-radius: 0vh 0vh 3vh 3vh;
+}
+.questionDropdownContent > a {
+    display: block;
+    color: #737373;
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 0.8em;
+    height: 5vh;
+    cursor: pointer;
+    padding-top: 2vh;
+    padding-left: 2vw;
+    padding-bottom: 1vh;
+    padding-right: 1vw;
+}
+.amountDropdownContent > a {
+    display: block;
+    color: #737373;
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 0.8em;
+    height: 5vh;
+    cursor: pointer;
+    padding-top: 2vh;
+    padding-left: 2vw;
+    padding-bottom: -1vh;
+}
+.questionDropdownContent > a:hover {
+    color: #70B0FF;
+    background-color: #FAFAFA;
+}
+.amountDropdownContent > a:hover {
+    color: #70B0FF;
+    background-color: #FAFAFA;
+}
+
+.bold {
+  font-family: "AvenirNextLTPro-Bold";
+}
+
+.applyBox {
+  margin-top: 5vh !important;
+}
+
+.uploadVideo {
+    background-color: #6393CE;
+    color: white;
+    font-family: 'AvenirNextLTPro-Bold';
+    font-size: 0.7em;
+    padding: 2vh 4vw;
+    margin-left: 5vw;
+    margin-bottom: 5vh;
+    border-radius: 2vh;
+}
+
+
+
+#whyNeedInput {
+  margin: 5vh 5%;
+  width: 80%;
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #737373;
+  font-size: 0.8em;
+  font-family: "AvenirNextLTPro-Regular";
+  color: #737373;
+  padding: 2vh 2vw 2vh 2vw;
+  text-align: left;
+  outline: none;
+}
+
+.appPart2 {
+  background-color: #F5F5F5;
+  overflow: auto
+}
+
+#applyBTN {
+  float: right;
+  margin-right: 5vw;
+}
+@media screen and (max-width: 1024px) {
+  .applyBody .microInfo {
+    display: none;
+  }
+  .applyBody .microWizard {
+    width: 100%;
+  }
+  .applyBody .uploadVideo {
+    width: 90%;
+  }
+  .applyBody .applyButtons {
+    display: flex;
+  }
+  .applyBody .back {
+    display: block !important;
+    background-color: #6A727D;
+  }
+  .appPart2 {
+    display: none;
+  }
+}
+
+#fileToUpload {
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 100px;
+  z-index: 2;
+  opacity: 0.0; /* Standard: FF gt 1.5, Opera, Safari */
+  filter: alpha(opacity=0); /* IE lt 8 */
+  -ms-filter: "alpha(opacity=0)"; /* IE 8 */
+  -khtml-opacity: 0.0; /* Safari 1.x */
+  -moz-opacity: 0.0; /* FF lt 1.5, Netscape */
+}
+
+.uploadChosen {
+  background-color: #b0db8e !important;
+}
+#upload {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer; 
+}
+
+.profileHeader {
+  color: #6B6969;
+  font-size: 1.2em;
+  padding: 2vh 0 1vh 0;
+}
+
+.profileCaption {
+  color: #6B6969;
+  font-size: 0.8em;
+}
+
+.profileSubHeader {
+    font-family: 'AvenirNextLTPro-Medium';
+    color: #6B6969;
+    font-size: 1em;
+    letter-spacing: 0em;
+    margin-top: 5vh;
+}
+
+.appliedScholarship {
+    border-radius: 5px 5px 10px 10px;
+    margin: 5vh 2vw;
+    box-shadow: 0px 1px 1px 1px #737373;
+    border-top: 5px solid #7CB7FF;
+    text-align: left;
+    padding: 0 3vw 3vh 3vw;
+    width: 40%;
+    float: left;
+}
+
+.appliedHeader {
+  font-family: 'AvenirNextLTPro-Demi';
+  color: #6B6969;
+  font-size: 0.8em;
+  letter-spacing: 0em;
+  margin-top: 3vh;
+}
+
+.appliedText {
+  font-family: 'AvenirNextLTPro-Medium';
+  color: #6B6969;
+  font-size: 0.8em;
+  letter-spacing: 0em;
+  margin-top: 1vh;
+}
+
+.appliedScholarships {
+  background-color: #FBFBFB;
+  padding: 1vh 2vw;
+  overflow:hidden;
+}
+
+.profile {
+  margin: 5vh 0;
+}
+
+#whyINeedProfile {
+  width: 90%;
+  height: auto;
+  margin-bottom: 5vh;
+  -webkit-box-shadow: 0.5px 0.5px 0.5px 0.5px #737373;
+  -moz-box-shadow: 0.5px 0.5px 0.5px 0.5px #737373;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #737373;
+  font-size: 0.8em;
+  font-family: "AvenirNextLTPro-Regular";
+  color: #737373;
+  padding: 3.5vh 4vh 3.5vh 4vh;
+  text-align: center;
+  outline: none;
+    border-radius: 0vh 0vh 2vh 2vh;
+    line-height: 1.5em;
+}
+
+.whoIam > div {
+  float: left;
+  width: 40%
+}
+.decisionWrapper, .acceptWrapper, .rejectWrapper {
+    margin-top: 15vh; 
+    margin-left: 35vw;
+    margin-bottom: 10vh;
+    width: 30vw;
+    height: 64vh;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px #6B6969;
+}
+.congratsHeader {
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 4vh;
+    color: #6B6969;
+}
+.congratsDescrip{
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 0.8em;
+    text-align: center;
+    line-height: 2em;
+    color: #737373;
+    letter-spacing: 0.02em;
+}
+.resultTrophy{
+    width: 10vw;
+    height: 10vw;
+    margin-left: 10vw;
+    margin-top: 1vh;
+}
+.shareResult {
+    width: 15vw;
+    height: 5vh;
+    background-color: #63E099;
+    color: white;
+    font-size: 0.8em;
+    font-family: "AvenirNextLTPro-Regular";
+    margin-top: 3vh;
+    margin-left: 8vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1px 5px 5px 1px solid #6B6969;
+}
+#seeDecision {
+    margin-top: 8vh;
+}
+.thanksFunds{
+    width: 15vw;
+    height: 5vh;
+    background-color: lightgray;
+    color: white;
+    font-size: 0.8em;
+    font-family: "AvenirNextLTPro-Regular";
+    margin-top: 5vh;
+    margin-left: 8vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1px 1px 1px 1px #6B6969;
+}
+.resultImage {
+    background-color: lightgray;
+    border-radius: 100%;
+    width: 10vw;
+    height: 10vw;
+    margin-left: 10vw;
+    margin-top: 3vh;
+}
+.scholarshipHeader{
+    display: flex;
+    flex-direction: row;
+}
+.scholarshipShort {
+    margin: auto;
+    margin-top: 3vh;
+    width: 70vw;
+    height: 5vh;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #737373;
+    box-shadow: 1px 1px 1px 1px #6B6969;
+}
+.shortDescrip{
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 0.8em;
+    text-align: center;
+    line-height: 2em;
+    color: #737373;
+    letter-spacing: 0.02em;
+}
+.shortView {
+    margin-top: 3vh;
+    margin-left: 5vw;
+    width: 20vw;
+    height: 5vh;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #70B0FF;
+    box-shadow: 1px 1px 1px 1px #6B6969;
+    font-size: 0.7em;
+    font-family: "AvenirNextLTPro-Regular";
+    color: #70B0FF;
+}
+#thankDonor {
+    font-family: 'AvenirNextLTPro-Regular';
+    font-size: 0.8em;
+    margin-top: 12vh;
+}
+.verifyUpload {
+    margin-top: 3vh;
+    margin-left: 10vw;
+    width: 15vw;
+    height: 5vh;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    border: 0.5px solid transparent;
+    box-shadow: 1px 1px 1px 1px #6B6969;
+    font-size: 0.6em;
+    font-family: "AvenirNextLTPro-Regular";
+    letter-spacing: 0.05em;
+    color: #737373;
+}
+#verifyDescription {
+    font-family: 'AvenirNextLTPro-Regular'; 
+    margin-top: 5vh;
+    line-height: 2.5em;
+    font-size: 0.7em;
+}
+.processAward {
+    width: 15vw;
+    height: 5vh;
+    background-color: #737373;
+    display: block;
+    margin-top: 5vh;
+    margin-left: 50vw;
+    font-family: 'AvenirNextLTPro-Regular'; 
+    line-height: 2.5em;
+    font-size: 0.6em;
+    letter-spacing: 0.08em;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+}
+.thankYouWrapper {
+    margin: 15vh auto; 
+    width: 40vw;
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 1px 1px 1px #737373;
+    text-align: center;
+    overflow: auto;
+}
+.backProfile {
+    margin-top: 5vh;
+    margin-left: 10vw;
+    width: 20vw;
+    height: 5vh;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #70B0FF;
+    box-shadow: 1px 1px 1px 1px #6B6969;
+    font-size: 0.7em;
+    font-family: "AvenirNextLTPro-Regular";
+    color: #70B0FF;
+    display: block;
+}
+.msNavbar{
+    width: 100%;
+    height: 7vh;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 5vh;
+    border-bottom: 0.2px solid lightgray;
+    z-index: 100;
+}
+.msMobileDiag{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 5vh;
+    z-index: 99;
+    position: fixed;
+    padding-top: 0;
+}
+.msMobileClose {
+    margin-right: 0;
+    background-color: white;
+    border: none;
+    margin-left: 85vw;
+    color: #8c8c8c !important; 
+}
+.msMobileClose:hover {
+    margin-right: 0;
+    background-color: white;
+    border: none;
+    margin-left: 85vw;
+    color: #8c8c8c !important;
+    border-radius: 3vh;
+}
+.mobileNavText{
+    color: #8c8c8c !important;
+    font-size: 1em;
+    font-family: 'AvenirNextLTPro-Demi';
+    padding-top: 1vh; 
+    padding-bottom: 1vh;
+    padding-left: 5vw;
+    text-decoration: none;
+}
+.mobileNavText>a:hover{
+    color: #70B0FF;
+}
+hr.mobileNavLine{
+    transform: skewY(-10deg);
+}
+.navText {
+    width: 30vw;
+    height: 15vh;
+    margin-top: 13vh;
+}
+.navText > h2 {
+    margin-top: 3vh;
+}
+.mobileNavText > a {
+    color: #8c8c8c;
+}
+
+/* MS phone design */ 
+@media screen and (max-width: 1024px) {
+  
+  #MSlogin {
+    width: 100% !important;
+    height: 100%;
+    margin: 0;
+  }
+  .onboardingGoogle {
+    width: 100%;
+  }
+  .withGoogle {
+    display: none;
+  }
+    
+    .decisionWrapper, .acceptWrapper, .rejectWrapper {
+        margin-top: 25vh; 
+        margin-left: 15vw;
+        width: 70vw;
+        height: 64vh;
+        background-color: white;
+        box-shadow: 1px 5px 5px 1px #6B6969;
+    }
+    .resultTrophy{
+    width: 30vw;
+    height: 30vw;
+    margin-left: 20vw;
+    margin-top: 1vh;
+}
+    .shareResult {
+    width: 30vw;
+    height: 5vh;
+    background-color: #63E099;
+    color: white;
+    font-size: 0.6em;
+    font-family: "AvenirNextLTPro-Regular";
+    margin-top: 3vh;
+    margin-left: 20vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1px 5px 5px 1px #6B6969;
+}
+.thanksFunds{
+    width: 30vw;
+    height: 5vh;
+    background-color: lightgray;
+    color: white;
+    font-size: 0.6em;
+    font-family: "AvenirNextLTPro-Regular";
+    margin-top: 5vh;
+    margin-left: 20vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1px 5px 5px 1px #6B6969;
+}
+    .verifyUpload {
+    margin-top: 3vh;
+    margin-left: 10vw;
+    width: 30vw;
+    height: 5vh;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    border: 0.5px solid #737373;
+    box-shadow: 1px 5px 5px 1px #6B6969;
+    font-size: 0.5em;
+    font-family: "AvenirNextLTPro-Thin";
+    letter-spacing: 0.05em;
+    color: #737373;
+}
+    .processAward {
+    width: 25vw;
+    height: 5vh;
+    background-color: #737373;
+    display: block;
+    margin-top: 5vh;
+    margin-left: 50vw;
+    font-family: 'AvenirNextLTPro-Regular'; 
+    line-height: 2.5em;
+    font-size: 0.5em;
+    letter-spacing: 0.08em;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+}
+    .scholarSlant{
+        height: 70vh;
+        transform: skewY(-25deg);
+        -webkit-transform: skewY(-25deg);
+        -moz-transform: skewY(-25deg);
+        -o-transform: skewY(-25deg);
+    }
+    #scholarHeader, #scholarDescrip, #scholarButton {
+        transform: skewY(25deg);
+        -webkit-transform: skewY(25deg);
+        -moz-transform: skewY(25deg);
+        -o-transform: skewY(25deg);
+        text-align: left;
+    }
+    #scholarButton{
+        width: 70vw;
+        height: 10vh;
+        margin-left: 10vw;
+        margin-top: 15vh;
+        text-align: center;
+    }
+    .yellowSection{
+        display: flex;
+        flex-direction: column;
+    }
+    #yellowShapes{
+    padding-right: 0;
+    z-index: 0;
+}
+    img#yellowSquares {
+        margin-left: -25vw;
+        margin-top: 10vh;
+        z-index: 999;
+    }
+    img#jorgeCard {
+        padding-top: 5vh;
+        margin-top: 65vh;
+        margin-left: 40vw;
+        width: 65vw;
+    }
+    #applyOverVideo {
+        margin-left: 90vw;
+        margin-top: -50vh;
+        padding-top: none;
+    }
+    #scholarMSText2 {
+        margin-top: 0;
+        padding: none;
+    }
+    #scholarMSText2 > .scholarSmall{
+        width: 80vw;
+        margin-left: -25vw;
+        margin-top: 5vh;
+        font-family: 'League Spartan';
+        font-size: 1.5em;
+    }
+    #scholarMSText2 > .scholarSub{
+        width: 60vw;
+        margin-left: -20vw;
+    }
+    #plentyAround{
+        display: flex;
+        flex-direction: column;
+    }
+    #plentyAround > .scholarSmall {
+        margin-top: 45vh;
+        margin-left: -65vw;
+        font-family: "League Spartan";
+        font-size: 2em;
+        text-align: center;
+    }
+    #plentyAround > .scholarSub {
+         margin-top: 5vh;
+        margin-left: -65vw;
+        text-align: center;
+    }
+    #congratsPhone > img {
+        width: 57vw;
+        height: 65vh;
+        padding-top: 0;
+        margin-top: 0;
+        margin-left: 7vw;
+        z-index: 999;
+        display: visible;
+    }
+    #receiveMicro{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #fiveHundred{
+        display: none;
+    }
+    #goldMoney{
+        margin-left: 23vw;
+        margin-top: 10vh;
+        width: 20vw;
+        height: auto;
+    }
+    #receiveFunds, #essentialCosts {
+        margin-left: -15vw;
+        margin-top: 5vh;
+    }
+    #receiveFunds {
+        font-family: "League Spartan";
+        font-size: 2em;
+        text-align: center;
+    }
+    .whiteBox {
+        width: 75vw !important;
+        height: 25vh !important;
+        margin-top: 10vh;
+        margin-left: 15vw !important;
+        margin-bottom: 10vh;
+    }
+    #scholarGradClass {
+        transform: skewY(0deg);
+        height: 50vh;
+        margin-top: 0;
+        margin-bottom: 0vh;
+    }
+    .scholarPrelaunch {
+        margin-top: -5vh;
+        margin-left: 0vw;
+        padding-right: 10vw;
+        padding-top: 0;
+        transform: skewY(0deg) !important;
+    }
+    .scholarPrelaunch > .scholarshipHero {
+        margin: 0;
+        font-size: 1.5em;
+    }
+    .scholarPrelaunch > .scholarSub {
+        margin: 0;
+    }
+    #enterEmail {
+        margin-left: -10vw;
+        width: 50vw;
+    }
+    #newWin {
+        margin-top: 45vh;
+        padding-left: 10vw;
+        font-family: "League Spartan";
+    }
+    img#scholarWin{
+        display: none;
+    }
+    #verificationMicroInfo {
+        display: none;
+    }
+    #verifyDescription{
+        font-size: 0.9em;
+        line-height: 1.8em;
+    }
+    .timelineText{
+        font-size: 1.4em !important;
+        margin-top: 0vh;
+    }
+    #thankDonor {
+        font-size: 1em;
+    }
+    #thankYouUpload {
+        width: 50vw;
+        height: 8vh;
+        font-family: "AvenirNextLTPro-Regular";
+        font-size: 1em;
+        box-shadow: 1px 1px 1px 1px #6B6969;
+    }
+    #processAward {
+        border-radius: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        width: 153%;
+        height: 8vh;
+        text-align: right;
+        font-size: 1em;
+        padding-right: 10vw;
+    }
+    .profileCaption {
+        font-family: "AvenirNextLTPro-Regular";
+        font-size: 0.9em;
+    }
+    #appliedTwo {
+        display: none;
+    }
+    .academicInterests > .interest {
+        font-size: 0.7em;
+        margin-left: 0;
+        padding-left: 2vw;
+        width: 30vw;
+        margin-top: 3vh;
+        text-align: center;
+}
+    .activities > .interest {
+        font-size: 0.7em;
+        margin-left: 0;
+        padding-left: 2vw;
+        width: 30vw;
+        margin-top: 3vh;
+        text-align: center;
+    }
+    .appliedScholarship {
+    border-radius: 5px 5px 10px 10px;
+    margin: 5vh 2vw;
+    box-shadow: 0px 1px 1px 1px #737373;
+    border-top: 5px solid #7CB7FF;
+    text-align: left;
+    padding: 0 3vw 3vh 3vw;
+    width: 90%;
+    float: left;
+}
+    .whoIam > div {
+        float: left;
+        width: 100%;
+        margin-top: 1vh;
+    }
+    #msNavbarDesk {
+        display: none;
+    }
+    #msNavbarMobile {
+        display: inline-block !important;
+    }
+    .mobileSlantHeader {
+        width: 100%;
+        height: 75vh;
+        background-color: #70B0FF;
+        margin-top: -35vh;
+        transform: skewY(-35deg);
+    -webkit-transform: skewY(-35deg);
+    -moz-transform: skewY(-35deg);
+    -o-transform: skewY(-35deg);
+        z-index: 4;
+    }
+    #launchSlantHeader {
+        display: none;
+    }
+    #mobileTextContainer{
+        transform: skewY(35deg);
+    -webkit-transform: skewY(35deg);
+    -moz-transform: skewY(35deg);
+    -o-transform: skewY(35deg);
+       margin-left: 10vw;
+    }
+    .mobileSlantedHeaderText {
+        padding-top: 35vh;
+        color: white;
+    }
+    .mobileSlantedHeaderDescription {
+        font-family: "AvenirNextLTPro-Regular";
+        color: white;
+    }
+    .mobileGetStarted{
+        width: 45vw;
+        height: 8vh;
+        font-size: 1em;
+        font-family: 'AvenirNextLTPro-Medium';
+        background: linear-gradient(to right, #63E099, #77EBA9);
+        border-radius: 30px;
+        border: 0.5vh;
+        margin-top: 15vh;
+        margin-left: 18vw;
+        padding-left: 1vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        color: white;
+        box-shadow: 1px 1px 1px 1px #6B6969;
+        z-index: 5;
+    }
+    #mobileStudent {
+        margin-top: -30vh;
+        width: 100vw;
+        padding: 0;
+        z-index: -1;
+    }
+    #mobileStudentImg {
+       margin-left: 0;
+        z-index: -1;
+        width: 100vw;
+        height: 80vh;
+        padding-top: 5vh;
+    }
+    .videoSlider{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: auto;
+        padding-top: 40vh;
+        margin-bottom: 0;
+    }
+    .slantedCraftBlue {
+        display: none;
+    }
+    .mobileCraftText{
+        margin-top: 50vh;
+        display: visible;
+    }
+    .mobileCraft{
+        font-family: "League Spartan";
+        font-size: 1.5em;
+        text-align: center;
+        color: #696B6B;
+    }
+    .mobileCraftDescrip{
+        font-family: "AvenirNextLTPro-Regular";
+        font-size: 1em;
+        color: #696B6B;
+        text-align: center;
+    }
+    .craftSteps {
+        flex-direction: column;
+        margin-top: 0vh;
+    }
+    .threeSteps {
+        width: 40vw;
+        margin-top: 15vh;
+    }
+    .MSicon {
+        margin-left: 10vw;
+        width: 20vw;
+        height: auto;
+        margin-top: 5vh;
+    }
+    .stepsLabel {
+        font-size: 1.3em;
+    }
+    .stepDetails {
+        line-height: 1.5em;
+        font-size: 1em;
+        margin-top: 5vh;
+    }
+    .MSarrow,
+    .winIcon, 
+    .greenSlantContainer
+    {
+        display: block; /* CHANGED THIS FROM NONE*/
+    }
+    .winIconDisplay{
+        display: inline-block !important;
+    }
+    .mobileGreenSlant {
+        border: none;
+        padding: auto;
+        margin: auto;
+        position: relative;
+        width: 100%;
+        height: 40vh;
+        background-color: #63E099;
+        transform: skewY(-2deg);
+        -webkit-transform: skewY(-15deg);
+        -moz-transform: skewY(-15deg);
+        -o-transform: skewY(-15deg);
+        top: -25vh;
+        z-index: -1;
+    }
+    .mobileWinIcon > img{
+        width: auto;
+        height: 55vh;
+        margin-left: 5vw;
+    }
+    .scholarshipHero {
+        margin-top: -5vh;
+    }
+    .MSgetStarted2 {
+        width: 50vw;
+    }
+    .sliderFlexBox {
+    width: 25vw;
+    height: 10vh;
+    z-index: 10;
+    overflow: hidden;
+    margin-top: 5vh;
+}
+}
+
+
+
+
+@media screen and (min-width: 1024px){ 
+    .mobileSlantHeader,
+    #mobileStudentImg,
+    .mobileCraftText {
+        display: none;
+    }
+    .mobileGreenSlant,
+    .mobileWinIcon > img {
+        display: none;
+    }
+}
+
+
+
+#plentyAround {
+    margin-top: 30vh; 
+    width: 30vw; 
+    margin-left: 40vw; 
+    text-align: center;
+}
+#scholarMSText2{
+    margin-top: 30vh; 
+    width: 30vw; 
+    margin-left: 60vw; 
+    text-align: center;
+}
+
+.msLi {
+    float: left;
+    padding-top: 0.5vh;
+}
+
+.msLi > a {
+    display: block;
+    color: #737373;
+    font-size: 0.7em;
+    font-family: 'AvenirNextLTPro-Demi';
+    text-align: center;
+    padding-top: 2vh; 
+    padding-bottom: 1vh;
+    padding-left: 5vw;
+    text-decoration: none;
+}
+
+.msLi > a:hover {
+    color: #70B0FF;
+}
+    
+.msSpaceRight{
+    padding-right: 8vw;
+}
+#msAlumni{
+    padding-right: 13vw;
+}
+.scholarSmall{
+    font-family: 'AvenirNextLTPro-Bold';
+    color: #737373;
+    font-size: 1em;
+    text-align: center;
+}
+#applyOverVideo {
+    padding-top: 20vh;
+    margin-left: 0vw;
+}
+.scholarSub{
+    font-family: 'AvenirNextLTPro-Regular';
+    color: #737373;
+    font-size: 0.8em;
+    margin-top: 5vh;
+    letter-spacing: 0.03em;
+    line-height: 1.5em;
+    text-align: center;
+}
+.yellowSection{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+#yellowShapes{
+    margin-top: 10vh; 
+    margin-left: -10vw; 
+    width: 5vw; 
+    height: 1vh;
+}
+#jorgeCard{
+    width: 25vw;
+    height: 53vh;
+    margin-left: 35vw;
+    margin-top: 45vh;
+}
+.whiteBox{
+    width: 25vw;
+    height: 20vw;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    border: 0.5px solid transparent;
+    box-shadow: 1px 1px 1px 1px #6B6969;
+    margin-left: 15vw;
+}
+.onboardingBox{
+    width: 50vw;
+    background-color: white;
+    border: 0.5px solid transparent;
+    box-shadow: 1px 1px 1px 1px #6B6969;
+    margin-left: 8vw;
+}
+#onboardingBoxText {
+    margin-left: 2vw;
+    margin-top: 5vh;
+    padding-left: 0;
+    text-align: left;
+}
+.scholarWrapper{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20vw;
+}
+.scholarWrapper > img {
+    width: 5vw;
+    height: 5vw;
+    margin-left: 10vw;
+}
+.scholarPrelaunch{
+    margin-left: 55vw;
+    color: white;
+    padding-top: 5vh;
+    transform: skewY(5deg);
+}
+#enterEmail{
+    margin-top: 5vh;
+}
+.winnerName{
+    font-family: "League Spartan";
+    color: #737373;
+    text-align: center;
+}
+.winnerContent{
+    width: 5vw;
+}
+.tinyText {
+    font-family: 'AvenirNextLTPro-Thin';
+    color: #737373;
+    font-size: 0.5em;
+    line-height: 3em;
+}
+
+.donorViewMore {
+    margin: auto;
+    margin-top: 3vh;
+    width: 20vw;
+    height: 5vh;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #70B0FF;
+    box-shadow: 1px 1px 1px 1px #6B6969;
+    font-size: 0.7em;
+    font-family: "AvenirNextLTPro-Regular";
+    color: #70B0FF;
+}
+
+.donorCreateMore {
+    margin: auto;
+    margin-top: 3vh;
+    width: 20vw;
+    height: 5vh;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    border: 0.5px solid transparent;
+    box-shadow: 1px 1px 1px 1px #6B6969;
+    font-size: 0.7em;
+    font-family: "AvenirNextLTPro-Regular";
+    color: #737373;
+}
+.winnerButtons {
+  width: 100%;
+  text-align: center;
+}
+.seeProfile{
+    width: 7vw;
+    height: 2.5vh;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid #70B0FF;
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 0.5em;
+    text-align: center;
+    color: #70B0FF;
+    margin-left: 4.5vw;
+    margin-top: 0.5vh;
+}
+
+.verificationBody > .microWizard {
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+}
+.verificationBody {
+  display: flex;
+}
+
+#thankYouUpload {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer; 
+}
+#MSlogin {
+    background-color: #70B0FF;
+    width: 40vw;
+    border-radius: 0;
+    text-align: center;
+}
+.loginDescription{
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 1.2em;
+    color: white;
+    text-align: center;
+    margin-top: 5vh;
+}
+.loginSub {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 0.7em;
+    color: white;
+    text-align: center;
+    margin-top: 5vh;
+}
+.privacyLink {
+    color: white;
+    text-decoration: underline;
+}
+.videoSlider {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10vh;
+}
+
+.sliderFlexBox {
+    width: 25vw;
+    height: 50vh;
+    z-index: 10;
+    overflow: hidden;
+    margin-top: 5vh;
+}
+#firstSlide {
+    /* margin-top: 10vh; */ 
+    width: 25vw;
+    /* height: 73%; */ 
+    height: 73% ;
+}
+#secondSlide {
+    margin-left: -30vw;
+    z-index: 9;
+    width: 15vw;
+    height: 73%;
+}
+#thirdSlide {
+    margin-left: -30vw;
+    z-index: 8;
+    width: 15vw;
+    height: 73%;
+}
+.connectCollege {
+    font-family: "League Spartan";
+    font-size: 1.5em;
+    color: #6B6969;
+    margin-top: 15vh;
+}
+.connectDescription{
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 0.8em;
+    color: #6B6969;
+    letter-spacing: 0.02em;
+}
+.connectArrowLeft, .connectArrowRight {
+    height: 5vw;
+    width: 5vw;
+    background-color: transparent;
+    border: none;
+    margin-top: 25vh;
+}
+.connectArrowLeft:hover {
+    display: hidden;
+}
+.connectArrowRight:hover {
+    display: hidden;
+}
+#titleStuck {
+    width: 40vw;
+    height: 5vh;
+    border-radius: 3vh;
+    border: 1px solid lightgray;
+    margin-left: 10vw;
+    margin-top: 3vh;
+    padding-left: 3vw;
+    padding-top: 0.5vh;
+}
+::placeholder {
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 0.6em;
+    padding-left: 5vw;
+    transform: skewX(-15deg);
+    color: #8c8c8c;
+}
+div#areasOfStudy:hover, div#areasOfStudy:active, .areasChosen {
+    border: 1.5px solid #70B0FF;
+}
+div#interestBig:hover, div#interestBig:active, .interestChosen {
+    border: 1.5px solid #63E099;
+}
+#interestBig {
+    background-color: lightgray;
+}
+#genderBig {
+    background-color: lightgray;
+}
+div#genderBig:hover, div#genderBig:active, .genderChosen {
+    border: 1.5px solid #FFD843;
+}
+#ethBig {
+    background-color: lightgray;    
+}
+div#ethBig:hover, div#ethBig:active, .ethChosen {
+    border: 1.5px solid #9A88C5;
+}
+.editLink{
+    color: #70B0FF;
+    margin-right: none;
+}
+.msBars {
+    margin-left: 70vw;
+    margin-top: 1.5vh;
+    background-color: transparent;
+    color: #8c8c8c;
+    border: none;
+    width: 8vw;
+    height: 3vh;
+}
+input[type=text].input {
+    font-family: "AvenirNextLTPro-Regular";
+    color: #6B6969;
+}
+
+#emailListInput {
+    height: 5vh;
+    width:90%;
+    border-radius: 3vh;
+    border: 1px solid lightgray;
+    padding-left: 3vw;
+    margin-top: 5vh;
+}
+#redesignEmailInput {
+    height: 5vh;
+    width: 50vw;
+    background-color: white;
+    border-radius: 1.5vh 0vh 0vh 1.5vh;
+    border: 1px solid lightgray;
+    padding-left: 3vw;
+    margin-left: 10vw;
+    margin-top: 5vh;
+    box-shadow: 1px #6B6969;
+}
+.greenProceed{
+    height: 6vh;
+    width: 8vw;
+    background-color: #63E099;
+    border-radius: 0vh 1.5vh 1.5vh 0vh;
+}
+.greenProceed:hover{
+    height: 6vh;
+    width: 8vw;
+}
+.greenProceed > i {
+    color: white;
+}
+.provideVideo {
+    width: 50vw;
+    margin-left: 25vw;
+    margin-top: 5vh;
+}
+.couldProvideAmounts {
+    margin-top: 10vh;
+    margin-left: 20vw;
+    margin-bottom: 5vh;
+}
+.amountButtons{
+    width: 15vw;
+    height: 5vh;
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+    background-color: lightgray;
+    color: #6B6969;
+    font-family: "AvenirNextLTPro-Regular";
+}
+.tryCreating {
+    background-image: url(/media/backgrounds/lightbluebackground.png);
+    background-size: cover;
+    width: 100vw;
+    height: 40vh;
+    display: block;
+    margin-left: -10vw;
+    padding-left: 0vw;
+}
+.tryCreateText {
+    color: white;
+    font-size: 0.2em;
+    padding-top: 10vh !important;
+}
+.createLearnMore {
+    width: 40vw;
+    height: 5vh;
+    background-color: white;
+    border-radius: 0.5vh;
+    color: #63E099;
+    margin-top: 8vh;
+    font-family: "AvenirNextLTPro-Regular";
+}
+.emailListBTN {
+  width: 75%;
+  background-color: #63E099;
+  color: white;
+  font-size: 0.7em;
+  font-family: "AvenirNextLTPro-Regular";
+  margin-top: 3vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border-radius: 2px 2px 2px 2px;
+  box-shadow: 1px 3px 3px 1px #6B6969;
+}
+.emailList {
+  width: 75% !important;
+}
+/* MS footer */
+.financialSupporters{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10vh;
+    padding-top: 15vh;
+}
+.financialSupportersHeader {
+    font-family: "League Spartan";
+    font-size: 1.5em !important;
+    color: white;
+}
+.aSupporter {
+    display: inline;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 15vw;
+}
+.aSupporter > a {
+    display: inline;
+}
+.aSupporter a img {
+    width: 15vw;
+    margin-top: 5vw;
+}
+.whiteAction {
+    height: 35vh;
+    margin: 0 -10vw;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+.whiteActionFlex {
+    margin-left: 10vw;
+    margin-top: 10vh;
+}
+#msRocket > a {
+    display: inline-block;
+}
+#msRocket > a > img {
+    width: 4vw;
+    height: 6vw;
+}
+.msTidbit {
+    display: inline-block;
+    width: 1vw;
+    height: 1vw;
+}
+.msFooterHeader{
+    font-family: "League Spartan";
+    color: #8A8A8A;
+    font-size: 0.7em !important;
+    letter-spacing: 0.05em;
+}
+.msFooterOption {
+    font-family: "League Spartan";
+    color: #AFAFAF;
+    font-size: 0.7em !important;
+    letter-spacing: 0.05em;
+}
+.msFooterBar {
+    background-color: #F4F4F4;
+    width: 140%;
+    height: 5vh;
+    margin-left: -10vw;
+    margin-bottom: 0;
+}
+.msFooterBar a {
+    color: #8A8A8A;
+    font-family: "AvenirNextLTPro-Regular";
+    font-size: 0.6em;
+}
+.msSocials i {
+    width:2vw;
+    height: 2vw;
+}
+.stanfordGreenBar {
+  width: 100%;
+  height: 5vh;
+  overflow: hidden;
+  background: linear-gradient(to right, #63E099, #77EBA9);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  color: white;
+  text-align: center;
+  padding: 1vh;
+}
+.loginNav:hover {
+    cursor: pointer;
+}
+.simpleVideoPrompt {
+    margin-top: 50vh;
+}
+#donorDatePreview {
+    font-size: 0.6em; 
+    margin-top: -3vh;
+    margin-bottom: 2vh;
+    margin-left: 0;
+    width: 25vw;
+}
+.previewGrayBar{
+    width: 80%;
+    background-color: #696B6B;
+    margin-top: -15vh;
+    margin-left: 6vw;
+}
+.grayBarText {
+    font-family: "AvenirNextLTPro-Regular";
+    color: white;
+    font-size: 0.6em;
+}
+
+@media screen and (max-width: 1024px) {
+  .msFooterBar {
+    width: unset;
+    margin-left: 0;
+  }
+  .whiteAction {
+    margin: 0;
+  }
+  .whiteActionFlex {
+    margin-left: 2vw;
+  }
+    .MSLAUNCHDESKTOP{
+    display: none;
+}
+    .MSLAUNCHMOBILE{
+        display: visible;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #donationContext250Launch{
+        width: 50vw;
+        height: 55vh;
+    }
+    #donationContext500Launch {
+        width: 50vw;
+        height: 55vh;
+        margin-left: 15vw;
+    }
+    #donationContext750Launch {
+        width: 50vw;
+        height: 55vh;
+        margin-left: 35vw;
+    }
+    #donationContext1000Launch {
+        width: 50vw;
+        height: 55vh;
+        margin-left: 45vw;
+    }
+    #provideIconBBook, #provideIconBPlane, #provideIconBHouse, #provideIconGBook, #provideIconGPlane, #provideIconGHouse, #provideIconYBook, #provideIconYPlane, #provideIconYHouse, #provideIconPBook, #provideIconPPlane, #provideIconPHouse {
+        width: 5vw;
+        height: 5vw;
+    }
+    .provideDescripLaunch{
+        font-size: 1em !important;
+    }
+    .MSLAUNCHDESKTOP{
+    display: visible;
+}
+    .MSLAUNCHMOBILE{
+        display: none;
+    }
+}
+
+.learnMoreBTN {
+    margin-left: 10vw;
+    margin-top: 3vh;
+    padding: 2vh;
+    width: 50vw;
+    color: white;
+    background-color: #63E099;
+    border-radius: 2vh;
+    font-family: "AvenirNext-Medium";
+}
