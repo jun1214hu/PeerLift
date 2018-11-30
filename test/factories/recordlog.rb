@@ -10,6 +10,8 @@ FactoryBot.define do
 # 	presence: true
 # end
 
+# TODO: This needs to change!! --> controller and model
+
   factory :record_log do
       user_id { Faker::Number.between(0,1)}
       scholarship_guide_id { Faker::Number.between(0,1) }
