@@ -5,6 +5,10 @@ class MeController < ApplicationController
       #@savedscholarships = RecordLog.where(user_id: current_user.id )
       @saved_scholarships = SavedScholarship.where("user_id = ?", current_user.id)
       @started_scholarships = StartedScholarship.where("user_id = ?", current_user.id)
+      @tasks_reference = []
+      @started_scholarships.each do |s|
+        @tasks_reference += Task.where("scholarship_id = ?", s.scholarship_guide_id).pluck(:id)
+      end
     end
 
     def start

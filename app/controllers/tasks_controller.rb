@@ -19,7 +19,7 @@ class TasksController < ApplicationController
     task = Task.find_by(id: params[:id])
     task.incomplete!
     respond_to do |format|
-      format.html { redirect_to request.referrer, notice: 'Completed!' }
+      format.html { redirect_to request.referrer, notice: 'Back to in progress!' }
     end
   end
 
