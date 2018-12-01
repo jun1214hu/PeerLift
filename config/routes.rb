@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :file_uploads
+  resources :tasks
   get 'home/index', as: 'home'
   get 'login', to: redirect('/auth/google_oauth2'), as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
@@ -46,5 +47,8 @@ Rails.application.routes.draw do
   post 'me4' => 'me#incomplete', as: :incomplete
   post 'me5' => 'me#submit', as: :submit
   post 'me6' => 'me#unsubmit', as: :unsubmit
+
+  post 'taskdone' => 'tasks#complete', as: :complete_task
+  post 'tasknotdone' => 'tasks#incomplete', as: :incomplete_task
 
 end

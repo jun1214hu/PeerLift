@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @task.user_id %>
+</p>
+
+<p>
+  <strong>Scholarship:</strong>
+  <%= @task.scholarship_id %>
+</p>
+
+<p>
+  <strong>Scholarship name:</strong>
+  <%= @task.scholarship_name %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @task.text %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @task.status %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @task.status %>
+</p>
+
+<p>
+  <strong>File:</strong>
+  <%= @task.file %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_30_011835) do
+ActiveRecord::Schema.define(version: 2018_12_01_073804) do
 
   create_table "file_uploads", force: :cascade do |t|
     t.integer "user_id"
@@ -74,6 +74,20 @@ ActiveRecord::Schema.define(version: 2018_11_30_011835) do
     t.index ["scholarship_guide_id"], name: "index_started_scholarships_on_scholarship_guide_id"
     t.index ["status"], name: "index_started_scholarships_on_status"
     t.index ["user_id"], name: "index_started_scholarships_on_user_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "scholarship_id"
+    t.string "scholarship_name"
+    t.string "text"
+    t.string "status"
+    t.string "file_given_name"
+    t.string "file"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["scholarship_id"], name: "index_tasks_on_scholarship_id"
+    t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 
   create_table "user_tasks", force: :cascade do |t|
