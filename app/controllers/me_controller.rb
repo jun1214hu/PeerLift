@@ -39,8 +39,8 @@ class MeController < ApplicationController
 
   def unstart
     @started_scholarship = StartedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
-    @log_save = RecordLog.new(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id], scholarship_name: params[:scholarship_name], deleted: 1)
-    @log_save.save!
+    #@log_save = RecordLog.new(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id], scholarship_name: params[:scholarship_name], deleted: 1)
+    #@log_save.save!
 
     @started_scholarship.destroy
     respond_to do |format|
@@ -56,19 +56,27 @@ class MeController < ApplicationController
     end
   end
 
-  def submit
-    scholarship = StartedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
-    scholarship.submit!
-    respond_to do |format|
-      format.html { redirect_to request.referrer, notice: 'Completed!' }
-    end
-  end
-
   def incomplete
     scholarship = StartedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
     scholarship.incomplete!
     respond_to do |format|
       format.html { redirect_to request.referrer, notice: 'Back to In Progress!' }
+    end
+  end
+
+  def submit
+    scholarship = StartedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
+    scholarship.submit!
+    respond_to do |format|
+      format.html { redirect_to request.referrer, notice: 'Submitted!' }
+    end
+  end
+
+  def unsubmit
+    scholarship = StartedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
+    scholarship.unsubmit!
+    respond_to do |format|
+      format.html { redirect_to request.referrer, notice: 'Back to Completed!' }
     end
   end
 
