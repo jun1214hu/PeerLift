@@ -260,8 +260,6 @@ DEPENDENCIES
   byebug (= 9.0.6)
   capybara (>= 2.15, < 4.0)
   carrierwave (~> 1.0)
-  chromedriver-helper
-
   coffee-rails (~> 4.2)
   factory_bot_rails (~> 4.0)
   faker
@@ -275,6 +273,7 @@ DEPENDENCIES
   pg (= 0.20.0)
   phantomjs
   poltergeist
+  popper_js (~> 1.14.5)
   puma (~> 3.11)
   rails (~> 5.2.0)
   rails-assets-tether!

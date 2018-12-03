@@ -1,7 +1,7 @@
 <!-- This is Jung's -->
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed">
     <a class="navbar-brand" href="/">
       <img src="/media/logo/grayText.png" width="170" alt="">
     </a>
@@ -35,7 +35,7 @@
                     <a class="dropdown-item" href="/me">My Overview</a>
                     <a class="dropdown-item" href="#">My Scholarships</a>
                     <a class="dropdown-item" href="#">My Task</a>
-                    <a class="dropdown-item" href="#">My Files</a>
+                    <a class="dropdown-item" href="/file_uploads">My Files</a>
                     <a class="dropdown-item"> <%= link_to 'Log Out', destroy_path, method: :post if current_user %> </a>
                         
                 </div>
@@ -48,7 +48,7 @@
     </div>
 </nav>
 
-    <div id="opportunities-menu-div" style="background-color:powderblue; display:none">
+    <div id="opportunities-menu-div" style="background-color:#6393ce; display:none">
                   <div class="col-xs-6" style="float:left;width:15%">
                     <a href="#">
                       <i><img src="/media/images/icons/awards.png" width=50px/></i>Awards
@@ -80,3 +80,4 @@
                     </a>
                   </div>
               </div>
+
