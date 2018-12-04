@@ -98,4 +98,26 @@
 </table>
 </div>
 
+<div>
+<h4>Tasks</h4>
+<table class="table table-hover col-md-6 offset-md-3">
+  <thead>
+    <tr>
+      <<th>Scholarship_ID</th>
+      <th>Task Text</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @tasks.each do |task| %>
+        <tr>
+          <td><%= task.scholarship_id %></td>
+          <td><%= task.text %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+</div>
+
 Go:

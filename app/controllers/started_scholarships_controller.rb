@@ -7,6 +7,9 @@ class StartedScholarshipsController < ApplicationController
       @started_scholarship.save!
       respond_to do |format|
         if @started_scholarship.save
+          @tasks = Task.where("scholarship_id = ?", @started_scholarship.id)
+          #@new_user_task = UserTaskItem.new(scholarship_id: 1)
+          #@new_user_task.save!
           format.html { redirect_to request.referrer, notice: 'Started Scholarship was successfully created.' }
         else
           format.html { redirect_to request.referrer, notice: 'Started Scholarship was not successfully created.' }

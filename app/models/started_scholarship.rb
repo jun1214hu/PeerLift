@@ -1,6 +1,7 @@
 class StartedScholarship < ApplicationRecord
   belongs_to :scholarship_guide
   belongs_to :user
+  has_many :user_task_items, dependent: :destroy
 
   include AASM
 
