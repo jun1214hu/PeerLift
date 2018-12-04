@@ -7,6 +7,8 @@ gem 'omniauth-google-oauth2'
 
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
+gem 'popper_js', '~> 1.14.5'
+
 gem 'autoprefixer-rails'
 gem 'rails-assets-tether', source: 'https://rails-assets.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
