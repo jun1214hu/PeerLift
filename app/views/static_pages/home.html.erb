@@ -37,7 +37,6 @@
 
 <hr>
 
-<!-- 
 <div id="mission" class="mission">
         <div id="slide-left"><i class="fa fa-angle-left"></i></div>
         <div id="slide-right"><i class="fa fa-angle-right"></i></div>
@@ -158,11 +157,3 @@
 
 <br>
 <%= render partial: 'partials/footer' %>
-                       
-Test:
-<% if current_user %>
-  <% current_user.attributes.slice('is_admin').each do |k,v| %>
-  <% if v == 1 %> <%= current_user.attributes.slice('first_name')["first_name"] %> is an admin with an adminid = <%= v %> <p>test html</p>
-  <% end %>
-  <% end %>
-<% end %>
