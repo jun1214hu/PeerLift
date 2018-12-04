@@ -13,7 +13,7 @@ class CreateScholarshipGuides < ActiveRecord::Migration[5.2]
       t.integer :transcript_count
       t.integer :resume_count
       t.string :time_estimate
-      t.references :scholarship, foreign_key: true
+     
 
       t.timestamps
     end
