@@ -99,9 +99,16 @@
 </div>
 
 Go:
+
 <%= @tasks_reference.each do |d| %>
-  <%= d %>
+  <%= puts d %>
+  <%= @tasks.each do |task| %>
+    <% if task.id = d %>
+      <%= task.text %>
+    <% end %>
+  <% end %>
 <% end %>
+</br><br><br>
 </br><%= @started_scholarships[0].id %>
 </br>
 <% @started_scholarships.each do |s| %>

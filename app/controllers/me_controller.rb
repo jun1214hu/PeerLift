@@ -9,6 +9,7 @@ class MeController < ApplicationController
       @started_scholarships.each do |s|
         @tasks_reference += Task.where("scholarship_id = ?", s.scholarship_guide_id).pluck(:id)
       end
+      @tasks = Task.all
     end
 
     def start
