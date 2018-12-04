@@ -1,4 +1,4 @@
-<%= render partial: 'partials/navbar2' %>
+<%= render partial: 'partials/navbar' %>
 
 <div class="main">
 <div id="filter-menu">
@@ -77,17 +77,67 @@
       <h3>See Less</h3>
     </div>
     <br>
+
+    <div class="row">
     <div class="applynow">
     <h2>
-      <a class="applyLink" href="/scholarship_guides/<%= scholarship_guide.id %>" target="_blank">Read More<i class="fa fa-chevron-circle-right"></i></a></h2></div>
-          <hr>
+      <a class="applyLink" href="/scholarship_guides/<%= scholarship_guide.id %>" target="_blank">Read More<i class="fa fa-chevron-circle-right"></i></a></h2>
+    </div>  
+       <%= button_to 'Add to favorites', save_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name, completed: 0), class: 'favorite-button' %> 
+     </div>
+          <hr style="background-color: lightgray">
     </div>
 
 
 <% end %>
 
     </div>
+
+
+<div class="opportunity-alt">
+
+    <% @saved_scholarships.each do |scholarship_guide| %>
+
+<div class="container">
+
+  <h1 class="scholarship_title" href="?">  <%= scholarship_guide.program_name %> </h1><i class="fa fa-plus-circle addDesktop" id="USAirForceROTC" style="display: inline;"></i>
+  <div class="flex-container">
+    <div class="grade">
+      <h3> <%= scholarship_guide.metric_box1 %></h3>
+    </div>
+    <div class="selectivity">
+      <h3><%= scholarship_guide.metric_box2 %></h3>
+    </div>
+    <div class="deadline">
+      <h3><%= scholarship_guide.metric_box3 %></h3>
+    </div><input type="hidden" class="metricDate" value="2017-12-01"></div>
+    <div class="info">
+      <p<%= scholarship_guide.description_long %></p>
+      <h3>See More</h3>
+      <h3>See Less</h3>
+    </div>
+    <br>
+        <div class="row">
+    <div class="applynow">
+    <h2>
+      <a class="applyLink" href="/scholarship_guides/<%= scholarship_guide.id %>" target="_blank">Read More<i class="fa fa-chevron-circle-right"></i></a></h2>
+    </div>  
+       <%= button_to 'Favorite', unsave_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name), method: :delete, class: 'unfavorite-button' %> 
+     </div>
+
+    
+
+          <hr style="background-color: lightgray">
+    </div>
+
+
+<% end %>
+
+    </div>
+
   </div>
+
+
 
 
 
@@ -138,3 +188,5 @@
     <% end %>
   </tbody>
 </table>
+
+

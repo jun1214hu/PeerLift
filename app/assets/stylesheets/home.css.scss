@@ -53,8 +53,28 @@ margin:0px;
 }
 
 .scholarship_title {
-  font-weight: 400; }
+  font-weight: 400;
+  align-content: center;
+  float: center;
+   }
 
+.favorite-button {
+    border-radius: 1vh;
+  width: 100%;
+  background-color: darkgray;
+  align-content: center;
+  float: center;
+    margin-left: 45%;
+}
+
+.unfavorite-button {
+    border-radius: 1vh;
+  width: 100%;
+  background-color: yellow;
+  align-content: center;
+  float: center;
+    margin-left: 45%;
+}
 
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700");
 @font-face {
