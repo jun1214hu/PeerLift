@@ -1,4 +1,7 @@
 class StartedScholarship < ApplicationRecord
+  belongs_to :scholarship_guide
+  belongs_to :user
+
   include AASM
 
   aasm do
