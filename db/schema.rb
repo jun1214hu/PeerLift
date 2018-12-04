@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 2018_11_30_011835) do
   end
 
   create_table "user_tasks", force: :cascade do |t|
+    t.integer "scholarship_guide_id"
     t.string "scholarship_name"
     t.integer "essay_count"
     t.integer "transcript_count"
@@ -85,7 +86,6 @@ ActiveRecord::Schema.define(version: 2018_11_30_011835) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.integer "scholarship_guide_id"
     t.index ["scholarship_guide_id"], name: "index_user_tasks_on_scholarship_guide_id"
     t.index ["user_id"], name: "index_user_tasks_on_user_id"
   end
