@@ -46,8 +46,14 @@ Rails.application.routes.draw do
   post 'me4' => 'me#incomplete', as: :incomplete
   post 'me5' => 'me#submit', as: :submit
   post 'me6' => 'me#unsubmit', as: :unsubmit
+  post 'me7' => 'user_task_items#complete', as: :complete_user_task
+  post 'me8' => 'user_task_items#incomplete', as: :incomplete_user_task
+
 
   post 'taskdone' => 'tasks#complete', as: :complete_task
   post 'tasknotdone' => 'tasks#incomplete', as: :incomplete_task
+
+  patch 'taskfile' => 'user_task_items#add_file', as: :user_task_item_path
+
 
 end

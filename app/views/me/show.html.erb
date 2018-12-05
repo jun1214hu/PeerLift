@@ -93,6 +93,26 @@
           <% end %>
           <td><%= button_to 'No longer doing this scholarship', unstart_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), method: :delete %></td>
         </tr>
+        <% @tasks.each do |task| %>
+        <% if task.scholarship_id == startedscholarship.id %>
+            <tr>
+              <td><%= task.text %></td>
+              <td><%= form_for task, :url => {:controller => "user_task_items", :action => "add_file"}, :html => {:class => 'form-horizontal'} do |f| %>
+              <%= f.text_field :file_given_name, placeholder: "name" %>
+              <%= hidden_field :user_id, current_user.id %>
+              <%= hidden_field :id, task.id %>
+              <%= f.submit 'Okay'%>
+              <% end %>
+            </td>
+              <% if task.status == "in_progress" %>
+                <td><%= button_to 'Complete Task', complete_user_task_path(user_id: current_user.id, id: task.id) %></td>
+              <% end %>
+              <% if task.status == "completed" %>
+                <td><%= button_to 'Back to In Progress', incomplete_user_task_path(user_id: current_user.id, id: task.id) %></td>
+              <% end %>
+            </tr>
+        <% end %>
+        <% end %>
       <% end %>
   </tbody>
 </table>
@@ -119,5 +139,7 @@
   </tbody>
 </table>
 </div>
+Here
+
 
 Go:
