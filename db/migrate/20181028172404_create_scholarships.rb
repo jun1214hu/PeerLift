@@ -5,6 +5,6 @@ class CreateScholarships < ActiveRecord::Migration[5.2]
       t.string :deadline
 
       t.timestamps
-    
+    end
   end
 end
