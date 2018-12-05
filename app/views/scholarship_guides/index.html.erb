@@ -4,8 +4,21 @@
 <div id="filter-menu">
       <i class="fa fa-times"></i>
       <div class="container">
-        <h2>Scholarships</h2>
+        <h2>Your Scholarships</h2>
+        <br>
+
         
+        
+        <% @saved_scholarships.each do |scholarship_guide| %>
+        <div class="row">
+        <div style="padding:0px; margin-bottom:15px; margin-left: 5px; margin-right:0px; width:150px;" align="left";>
+        <p> <a class="applyLink" href="/scholarship_guides/<%= scholarship_guide.id %>"><%= scholarship_guide.program_name %> </a> </p> </div>
+
+        <div align="right">
+        <%= button_to 'Unfavorite', unsave_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name), method: :delete, class: 'unfavorite-button' %> </div>
+      </div>
+      <% end %>
+
       </div>
     </div>
   </div>
@@ -77,7 +90,7 @@
     <h2>
       <a class="applyLink" href="/scholarship_guides/<%= scholarship_guide.id %>" target="_blank">Read More<i class="fa fa-chevron-circle-right"></i></a></h2>
     </div>  
-       <%= button_to 'Favorite', unsave_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name), method: :delete, class: 'unfavorite-button' %> 
+       <%= button_to 'Unfavorite', unsave_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name), method: :delete, class: 'unfavorite-button' %> 
      </div>
 
     
@@ -140,7 +153,7 @@
               <td><%= link_to 'Destroy', scholarship_guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
         <% end %>
-        <td><%= button_to 'Save to my Profile', save_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name, completed: 0) %></td>
+        <td><%= button_to 'Favorite', save_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name, completed: 0) %></td>
       </tr>
     <% end %>
   </tbody>
