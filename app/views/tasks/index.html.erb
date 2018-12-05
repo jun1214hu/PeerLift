@@ -1,0 +1,44 @@
+<%= render partial: 'partials/navbar' %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Tasks</h1>
+
+<table class = "table table-bordered table-striped">
+   <thead>.
+      <tr>
+         <th>User ID</th>
+         <th>Scholarship ID</th>
+         <th>Scholarship Name</th>
+         <th>Task (text)</th>
+         <th>Status</th>
+         <th>File</th>
+         <th> </th>
+      </tr>
+   </thead>
+
+   <tbody>
+      <% @tasks.each do |task| %>
+
+         <tr>
+            <td><%= task.user_id %></td>
+            <td><%= task.scholarship_id %></td>
+            <td><%= task.scholarship_name %></td>
+            <td><%= task.text %></td>
+            <td><%= task.status %></td>
+            <td><%= task.file_given_name %>: <% if task.file %> <%= link_to "Download File", task.file_url %> <% end %></td>
+            <% if task.status == "in_progress" %>
+              <td><%= button_to "Complete",  complete_task_path(id: task.id), class: "btn" %></td>
+            <% end %>
+            <% if task.status == "completed" %>
+              <td><%= button_to "Incomplete",  incomplete_task_path(id: task.id), class: "btn" %></td>
+            <% end %>
+            <td><%= button_to "Delete",  task, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete this task?" %></td>
+         </tr>
+
+      <% end %>
+   </tbody>
+
+</table>
+
+<%= link_to "New Task", new_task_path, class: "btn btn-primary" %>

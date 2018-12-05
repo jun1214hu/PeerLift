@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2018_12_05_180002) do
+
 
   create_table "file_uploads", force: :cascade do |t|
     t.integer "user_id"
@@ -84,6 +86,38 @@ ActiveRecord::Schema.define(version: 2018_12_05_180002) do
     t.index ["scholarship_guide_id"], name: "index_started_scholarships_on_scholarship_guide_id"
     t.index ["status"], name: "index_started_scholarships_on_status"
     t.index ["user_id"], name: "index_started_scholarships_on_user_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "scholarship_id"
+    t.string "scholarship_name"
+    t.string "text"
+    t.string "status"
+    t.string "file"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "file_given_name"
+    t.index ["scholarship_id"], name: "index_tasks_on_scholarship_id"
+    t.index ["user_id"], name: "index_tasks_on_user_id"
+  end
+
+  create_table "user_task_items", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "task_id"
+    t.integer "scholarship_id"
+    t.string "scholarship_name"
+    t.string "text"
+    t.string "status"
+    t.integer "file_id"
+    t.string "file_given_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "started_scholarship_id"
+    t.index ["file_id"], name: "index_user_task_items_on_file_id"
+    t.index ["scholarship_id"], name: "index_user_task_items_on_scholarship_id"
+    t.index ["task_id"], name: "index_user_task_items_on_task_id"
+    t.index ["user_id"], name: "index_user_task_items_on_user_id"
   end
 
   create_table "user_tasks", force: :cascade do |t|
