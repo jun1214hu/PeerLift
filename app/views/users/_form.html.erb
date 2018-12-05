@@ -1,4 +1,4 @@
-<%= form_with(model: user, local: true) do |form| %>
+<%= form_for(@user) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -11,32 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+  
+  <div class="field" style="color: black;">
+    <%= form.label :school,  "School name" %> 
+    <%= form.text_field :school %>
   </div>
 
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :uid %>
-    <%= form.text_field :uid %>
-  </div>
-
-  <div class="field">
-    <%= form.label :provider %>
-    <%= form.text_field :provider %>
+  <div class="field" style="color: black;">
+    <%= form.label "Grade Level" %> 
+    <%= form.text_field :grade %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Update" %>
   </div>
+
 <% end %>

@@ -1,98 +1,133 @@
-<%= render partial: 'partials/navbar2' %>
+<%= render partial: 'partials/navbar' %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 style="text-align: center;margin-left:auto;margin-right:auto;width:300px"> Hello, <%= current_user.first_name %>! </h1>
 
+<br>
+<br>  
 
 <div class="container-fluid text-center">
     <div class="row content">
         <div class="col-sm-2 sidenav">
             <h4> Dashboard </h4>
             <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action list-group-item-default">Overview</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-default"> Saved Scholarships </a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-default"> My Applications</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-default"> My Files </a>
+                <a href="#account" class="list-group-item list-group-item-action list-group-item-default">Me</a>
+                <a href="#application" class="list-group-item list-group-item-action list-group-item-default">My Applications</a>
+                <a href="#favorites" class="list-group-item list-group-item-action list-group-item-default">My Favorites</a>
+                <a href="#files" class="list-group-item list-group-item-action list-group-item-default"> My Files </a>
                 <a href="#" class="list-group-item list-group-item-action list-group-item-default"> Settings </a>
             </div>
         </div>
 
  <div class="col-sm-8">
 
-  <h4>My Favorite Scholarships:</h4>
+<h4 align="left" id="account"> My Account </h4>
+
+          
+              <table class="table table-sm table-hover table-bordered">
+                <thead>
+              <% if current_user %>
+            <tr>
+              <td scope="row"> Name </td>
+              <td> <%= current_user.first_name %> <%= current_user.last_name %> </td>
+              </tr>
+
+              <tr>
+              <td scope="row"> Email </td>
+              <td> <%= current_user.email %> </td>
+              </tr>
+
+              <tr>
+              <td scope="row"> School </td>
+              <td> <%= current_user.school %> </td>
+              </tr>
+
+              <tr>
+              <td scope="row"> Grade </td>
+              <td> <%= current_user.grade %> </td>
+              </tr>
+
+              <tr>
+              <td scope="row">  </td>
+              <td> <%= link_to 'Edit', edit_user_path(current_user) %> </td>
+              </tr>
+
+              <% end %>
+            </thead>
+          </table>
+
+
+<div>
+  <h4 align="left" id="application"> My Applications </h4>
+
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>Scholarship Name</th>
+      <th>Current status</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @started_scholarships.each do |startedscholarship| %>
+
+      <% if startedscholarship.aasm_state == "in_progress" %>
+        <tr style="background-color:orange">
+          <% end %>
+          <% if startedscholarship.aasm_state == "completed" %>
+        <tr style="background-color:lightgreen">
+          <% end %>
+          <% if startedscholarship.aasm_state == "submitted" %>
+        <tr style="background-color:lightgreen">
+          <% end %>
+
+          <td><a href="/scholarship_guides/<%= startedscholarship.scholarship_guide_id %>"><%= startedscholarship.scholarship_name %></a></td>
+          <% if startedscholarship.aasm_state == "in_progress" %>
+          <td> In Progress </td>
+            <td><%= button_to 'Complete?', complete_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), :class => 'btn btn-warning' %></td>
+          <% end %>
+          <% if startedscholarship.aasm_state == "completed" %>
+          <td> Completed </td>
+            <td><%= button_to 'Submit', submit_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), :class => 'btn btn-success' %></td>
+            <td><%= button_to 'Back to In Progress', incomplete_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), :class => 'btn btn-warning' %></td>
+          <% end %>
+          <% if startedscholarship.aasm_state == "submitted" %>
+          <td> Submitted </td>
+            <td><%= button_to 'Unsubmit', unsubmit_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), :class => 'btn btn-danger' %></td>
+          <% end %>
+          <td><%= button_to 'Delete Application', unstart_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), method: :delete, :class => 'btn btn-danger' %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+
+
+  <h4 align="left" id="favorites">My Favorites</h4>
 
   <div>
 <table class="table table-hover table-bordered">
   <thead>
     <tr>
       <th>Scholarship Name</th>
-      <th>Due date </th>
-      <th> Start </th>
-      <th> Unfavorite </th>
+      <th> Status </th>
+      <th> Remove </th>
     </tr>
   </thead>
   <tbody>
       <% @saved_scholarships.each do |savedscholarship| %>
         <tr>
           <td><a href="/scholarship_guides/<%= savedscholarship.scholarship_guide_id %>"><%= savedscholarship.scholarship_name %></a> </td>
-          <td><%= savedscholarship.scholarship_name %></td>
-          <td><%= button_to 'Start Scholarship', scholarship_start_path(user_id: current_user.id, scholarship_guide_id: savedscholarship.scholarship_guide_id, scholarship_name: savedscholarship.scholarship_name, status: 1) %></td>
-          <td><%= button_to 'Unsave from my Profile', unsave_scholarship_me_saved_path(user_id: current_user.id, scholarship_guide_id: savedscholarship.scholarship_guide_id), method: :delete %></td>
+          <td><%= button_to 'Start Scholarship', scholarship_start_path(user_id: current_user.id, scholarship_guide_id: savedscholarship.scholarship_guide_id, scholarship_name: savedscholarship.scholarship_name, status: 1), :class => 'btn btn-success' %></td>
+          <td><%= button_to 'Unfavorite', unsave_scholarship_me_saved_path(user_id: current_user.id, scholarship_guide_id: savedscholarship.scholarship_guide_id), method: :delete, :class => 'btn btn-warning' %></td>
         </tr>
       <% end %>
   </tbody>
 </table>
 </div>
 
-<div>
-  <h4>Scholarships I'm Doing:</h4>
-
-<table class="table table-hover col-md-6 offset-md-3">
-  <thead>
-    <tr>
-      <<th>User ID</th>
-      <th>Scholarship ID</th>
-      <th>Scholarship Name</th>
-      <th>Status</th>
-    </tr>
-  </thead>
-  <tbody>
-      <% @started_scholarships.each do |startedscholarship| %>
-        <tr>
-          <td><%= startedscholarship.user_id %></td>
-          <td><%= startedscholarship.scholarship_guide_id %></td>
-          <td><a href="/scholarship_guides/<%= startedscholarship.scholarship_guide_id %>"><%= startedscholarship.scholarship_name %></a></td>
-          <td><%= startedscholarship.status %></td>
-          <% if startedscholarship.aasm_state == "in_progress" %>
-            <td><%= button_to 'Complete', complete_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id) %></td>
-          <% end %>
-          <% if startedscholarship.aasm_state == "completed" %>
-            <td><%= button_to 'Submit', submit_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id) %></td>
-            <td><%= button_to 'Back to In Progress', incomplete_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id) %></td>
-          <% end %>
-          <% if startedscholarship.aasm_state == "submitted" %>
-            <td><%= button_to 'Unsubmit', unsubmit_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id) %></td>
-          <% end %>
-          <td><%= button_to 'No longer doing this scholarship', unstart_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), method: :delete %></td>
-        </tr>
-      <% end %>
-  </tbody>
-</table>
 </div>
-
-
-
-
-
-<h4> My Overview </h4>
-
-                <table class="table table-hover table-bordered">
-                    <thead>
-
-                        <% if current_user %> <% current_user.attributes.each do |k, v| %>
-                        <tr> <th scope="row"><%= k %>:</th> <td> <%= v %> </td> </tr>
-						<% end %>
-						<% end %>
-
-                    </thead>
-                </table>
             </div>
 <div class="col-sm-2 sidenav">
             <h4> To do list: </h4>
@@ -122,7 +157,7 @@
 
 
 
-
+<!-- 
 <div>
   <h4>My Saved Scholarships:</h4>
 
@@ -182,4 +217,4 @@
       <% end %>
   </tbody>
 </table>
-</div>
+</div> -->
