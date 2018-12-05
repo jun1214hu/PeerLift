@@ -19,9 +19,9 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
 
+
   resources :users do
         end
-
 
   #resources :users do
   # 	resources :user_tasks

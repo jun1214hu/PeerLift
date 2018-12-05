@@ -40,6 +40,45 @@ margin:0px;
 	width: 70%;
 }
 
+.main {
+	margin-top: 70px;
+	z-index: 0;
+}
+
+.navbar-fixed {
+	position:fixed;
+	top:0;
+	z-index:99;
+	width: 100%;
+}
+
+.scholarship_title {
+  font-weight: 400;
+  align-content: center;
+  float: center;
+   }
+
+.favorite-button {
+    border-radius: 1vh;
+  width: 100%;
+  background-color: darkgray;
+  align-content: center;
+  float: center;
+    margin-left: 45%;
+}
+
+.unfavorite-button {
+    border-radius: 1vh;
+  width: 100%;
+  background-color: yellow;
+  align-content: center;
+  float: center;
+    margin-left: 45%;
+}
+
+.in_progress_button {
+  background-color: orange;
+}
 
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700");
 @font-face {
@@ -1287,6 +1326,37 @@ input[type="button"] {
 .deadline {
   background-color: #fbb4c8; }
 
+.applynow {
+	border-radius: 1vh;
+	width: 33%;
+	background-color: darkgray;
+	align-content: center;
+	float: center;
+    margin-left: 33%;
+
+}
+
+#videoBanner {
+	width:100%;
+}
+
+#videoBanner img {
+	margin: auto;
+  width: 20%
+}
+
+#peerLiftVideo {
+	width:100%;
+}
+
+#videoMessage {
+	margin: auto;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  color: white;
+}
+
 .info {
   background-color: #BFD7F4;
   border-radius: 1vh;
@@ -1652,7 +1722,7 @@ button:hover {
 
 /* opportunity pages */
   .oppBody {
-      padding-top: 100px !important;
+      padding-top: 0 !important;
   }
   .oppPage > div {
     margin-bottom: 7vh;

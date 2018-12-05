@@ -1,84 +1,116 @@
 <%= render partial: 'partials/navbar' %>
 
+<div class="main">
 <div id="filter-menu">
       <i class="fa fa-times"></i>
       <div class="container">
-        <h2>Scholarships</h2>
-        <form>
-          <fieldset>
-            <h3>Grade:</h3>
-            <hr>
-            <input type="radio" name="grade" value="9" id="nine"><label for="nine"><h4>9</h4></label>
-            <input type="radio" name="grade" value="10" id="ten"><label for="ten"><h4>10</h4></label>
-            <input type="radio" name="grade" value="11" id="eleven"><label for="eleven"><h4>11</h4></label>
-            <input type="radio" name="grade" value="12" id="twelve"><label for="twelve"><h4>12</h4></label>
-          </fieldset>
-          <fieldset>
-            <h3>Sort By:</h3>
-            <hr>
-            <div class="column-wrapper">
-              <ul>
-                <li><label for="deadline">Deadline</label></li>
-              </ul>
-              <ul>
-                <li><input type="checkbox" name="sortDate" value="deadline" id="deadline"><label for="deadline"><i class="fa fa-check"></i></label></li>
-              </ul>
-            </div>
-          </fieldset>
-          <fieldset>
-            <h3>Tags:</h3>
-            <hr>
-            <div class="column-wrapper">
-              <ul>
-                <li><label for="diversity"><span>Diversity </span></label></li>
-              <li><label for="low-income"><span>Low-Income </span></label></li>
-              <li><label for="service"><span>Service </span></label></li>
-                <li><label for="stem">STEM</label></li>
-        <li><label for="daca"><span>DACA </span></label></li>
-              </ul>
-              <ul>
-                <li><input type="checkbox" name="tags[]" value="diversity" id="diversity"><label for="diversity"><i class="fa fa-check"></i></label></li>
-                <li><input type="checkbox" name="tags[]" value="low-income" id="low-income"><label for="low-income"><i class="fa fa-check"></i></label></li>
-              <li><input type="checkbox" name="tags[]" value="service" id="service"><label for="service"><i class="fa fa-check"></i></label></li>
-              <li><input type="checkbox" name="tags[]" value="stem" id="stem"><label for="stem"><i class="fa fa-check"></i></label></li>
-        <li><input type="checkbox" name="tags[]" value="daca" id="daca"><label for="daca"><i class="fa fa-check"></i></label></li>
-              </ul>
-            </div>
-          </fieldset>
-          <input type="button" name="SubmitButton" value="Submit">
-        </form>
+        <h2>Your Scholarships</h2>
+        <br>
+
+        
+        
+        <% @saved_scholarships.each do |scholarship_guide| %>
+        <div class="row">
+        <div style="padding:0px; margin-bottom:15px; margin-left: 5px; margin-right:0px; width:150px;" align="left";>
+        <p> <a class="applyLink" href="/scholarship_guides/<%= scholarship_guide.id %>"><%= scholarship_guide.program_name %> </a> </p> </div>
+
+        <div align="right">
+        <%= button_to 'Unfavorite', unsave_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name), method: :delete, class: 'unfavorite-button' %> </div>
+      </div>
+      <% end %>
+
       </div>
     </div>
+  </div>
 
+<div class="main">
+
+<div class="opportunity-alt">
+
+    <% @unsaved_scholarships.each do |scholarship_guide| %>
+
+<div class="container">
+
+  <h1 class="scholarship_title" href="<%= scholarship_guide.program_url %>">  <%= scholarship_guide.program_name %> </h1><i class="fa fa-plus-circle addDesktop" id="USAirForceROTC" style="display: inline;"></i>
+  <div class="flex-container">
+    <div class="selectivity">
+      <h3> Selectivity <br> <%= scholarship_guide.metric_box1 %></h3>
+    </div>
+    <div class="grade">
+      <h3> Award <br> <%= scholarship_guide.metric_box2 %></h3>
+    </div>
+    <div class="deadline">
+      <h3> Deadline <br> <%= scholarship_guide.metric_box3 %></h3>
+    </div><input type="hidden" class="metricDate" value="2017-12-01"></div>
+    <div class="info">
+      <p><%= scholarship_guide.description_short %> </p>
+
+    </div>
+    <br>
+
+    <div class="row">
+    <div class="applynow">
+    <h2>
+      <a class="applyLink" href="/scholarship_guides/<%= scholarship_guide.id %>" target="_blank">Read More<i class="fa fa-chevron-circle-right"></i></a></h2>
+    </div>  
+       <%= button_to 'Add to favorites', save_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name, completed: 0), class: 'favorite-button' %> 
+     </div>
+          <hr style="background-color: lightgray">
+    </div>
+
+
+<% end %>
+
+    </div>
 
 
 <div class="opportunity-alt">
-<div class="container main">
-  <h2 class="oppName">US Air Force ROTC</h2><i class="fa fa-plus-circle addDesktop" id="USAirForceROTC" style="display: inline;"></i>
-  <br>
-  <br>
+
+    <% @saved_scholarships.each do |scholarship_guide| %>
+
+<div class="container">
+
+  <h1 class="scholarship_title" href="?">  <%= scholarship_guide.program_name %> </h1><i class="fa fa-plus-circle addDesktop" id="USAirForceROTC" style="display: inline;"></i>
   <div class="flex-container">
-    <div class="grade">
-      <h3>11, 12</h3>
-    </div>
     <div class="selectivity">
-      <h3>$18,000</h3>
+      <h3> Selectivity <br>  <%= scholarship_guide.metric_box1 %></h3>
+    </div>
+    <div class="grade">
+      <h3> Award <br> <%= scholarship_guide.metric_box2 %></h3>
     </div>
     <div class="deadline">
-      <h3>December 1, 2018</h3>
+      <h3> Deadline <br> <%= scholarship_guide.metric_box3 %></h3>
     </div><input type="hidden" class="metricDate" value="2017-12-01"></div>
     <div class="info">
-      <p>Air Force ROTC is a college program offered at more than 1,100 colleges and universities across the United States. It prepares you to become an Air Force Officer while earning a college degree. Applicants must complete a physical fitness test, a description of extracurricular activities, and an interview with Air Force personnel. Scholarships often vary by the school you enroll in.</p>
-      <h3>See More</h3>
-      <h3>See Less</h3>
+      <p> <%= scholarship_guide.description_short %></p>
     </div>
     <br>
+        <div class="row">
+    <div class="applynow">
     <h2>
-      <a class="applyLink" id="USAirForceROTC" href="https://www.afrotc.com/scholarships/application" target="_blank">Apply Now<i class="fa fa-chevron-circle-right"></i></a></h2></div>
+      <a class="applyLink" href="/scholarship_guides/<%= scholarship_guide.id %>" target="_blank">Read More<i class="fa fa-chevron-circle-right"></i></a></h2>
+    </div>  
+       <%= button_to 'Unfavorite', unsave_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name), method: :delete, class: 'unfavorite-button' %> 
+     </div>
+
+    
+
+          <hr style="background-color: lightgray">
     </div>
 
 
- 
+<% end %>
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
 
 
   <table class="table table-hover col-md-6 offset-md-3">
@@ -121,9 +153,54 @@
               <td><%= link_to 'Destroy', scholarship_guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
         <% end %>
-        <td><%= button_to 'Save to my Profile', save_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name, completed: 0) %></td>
+        <td><%= button_to 'Favorite', save_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name, completed: 0) %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
+
+<!-- <form>
+          <fieldset>
+            <h3>Grade:</h3>
+            <hr>
+
+            <input type="radio" name="grade" value="9" id="nine"><label for="nine"><h4>9</h4></label>
+            <input type="radio" name="grade" value="10" id="ten"><label for="ten"><h4>10</h4></label>
+            <input type="radio" name="grade" value="11" id="eleven"><label for="eleven"><h4>11</h4></label>
+            <input type="radio" name="grade" value="12" id="twelve"><label for="twelve"><h4>12</h4></label>
+          </fieldset>
+          <fieldset>
+            <h3>Sort By:</h3>
+            <hr>
+            <div class="column-wrapper">
+              <ul>
+                <li><label for="deadline">Deadline</label></li>
+              </ul>
+              <ul>
+                <li><input type="checkbox" name="sortDate" value="deadline" id="deadline"><label for="deadline"><i class="fa fa-check"></i></label></li>
+              </ul>
+            </div>
+          </fieldset>
+          <fieldset>
+            <h3>Tags:</h3>
+            <hr>
+            <div class="column-wrapper">
+              <ul>
+                <li><label for="diversity"><span>Diversity </span></label></li>
+              <li><label for="low-income"><span>Low-Income </span></label></li>
+              <li><label for="service"><span>Service </span></label></li>
+                <li><label for="stem">STEM</label></li>
+        <li><label for="daca"><span>DACA </span></label></li>
+              </ul>
+              <ul>
+                <li><input type="checkbox" name="tags[]" value="diversity" id="diversity"><label for="diversity"><i class="fa fa-check"></i></label></li>
+                <li><input type="checkbox" name="tags[]" value="low-income" id="low-income"><label for="low-income"><i class="fa fa-check"></i></label></li>
+              <li><input type="checkbox" name="tags[]" value="service" id="service"><label for="service"><i class="fa fa-check"></i></label></li>
+              <li><input type="checkbox" name="tags[]" value="stem" id="stem"><label for="stem"><i class="fa fa-check"></i></label></li>
+        <li><input type="checkbox" name="tags[]" value="daca" id="daca"><label for="daca"><i class="fa fa-check"></i></label></li>
+              </ul>
+            </div>
+          </fieldset>
+          <input type="button" name="SubmitButton" value="Submit">
+        </form> -->
