@@ -10,6 +10,8 @@ class MeController < ApplicationController
         @tasks_reference += Task.where("scholarship_id = ?", s.scholarship_guide_id).pluck(:id)
       end
       @tasks = UserTaskItem.all
+      @files = FileUpload.all.map{|a| [a.given_name, a.id]}
+      @task_files = FileUpload.where("id = ?", 13)
     end
 
     def start
