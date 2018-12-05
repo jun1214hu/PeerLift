@@ -1,0 +1,2 @@
+module ScholarshipGuidesHelper
+end

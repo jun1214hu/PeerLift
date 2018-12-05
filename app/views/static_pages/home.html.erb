@@ -1,0 +1,166 @@
+
+<div id="videoBanner">
+    <video id="peerLiftVideo" playsinline="" autoplay="" loop="" muted="">
+      <source src="media/backgrounds/frontpage.mp4" type="video/mp4">
+      </video>
+      <div id="videoMessage">
+        <img src="media/logo/whiteText.png">
+        <h2>Creating access to opportunity.</h2>
+        <a href="#opportunities" class="scroll-arrow">
+          <i class="fa fa-caret-down"></i></a>
+      </div>
+    </div>
+
+<%= render partial: 'partials/navbar' %>
+
+
+<div class="container-fluid text-center">
+
+  <div class="row">
+    <div class="col-md-4" style="">
+        <a href="/scholarship_guides">
+          <img src="../images/scholarship_icon.png" href="/scholarship_guides"> </a>
+        </div>
+    <div class="col-md-4" style="">
+        <a data-toggle="modal" data-target="#exampleModalCenter">
+          <img src="../images/add_scholarship_icon.png"> </a>
+        </div>
+        <div class="col-md-4" style="">
+        <a data-toggle="modal" data-target="#exampleModalCenter">
+          <img src="../images/awards.png"> </a>
+        </div>
+    </div>
+  </div>
+
+
+<hr>
+
+<!-- 
+<div id="mission" class="mission">
+        <div id="slide-left"><i class="fa fa-angle-left"></i></div>
+        <div id="slide-right"><i class="fa fa-angle-right"></i></div>
+        <div class="peersoverprofit" style="display: none;">
+          <div class="container">
+            <div class="mission-text">
+              <h1>Peers Over Profit</h1>
+              <h2>As a 501(c)(3) nonprofit, Peerlift is completely free.</h2>
+            </div>
+            <div class="mission-graphics">
+              <i class="fa fa-check-circle"></i>
+            </div>
+            <div class="mission-text">
+              <p>We connect high school students of all backgrounds to a proven selection of exceptional opportunities for college.</p>
+            </div>
+          </div>
+        </div>
+        <div class="studentdriven" style="display: none;">
+          <div class="container">
+            <div class="mission-text">
+              <h1>Student-Driven</h1>
+              <h2>In our 20-person team,</h2>
+            </div>
+            <div class="mission-graphics">
+              <h1>100%</h1>
+              <h2>are 18 years old or younger.</h2>
+            </div>
+            <div class="mission-text">
+              <p>Peerlift is the only major opportunities platform exclusively run by current students.</p>
+            </div>
+          </div>
+        </div>
+        <div class="uniqueapproach" style="display: block;">
+          <div class="container">
+            <div class="mission-text">
+              <h1>A Unique Approach</h1>
+              <h2>We offer a curated set of 350 opportunities. All offer financial aid.</h2>
+            </div>
+            <div class="mission-graphics">
+              <i class="fa fa-bullseye"></i>
+            </div>
+            <div class="mission-text">
+              <p>No more searching through millions of unhelpful scholarships. We focus on helping low- and middle- income students find resources for success.</p>
+            </div>
+          </div>
+        </div>
+        <div class="provencontent" style="display: none;">
+          <div class="container">
+            <div class="mission-text">
+              <h1>Proven Content</h1>
+              <h2>Completely crowdsourced.</h2>
+            </div>
+            <div class="mission-graphics">
+              <i class="fa fa-heart"></i>
+            </div>
+            <div class="mission-text">
+              <p>College freshmen from across the country shared what made higher education a reality for them. Each opportunity you see was invaluable to another student like you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+ -->
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Add An Opportunity
+</button>
+ -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add Opportunities</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Add your own opportunity to Peerlift
+          <p>This <a href="" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover sbody content is set in this attribute.">button</a> triggers a popover on click.</p>
+          <%= form_for ScholarshipGuide.new do |form| %>
+            <p>
+              <%= form.label :Opportunity_Details %><br>
+              <%= form.text_field :program_name %>
+            </p>
+
+            <p>
+              <%= form.submit "Submit"%>
+            </p>
+          <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container-fluid">
+  <div class="row">
+ <div class="col-sm-offset-5 col-sm-4 ">
+<h4> My Overview </h4>
+                <table class="table table-hover table-bordered">
+                    <thead>
+
+                        <% if current_user %> <% current_user.attributes.each do |k, v| %>
+                        <tr> <th scope="row"><%= k %>:</th> <td> <%= v %> </td> </tr>
+            <% end %>
+            <% end %>
+
+                    </thead>
+                </table>
+            </div>
+          </div>
+        </div> -->
+</div>
+
+<br>
+<%= render partial: 'partials/footer' %>
+                       
+Test:
+<% if current_user %>
+  <% current_user.attributes.slice('is_admin').each do |k,v| %>
+  <% if v == 1 %> <%= current_user.attributes.slice('first_name')["first_name"] %> is an admin with an adminid = <%= v %> <p>test html</p>
+  <% end %>
+  <% end %>
+<% end %>
