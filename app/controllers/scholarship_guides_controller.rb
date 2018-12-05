@@ -10,6 +10,7 @@ class ScholarshipGuidesController < ApplicationController
     @scholarship_references_unsaved = ScholarshipGuide.where.not(id: @scholarship_references_saved).pluck(:id)
     @saved_scholarships = ScholarshipGuide.where(id: @scholarship_references_saved)
     @unsaved_scholarships = ScholarshipGuide.where(id: @scholarship_references_unsaved)
+    @scholarship_guide = ScholarshipGuide.all
   end
 
   # GET /scholarship_guides/1

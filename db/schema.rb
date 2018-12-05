@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_30_011835) do
+ActiveRecord::Schema.define(version: 2018_12_05_180002) do
 
   create_table "file_uploads", force: :cascade do |t|
     t.integer "user_id"
@@ -61,6 +61,16 @@ ActiveRecord::Schema.define(version: 2018_11_30_011835) do
     t.string "time_estimate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "program_url"
+    t.string "location"
+    t.integer "diversity"
+    t.integer "low_income"
+    t.integer "STEM"
+    t.integer "DACA"
+    t.integer "freshman"
+    t.integer "sophomore"
+    t.integer "junior"
+    t.integer "senior"
   end
 
   create_table "started_scholarships", force: :cascade do |t|
@@ -99,6 +109,8 @@ ActiveRecord::Schema.define(version: 2018_11_30_011835) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "is_admin"
+    t.string "school"
+    t.string "grade"
   end
 
 end

@@ -3,48 +3,17 @@
 
   <div class="body oppBody">
     <div class="oppHeader">
-      <div class="centered"><h1><div class='loading-line loading-header'><img src="<%= @scholarship_guide.image_url %>" alt="<%= @scholarship_guide.program_name %> Image" width="100%">
-      </div></h1></div>
+      <div class="centered">
+        <h1> <%= @scholarship_guide.program_name %> </h1></div>
       <div class="flex-container">
-        <div class="grade"><h3><div class='loading-line loading-metric'> <%= @scholarship_guide.metric_box1 %></div></h3></div>
-        <div class="selectivity"><h3><div class='loading-line loading-metric'><%= @scholarship_guide.metric_box2 %></div></h3></div>
-        <div class="deadline"><h3><div class='loading-line loading-metric'><%= @scholarship_guide.metric_box3 %></div></h3></div>
+        <div class="grade"><h3> <%= @scholarship_guide.metric_box1 %> </h3></div>
+        <div class="selectivity"><h3><%= @scholarship_guide.metric_box2 %></h3></div>
+        <div class="deadline"><h3><%= @scholarship_guide.metric_box3 %></h3></div>
       </div>
     </div>
     <div class="container">
       <div class="oppPage">
-      <div class="oppDescription cd-section" id="oppDescription">
-        <h2 id="shortDesc"><h4><%= @scholarship_guide.description_short %></h4>
-          <div class='text-loading'>test2
-            <div class='loading-line'>test3</div>test4
-            <div class='loading-line'>test5</div>test6
-          </div>
-        </h2>
-        <h2 id="description"><h6><%= @scholarship_guide.description_long %><h6>
-          <div class='text-loading'>
-            <div class='loading-line'></div>
-            <div class='loading-line'></div>
-            <div class='loading-line'></div>
-            <div class='loading-line'></div>
-          </div>
-        </h2>
-        <div id="readMore">
-          <h3>Read More</h3>
-          <i class="fa fa-chevron-down"></i>
-        </div>
-      </div>
-      <div class="oppChecks">
-        <ul>
-          <li>
-            <i class="fa fa-check-circle"></i>
-            <h3><div class='loading-line'></div></h3>
-          </li>
-          <li>
-            <i class="fa fa-check-circle"></i>
-            <h3><div class='loading-line'></div></h3>
-          </li>
-        </ul>
-      </div>
+      
       <div class="oppComponents" style="display: block">
         <div class="financialAid cd-section" id="financialAid">
           <div class="financialAidHeader header">

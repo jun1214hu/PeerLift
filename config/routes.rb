@@ -18,9 +18,7 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
 
-  resources :users do
-      resources :user_tasks
-    end
+  resources :users, only: [:show, :create, :edit, :update]
 
 
   #resources :users do
