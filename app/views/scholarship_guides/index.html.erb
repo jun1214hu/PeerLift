@@ -5,49 +5,7 @@
       <i class="fa fa-times"></i>
       <div class="container">
         <h2>Scholarships</h2>
-        <form>
-          <fieldset>
-            <h3>Grade:</h3>
-            <hr>
-            <input type="radio" name="grade" value="9" id="nine"><label for="nine"><h4>9</h4></label>
-            <input type="radio" name="grade" value="10" id="ten"><label for="ten"><h4>10</h4></label>
-            <input type="radio" name="grade" value="11" id="eleven"><label for="eleven"><h4>11</h4></label>
-            <input type="radio" name="grade" value="12" id="twelve"><label for="twelve"><h4>12</h4></label>
-          </fieldset>
-          <fieldset>
-            <h3>Sort By:</h3>
-            <hr>
-            <div class="column-wrapper">
-              <ul>
-                <li><label for="deadline">Deadline</label></li>
-              </ul>
-              <ul>
-                <li><input type="checkbox" name="sortDate" value="deadline" id="deadline"><label for="deadline"><i class="fa fa-check"></i></label></li>
-              </ul>
-            </div>
-          </fieldset>
-          <fieldset>
-            <h3>Tags:</h3>
-            <hr>
-            <div class="column-wrapper">
-              <ul>
-                <li><label for="diversity"><span>Diversity </span></label></li>
-              <li><label for="low-income"><span>Low-Income </span></label></li>
-              <li><label for="service"><span>Service </span></label></li>
-                <li><label for="stem">STEM</label></li>
-        <li><label for="daca"><span>DACA </span></label></li>
-              </ul>
-              <ul>
-                <li><input type="checkbox" name="tags[]" value="diversity" id="diversity"><label for="diversity"><i class="fa fa-check"></i></label></li>
-                <li><input type="checkbox" name="tags[]" value="low-income" id="low-income"><label for="low-income"><i class="fa fa-check"></i></label></li>
-              <li><input type="checkbox" name="tags[]" value="service" id="service"><label for="service"><i class="fa fa-check"></i></label></li>
-              <li><input type="checkbox" name="tags[]" value="stem" id="stem"><label for="stem"><i class="fa fa-check"></i></label></li>
-        <li><input type="checkbox" name="tags[]" value="daca" id="daca"><label for="daca"><i class="fa fa-check"></i></label></li>
-              </ul>
-            </div>
-          </fieldset>
-          <input type="button" name="SubmitButton" value="Submit">
-        </form>
+        
       </div>
     </div>
   </div>
@@ -60,21 +18,20 @@
 
 <div class="container">
 
-  <h1 class="scholarship_title" href="?">  <%= scholarship_guide.program_name %> </h1><i class="fa fa-plus-circle addDesktop" id="USAirForceROTC" style="display: inline;"></i>
+  <h1 class="scholarship_title" href="<%= scholarship_guide.program_url %>">  <%= scholarship_guide.program_name %> </h1><i class="fa fa-plus-circle addDesktop" id="USAirForceROTC" style="display: inline;"></i>
   <div class="flex-container">
-    <div class="grade">
-      <h3> <%= scholarship_guide.metric_box1 %></h3>
-    </div>
     <div class="selectivity">
-      <h3><%= scholarship_guide.metric_box2 %></h3>
+      <h3> Selectivity <br> <%= scholarship_guide.metric_box1 %></h3>
+    </div>
+    <div class="grade">
+      <h3> Award <br> <%= scholarship_guide.metric_box2 %></h3>
     </div>
     <div class="deadline">
-      <h3><%= scholarship_guide.metric_box3 %></h3>
+      <h3> Deadline <br> <%= scholarship_guide.metric_box3 %></h3>
     </div><input type="hidden" class="metricDate" value="2017-12-01"></div>
     <div class="info">
-      <p<%= scholarship_guide.description_long %></p>
-      <h3>See More</h3>
-      <h3>See Less</h3>
+      <p><%= scholarship_guide.description_short %> </p>
+
     </div>
     <br>
 
@@ -102,19 +59,17 @@
 
   <h1 class="scholarship_title" href="?">  <%= scholarship_guide.program_name %> </h1><i class="fa fa-plus-circle addDesktop" id="USAirForceROTC" style="display: inline;"></i>
   <div class="flex-container">
-    <div class="grade">
-      <h3> <%= scholarship_guide.metric_box1 %></h3>
-    </div>
     <div class="selectivity">
-      <h3><%= scholarship_guide.metric_box2 %></h3>
+      <h3> Selectivity <br>  <%= scholarship_guide.metric_box1 %></h3>
+    </div>
+    <div class="grade">
+      <h3> Award <br> <%= scholarship_guide.metric_box2 %></h3>
     </div>
     <div class="deadline">
-      <h3><%= scholarship_guide.metric_box3 %></h3>
+      <h3> Deadline <br> <%= scholarship_guide.metric_box3 %></h3>
     </div><input type="hidden" class="metricDate" value="2017-12-01"></div>
     <div class="info">
-      <p<%= scholarship_guide.description_long %></p>
-      <h3>See More</h3>
-      <h3>See Less</h3>
+      <p> <%= scholarship_guide.description_short %></p>
     </div>
     <br>
         <div class="row">
@@ -134,6 +89,8 @@
 <% end %>
 
     </div>
+
+
 
   </div>
 
@@ -190,3 +147,47 @@
 </table>
 
 
+<!-- <form>
+          <fieldset>
+            <h3>Grade:</h3>
+            <hr>
+
+            <input type="radio" name="grade" value="9" id="nine"><label for="nine"><h4>9</h4></label>
+            <input type="radio" name="grade" value="10" id="ten"><label for="ten"><h4>10</h4></label>
+            <input type="radio" name="grade" value="11" id="eleven"><label for="eleven"><h4>11</h4></label>
+            <input type="radio" name="grade" value="12" id="twelve"><label for="twelve"><h4>12</h4></label>
+          </fieldset>
+          <fieldset>
+            <h3>Sort By:</h3>
+            <hr>
+            <div class="column-wrapper">
+              <ul>
+                <li><label for="deadline">Deadline</label></li>
+              </ul>
+              <ul>
+                <li><input type="checkbox" name="sortDate" value="deadline" id="deadline"><label for="deadline"><i class="fa fa-check"></i></label></li>
+              </ul>
+            </div>
+          </fieldset>
+          <fieldset>
+            <h3>Tags:</h3>
+            <hr>
+            <div class="column-wrapper">
+              <ul>
+                <li><label for="diversity"><span>Diversity </span></label></li>
+              <li><label for="low-income"><span>Low-Income </span></label></li>
+              <li><label for="service"><span>Service </span></label></li>
+                <li><label for="stem">STEM</label></li>
+        <li><label for="daca"><span>DACA </span></label></li>
+              </ul>
+              <ul>
+                <li><input type="checkbox" name="tags[]" value="diversity" id="diversity"><label for="diversity"><i class="fa fa-check"></i></label></li>
+                <li><input type="checkbox" name="tags[]" value="low-income" id="low-income"><label for="low-income"><i class="fa fa-check"></i></label></li>
+              <li><input type="checkbox" name="tags[]" value="service" id="service"><label for="service"><i class="fa fa-check"></i></label></li>
+              <li><input type="checkbox" name="tags[]" value="stem" id="stem"><label for="stem"><i class="fa fa-check"></i></label></li>
+        <li><input type="checkbox" name="tags[]" value="daca" id="daca"><label for="daca"><i class="fa fa-check"></i></label></li>
+              </ul>
+            </div>
+          </fieldset>
+          <input type="button" name="SubmitButton" value="Submit">
+        </form> -->

@@ -11,4 +11,6 @@ class ScholarshipGuide < ApplicationRecord
   :resume_count,
   :time_estimate,
   presence: true
+
+
 end
