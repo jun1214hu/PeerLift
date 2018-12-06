@@ -3,12 +3,35 @@
 
   <div class="body oppBody">
     <div class="oppHeader">
-      <div class="centered">
-        <h1> <%= @scholarship_guide.program_name %> </h1></div>
+      <div class="centered row">
+        <h1> <%= @scholarship_guide.program_name %> </h1>
+      <% @saved_scholarships.each do |scholarship_guide| %>
+        <% if scholarship_guide.id == @scholarship_guide.id %>
+        <div class="row">
+
+        <div align="right">
+        <%= button_to 'Unfavorite', unsave_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name), method: :delete, class: 'unfavorite-button' %> </div>
+      </div>
+      <% end %>
+      <% end %>
+
+      <% @unsaved_scholarships.each do |scholarship_guide| %>
+        <% if scholarship_guide.id == @scholarship_guide.id %>
+        <div class="row">
+        
+
+        <div align="right">
+        <%= button_to 'Favorite', save_scholarship_path(user_id: current_user.id, scholarship_guide_id: scholarship_guide.id, scholarship_name: scholarship_guide.program_name, completed: 0), class: 'favorite-button' %> </div>
+      </div>
+ 
+      <% end %>
+      <% end %>
+</div>
+
       <div class="flex-container">
-        <div class="grade"><h3> <%= @scholarship_guide.metric_box1 %> </h3></div>
-        <div class="selectivity"><h3><%= @scholarship_guide.metric_box2 %></h3></div>
-        <div class="deadline"><h3><%= @scholarship_guide.metric_box3 %></h3></div>
+        <div class="grade"><h3>Selectivity <br> <%= @scholarship_guide.metric_box1 %> </h3></div>
+        <div class="selectivity"><h3>Amount <br> <%= @scholarship_guide.metric_box2 %></h3></div>
+        <div class="deadline"><h3>Deadline <br><%= @scholarship_guide.metric_box3 %></h3></div>
       </div>
     </div>
     <div class="container">
@@ -18,11 +41,12 @@
         <div class="financialAid cd-section" id="financialAid">
           <div class="financialAidHeader header">
             <i class="fa fa-chevron-down"></i>
-            <h1>Financial Aid</h1>
+            <h1>Summary</h1>
+            <p style="color:black"> <br><%= @scholarship_guide.description_short %>
           </div>
           <div class="financialAidBody">
-            <h2 class="subHeader">Program Cost: </h2>
-            <h2 id="cost"><%= @scholarship_guide.metric_box1 %></h2>
+            <h2 class="subHeader">Award Amount: </h2>
+            <h2 id="cost"><%= @scholarship_guide.metric_box2 %></h2>
             <h2 class="subHeader">Aid Breakdown: </h2>
             <h2 id="aidBreakdown">Scholarship awarded for college</h2>
           </div>
@@ -65,27 +89,34 @@
         <div class="application cd-section" id="application">
           <div class="applicationHeader header">
             <i class="fa fa-chevron-down"></i>
-            <h1>Application</h1>
+            <h1>Application Tasks</h1>
           </div>
           <div class="applicationBody">
             <i class="fa fa-clock-o"></i>
-            <h2 id="timeEstimate"><%= @scholarship_guide.time_estimate %> to complete</h2>
+            <h2 id="timeEstimate">Approximately <%= @scholarship_guide.location %> minutes to complete</h2>
             <div class="componentWrapper" id="componentWrapper">
               <div class="essay">
                 <i class="fa fa-pencil"></i>
-                <h2><%= @scholarship_guide.essay_count %> Essays</h2>
+                <h2>Essays: <%= @scholarship_guide.essay_count %> </h2>
               </div>
               <div class="reccomendation">
                 <i class="fa fa-envelope"></i>
-                <h2>[#] Rec Letter(s)</h2>
+                <h2>Recs: <%= @scholarship_guide.resume_count %></h2>
+              </div>
+              <div class="resume">
+                <i class="fa fa-envelope"></i>
+                <h2>Resumes: <%= @scholarship_guide.resume_count %> </h2>
               </div>
               <div class="transcript">
                 <i class="fa fa-file-text"></i>
-                <h2><%= @scholarship_guide.transcript_count %>Transcript &amp; <%= @scholarship_guide.resume_count %>Resume</h2>
+                <h2>Transcripts: <%= @scholarship_guide.transcript_count %> </h2>
               </div>
             </div>
           </div>
         </div>
+
+    
+
         <!--<div class="timeline cd-section" id="timeline">
           <div class="timelineHeader header">
             <i class="fa fa-chevron-down"></i>
@@ -96,7 +127,7 @@
         </div>-->
       </div>
       <div class="apply">
-          <a target="_blank"><button class="btn btn-primary">
+          <a href="/me"> <button class="btn btn-primary">
               <h1>Apply Now</h1>
           </button></a>
       </div>
@@ -128,15 +159,9 @@
             <span class="cd-label">Application</span>
           </a>
         </li>
-        <!--<li>
-          <a href="#timeline" data-number="5">
-            <span class="cd-dot"></span>
-            <span class="cd-label">Timeline</span>
-          </a>
-        </li>-->
-        <button class="btn btn-primary" id="saveOpp">Save </button>
       </ul>
-	</nav>
+
+      </nav>
     </div>
     </div>
   </div>

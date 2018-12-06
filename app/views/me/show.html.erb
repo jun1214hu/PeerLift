@@ -4,6 +4,7 @@
 <br>
 <br>
 <br>
+
 <h1 style="text-align: center;margin-left:auto;margin-right:auto;width:300px"> Hello, <%= current_user.first_name %>! </h1>
 
 <br>
@@ -66,39 +67,73 @@
 <table class="table table-hover table-bordered">
   <thead>
     <tr>
+      <th> See Tasks </th>
       <th>Scholarship Name</th>
       <th>Current status</th>
     </tr>
   </thead>
   <tbody>
+    
       <% @started_scholarships.each do |startedscholarship| %>
 
       <% if startedscholarship.aasm_state == "in_progress" %>
-        <tr style="background-color:orange">
+        <tr class="table-warning" data-toggle="collapse" data-target=".order<%= startedscholarship.id %>">
           <% end %>
           <% if startedscholarship.aasm_state == "completed" %>
-        <tr style="background-color:lightgreen">
+        <tr class="table-success" data-toggle="collapse" data-target=".order<%= startedscholarship.id %>">
           <% end %>
           <% if startedscholarship.aasm_state == "submitted" %>
-        <tr style="background-color:lightgreen">
+        <tr class="table-success" data-toggle="collapse" data-target=".order<%= startedscholarship.id %>">
           <% end %>
 
+          <td> + </td>
+
           <td><a href="/scholarship_guides/<%= startedscholarship.scholarship_guide_id %>"><%= startedscholarship.scholarship_name %></a></td>
+
+
           <% if startedscholarship.aasm_state == "in_progress" %>
           <td> In Progress </td>
             <td><%= button_to 'Complete?', complete_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), :class => 'btn btn-warning' %></td>
           <% end %>
+
+
           <% if startedscholarship.aasm_state == "completed" %>
           <td> Completed </td>
             <td><%= button_to 'Submit', submit_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), :class => 'btn btn-success' %></td>
             <td><%= button_to 'Back to In Progress', incomplete_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), :class => 'btn btn-warning' %></td>
           <% end %>
+
+
           <% if startedscholarship.aasm_state == "submitted" %>
           <td> Submitted </td>
             <td><%= button_to 'Unsubmit', unsubmit_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), :class => 'btn btn-danger' %></td>
           <% end %>
+
+
           <td><%= button_to 'Delete Application', unstart_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), method: :delete, :class => 'btn btn-danger' %></td>
         </tr>
+
+        <% @tasks.each do |task| %>
+
+       <!--  <% if task.scholarship_id == startedscholarship.scholarship_guide_id %> -->
+
+         <tr class="order<%= startedscholarship.id %> collapse table-warning table-sm">
+                        
+            <td><%= task.text %></td>
+            <td><%= task.status %></td>
+            <td><%= task.file_given_name %>: <% if task.file %> <%= link_to "Download File", task.file_url %> <% end %></td>
+            <% if task.status == "in_progress" %>
+              <td><%= button_to "Complete",  complete_task_path(id: task.id), class: "btn" %></td>
+            <% end %>
+            <% if task.status == "completed" %>
+              <td><%= button_to "Incomplete",  incomplete_task_path(id: task.id), class: "btn" %></td>
+            <% end %>
+            <td><%= button_to "Delete",  task, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete this task?" %></td>
+         </tr>
+         <% end %>
+
+      <% end %>
+
       <% end %>
   </tbody>
 </table>
@@ -127,6 +162,93 @@
 </table>
 </div>
 
+<div>
+<h4>Tasks</h4>
+<table class="table table-hover col-md-6 offset-md-3">
+  <thead>
+    <tr>
+      <<th>Scholarship_ID</th>
+      <th>Task Text</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @tasks.each do |task| %>
+        <tr>
+          <td><%= task.scholarship_guide_id %></td>
+          <td><%= task.text %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+</div>
+
+<table class = "table table-bordered table-striped">
+   <thead>.
+      <tr>
+         <th>Given Name</th>
+         <th>Download Link</th>
+         <th>File Name</th>
+         <th> </th>
+      </tr>
+   </thead>
+
+   <tbody>
+      <% @file_uploads.each do |file_upload| %>
+
+         <tr>
+            <td><%= file_upload.given_name %></td>
+            <td><%= button_to "Download", file_upload.attachment_url, :class => 'btn btn-primary' %></td>
+            <td><%= file_upload.attachment %>
+            <td><%= button_to "Delete",  file_upload, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{file_upload.given_name}?" %></td>
+         </tr>
+
+      <% end %>
+   </tbody>
+
+</table>
+
+<h1>Tasks</h1>
+
+<table class = "table table-bordered table-striped">
+   <thead>.
+      <tr>
+         <th>User ID</th>
+         <th>Scholarship ID</th>
+         <th>Scholarship Name</th>
+         <th>Task (text)</th>
+         <th>Status</th>
+         <th>File</th>
+         <th> </th>
+      </tr>
+   </thead>
+
+   <tbody>
+      <% @tasks.each do |task| %>
+
+         <tr>
+            <td><%= task.user_id %></td>
+            <td><%= task.scholarship_id %></td>
+            <td><%= task.scholarship_name %></td>
+            <td><%= task.text %></td>
+            <td><%= task.status %></td>
+            <td><%= task.file_given_name %>: <% if task.file %> <%= link_to "Download File", task.file_url %> <% end %></td>
+            <% if task.status == "in_progress" %>
+              <td><%= button_to "Complete",  complete_task_path(id: task.id), class: "btn" %></td>
+            <% end %>
+            <% if task.status == "completed" %>
+              <td><%= button_to "Incomplete",  incomplete_task_path(id: task.id), class: "btn" %></td>
+            <% end %>
+            <td><%= button_to "Delete",  task, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete this task?" %></td>
+         </tr>
+
+      <% end %>
+   </tbody>
+
+</table>
+
+
 </div>
             </div>
 <div class="col-sm-2 sidenav">
@@ -139,7 +261,6 @@
                 <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Deadline 5 </a>
             </div>
           </div>
-
 
 
 
@@ -238,26 +359,5 @@
   </tbody>
 </table>
 </div>
+</div>  -->
 
-<div>
-<h4>Tasks</h4>
-<table class="table table-hover col-md-6 offset-md-3">
-  <thead>
-    <tr>
-      <<th>Scholarship_ID</th>
-      <th>Task Text</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-      <% @tasks.each do |task| %>
-        <tr>
-          <td><%= task.scholarship_id %></td>
-          <td><%= task.text %></td>
-        </tr>
-      <% end %>
-  </tbody>
-</table>
-</div>
-</div> 

@@ -8,8 +8,11 @@ class MeController < ApplicationController
       @tasks_reference = []
       @started_scholarships.each do |s|
         @tasks_reference += Task.where("scholarship_id = ?", s.scholarship_guide_id).pluck(:id)
+      
       end
       @tasks = UserTaskItem.all
+      @file_uploads = FileUpload.where("user_id = ?", current_user.id)
+
     end
 
     def start

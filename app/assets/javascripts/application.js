@@ -18,5 +18,6 @@
 //= require tether
 //= require popper
 //= require bootstrap
-//= require_tree .
+ //=require custom
+//= require_tree 
 //do I need to include boostrap sprockets?
