@@ -336,14 +336,17 @@
           <td><%= button_to 'No longer doing this scholarship', unstart_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), method: :delete %></td>
         </tr>
         <% @tasks.each do |task| %>
-        <% if task.scholarship_id == startedscholarship.id %>
+          <% if task.scholarship_id == startedscholarship.id %>
             <tr>
               <td><%= task.text %></td>
-              <td><%= form_for task, :url => {:controller => "user_task_items", :action => "add_file"}, :html => {:class => 'form-horizontal'} do |f| %>
-              <%= f.text_field :file_given_name, placeholder: "name" %>
-              <%= hidden_field :user_id, current_user.id %>
-              <%= hidden_field :id, task.id %>
-              <%= f.submit 'Okay'%>
+              <% if task.file %>
+                <td><%= link_to "Download File", task.file %></td>
+              <% end %>
+              <td><%= form_for task, :url => {:controller => "user_task_items", :action => "add_file"}, :html => {:method => :patch, :class => 'form-horizontal'} do |f| %>
+                <td><%= select_tag( :file_id, options_for_select(@files, task.file_id), prompt: "Choose File" ) %></td>
+                <%= hidden_field_tag "user_id", current_user.id %>
+                <%= hidden_field_tag "id", task.id %>
+                <td><%= f.submit 'Okay'%></td>
               <% end %>
             </td>
               <% if task.status == "in_progress" %>
@@ -353,7 +356,7 @@
                 <td><%= button_to 'Back to In Progress', incomplete_user_task_path(user_id: current_user.id, id: task.id) %></td>
               <% end %>
             </tr>
-        <% end %>
+          <% end %>
         <% end %>
       <% end %>
   </tbody>

@@ -53,7 +53,7 @@ Rails.application.routes.draw do
   post 'taskdone' => 'tasks#complete', as: :complete_task
   post 'tasknotdone' => 'tasks#incomplete', as: :incomplete_task
 
-  patch 'taskfile' => 'user_task_items#add_file', as: :user_task_item_path
+  patch 'taskfile' => 'user_task_items#add_file', as: :add_task_file
 
 
 end

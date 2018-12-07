@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_05_180002) do
+ActiveRecord::Schema.define(version: 2018_12_06_195827) do
 
   create_table "file_uploads", force: :cascade do |t|
     t.integer "user_id"
@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(version: 2018_12_05_180002) do
     t.string "status"
     t.integer "file_id"
     t.string "file_given_name"
+    t.string "file"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "started_scholarship_id"

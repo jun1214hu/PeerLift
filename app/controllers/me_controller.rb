@@ -11,7 +11,8 @@ class MeController < ApplicationController
       
       end
       @tasks = UserTaskItem.all
-      @file_uploads = FileUpload.where("user_id = ?", current_user.id)
+      @files = FileUpload.all.map{|a| [ a.given_name, a.id] }
+      #@task_files = FileUpload.where(id: @tasks.file_id)
 
     end
 

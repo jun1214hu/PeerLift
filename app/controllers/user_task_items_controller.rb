@@ -1,4 +1,6 @@
 class UserTaskItemsController < ApplicationController
+  before_action :set_user_task_item, only: [:update]
+
   def complete
     task = UserTaskItem.find_by(id: params[:id], user_id: params[:user_id])
     task.complete!
@@ -16,8 +18,16 @@ class UserTaskItemsController < ApplicationController
   end
 
   def add_file
-    task = UserTaskItem.find_by(id: params[:id], user_id: params[:user_id])
-    task.update(file_given_name: params[:user_id])
+    if params[:file_id]
+      task = UserTaskItem.find_by(id: params[:id], user_id: params[:user_id])
+      task.update!(file_id: params[:file_id], file: FileUpload.find_by_id(params[:file_id]).attachment.url )
+    end
+  end
+
+  private
+
+  def task_params
+    params.permit(:user_id, :file_given_name)
   end
 
 end
