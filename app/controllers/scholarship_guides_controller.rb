@@ -1,6 +1,6 @@
 class ScholarshipGuidesController < ApplicationController
   before_action :set_scholarship_guide, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate, except: [:index]
+  before_action :authenticate
   before_action :user_is_admin?, except: [:index, :show]
 
   # GET /scholarship_guides

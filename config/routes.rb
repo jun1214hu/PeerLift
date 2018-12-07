@@ -41,7 +41,7 @@ Rails.application.routes.draw do
 
   patch 'me' => 'me#complete', as: :scholarship_completed
 
-  post 'me' => 'me#start', as: :scholarship_start
+  post 'me9' => 'me#start', as: :scholarship_start
   delete 'me1' => 'me#unsave_from_saved', as: :unsave_scholarship_me_saved
   delete 'me2' => 'me#unstart', as: :unstart
 
@@ -51,7 +51,7 @@ Rails.application.routes.draw do
   post 'me6' => 'me#unsubmit', as: :unsubmit
   post 'me7' => 'user_task_items#complete', as: :complete_user_task
   post 'me8' => 'user_task_items#incomplete', as: :incomplete_user_task
-
+post 'me' => 'me#show'
 
   post 'taskdone' => 'tasks#complete', as: :complete_task
   post 'tasknotdone' => 'tasks#incomplete', as: :incomplete_task
