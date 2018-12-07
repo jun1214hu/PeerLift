@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, maximum-scale=1">
+	<meta property="og:image" content="https://peerlift.org/img/Peerlift_FB_Logo.png" />
+	<meta property="og:description" content="We're a simple online platform and youth-driven 501(c)(3) nonprofit making access to high school opportunities faster and fairer than ever before. " />
+	<meta property="og:url"content="https://peerlift.org/index.html" />
+	<meta property="og:title" content="Peerlift" />
+  <title>Peerlift</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="main.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-104681104-1', 'auto');
+	  ga('send', 'pageview');
+      
+      window['_fs_debug'] = false;
+      window['_fs_host'] = 'fullstory.com';
+      window['_fs_org'] = 'B0XAZ';
+      window['_fs_namespace'] = 'FS';
+      (function(m,n,e,t,l,o,g,y){
+        if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+        g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+        o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+        y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+        g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+        y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+        g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+        g.clearUserCookie=function(){};
+      })(window,document,window['_fs_namespace'],'script','user');
+  </script>
+
+  <style>
+  body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/media/images/teampic.png");
+    height: 100%;/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  .hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .hero-text button:hover {
+    background-color: #555;
+    color: white;
+  }
+  </style>
+</head>
+<body>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>Our Team</h1>
+    <h2>We’re a diverse group of students invested in providing opportunity.</h2>
+   
+  </div>
+  <a href="#coalition" class="scroll-arrow"><i class="fa fa-caret-down"></i></a>
+  </div>
+  <%= render partial: 'partials/navbar2' %>
+  
+  <div class="body">
+    <div class="picture">
+      <div class="container">
+        <div class="column-wrapper">
+          <div class="member">
+            <div class="sam">
+            <img src="/media/images/jung.png">
+             </div>
+            <h5>Jung Hur</h5>
+            <p style ="color:black">Harvard College</p>
+            <a href="https://www.facebook.com/Jun1214Hu" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/jung-hur-593833155/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="mailto:junghur@college.harvard.edu"><i class="fa fa-envelope"></i></a>
+            </div>
+
+          <div class="member">
+          <div class="jerry">
+          <img src="/media/images/jerry.png">
+          
+            </div>
+          <h5>Jerry Registre</h5>
+          <p style ="color:black">Harvard College</p>
+          <a href="https://www.facebook.com/profile.php?id=100006313651225" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="mailto:jerry@peerlift.org"><i class="fa fa-envelope"></i></a>
+        
+         
+        </div>
+          <div class="member">
+            <div class="sam">
+            <img src="/media/images/becina.png">
+            </div>
+            <h5>Becina Ganther</h5>
+            <p style ="color:black">Harvard College<p>
+              <a href="https://www.facebook.com/becina.ganther" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/becina-ganther" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="mailto:becina_ganther@college.harvard.edu"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <!--<div class="container"><hr class="divider"></div>
+    <div class="no-picture">
+      <div class="container">
+        <div class="column-wrapper">
+          <div class="member">
+            <h5>Rajath Salegame</h5>
+            <h6>Associate Director of Continuity</h6>
+            <p>Harvard College</p>
+          </div>
+          <div class="member">
+            <h5>Mayank Mishra</h5>
+            <h6>Former Director of Technology</h6>
+            <p>University of Pennsylvania</p>
+          </div>
+          <div class="member">
+            <h5>Victor Yu</h5>
+            <h6>Associate Director of Outreach</h6>
+            <p>North Allegheny Senior High School</p>
+          </div>
+        </div>
+        <div class="column-wrapper">
+          <div class="member">
+            <h5>Zainab Badejo</h5>
+            <h6>Content Team Member</h6>
+            <p>Towson University</p>
+          </div>
+          <div class="member">
+            <h5>Keturah Gadson</h5>
+            <h6>Content Team Member</h6>
+            <p>Harvard College</p>
+          </div>
+          <div class="member">
+            <h5>Alvin Kim</h5>
+            <h6>Former Co-Founder</h6>
+            <p>Brigham Young University</p>
+            <div class="member">
+            <div class="sravya">
+            <img src="/media/images/sravya.png">
+             </div>
+            <h5>Sravya Alla</h5>
+            <h6>Director of Finance</h6>
+            <p style ="color:black">University of Pennsylvania</p>
+            <a href="https://www.facebook.com/profile.php?id=100010496233312" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/sravyaalla/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="mailto:sravya@peerlift.org"><i class="fa fa-envelope"></i></a>
+          
+          </div>
+          <div class="member">
+            <div class="sam">
+            <img src="/media/images/sam.png">
+              </div>
+            <h5>Sam Gorman</h5>
+            <h6>Executive Director</h6>
+            <p style ="color:black">Stanford University</p>
+            <a href="https://twitter.com/samueljgorman" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.facebook.com/sam.gorman.7" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/sam-gorman-a07b18ba/" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="mailto:sam@peerlift.org"><i class="fa fa-envelope"></i></a>
+          </div>
+          <div class="member">
+            <div class="julie">
+            <img src="/media/images/julie.png">
+            </div>
+            <h5>Julie Chen</h5>
+            <h6>Director of Marketing</h6>
+            <p style ="color:black">University of Pennsylvania<p>
+            <a href="https://twitter.com/julieechenn" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.facebook.com/julie418" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/julie-li-chen/" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="mailto:julie@peerlift.org"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="column-wrapper">
+		  <div class="member">
+            <div class="praneeth">
+            <img src="/media/images/praneeth.png">
+              </div>
+            <h5>Praneeth Alla</h5>
+            <h6>Director of Technology</h6>
+            <p style ="color:black">The Episcopal Academy</p>
+            <a href="https://www.instagram.com/pranman17/" target="_blank"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/praneethalla/" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="mailto:praneeth@peerlift.org"><i class="fa fa-envelope"></i></a>
+            
+          </div>
+          <div class="member">
+            <div class="kassen">
+            <img src="/media/images/kassen.png">
+              </div>
+            <h5>Kassen Qian</h5>
+            <h6>Front-End Developer</h6>
+            <p style ="color:black">Duke University</p>
+            <a href="https://www.facebook.com/kassen.qian" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="mailto:kassen@peerlift.org"><i class="fa fa-envelope"></i></a>
+            
+          </div>
+          <div class="member">
+            <div class="jerry">
+            <img src="/media/images/jerry.png">
+              </div>
+            <h5>Jerry Registre</h5>
+            <h6>Director of Content Development</h6>
+            <p style ="color:black">Harvard College</p>
+            <a href="https://www.facebook.com/profile.php?id=100006313651225" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="mailto:jerry@peerlift.org"><i class="fa fa-envelope"></i></a>
+            
+          </div>
+        </div>
+        <div class="column-wrapper">
+          <div class="member">
+            <div class="jorge">
+            <img src="/media/images/jorge.png">
+            </div>
+            <h5>Jorge Campos</h5>
+            <h6>Associate Director of Partnerships</h6>
+            <p style ="color:black">Harvard University</p>
+            <a href="https://www.facebook.com/jorge.campos.710667" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="mailto:jorge@peerlift.org"><i class="fa fa-envelope"></i></a>
+          
+          </div>
+          <div class="member">
+            <div class="anitra">
+            <img src="/media/images/anitra.png">
+              </div>
+            <h5>Anitra Karthic </h5>
+            <h6>Associate Director of Partnerships</h6>
+            <p style ="color:black">Case Western Reserve University</p>
+            <a href="mailto:anitra@peerlift.org"><i class="fa fa-envelope"></i></a>
+           
+          </div>
+          <div class="member">
+            <div class="micheal">
+            <img src="/media/images/micheal.png">
+              </div>
+            <h5>Micheal Brown</h5>
+            <h6>Associate Director of Accessibility</h6>
+            <p style ="color:black">Stanford University</p><a href="https://www.facebook.com/micheal.brown.3114" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="mailto:micheal@peerlift.org"><i class="fa fa-envelope"></i></a>
+          
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+  </div>
+
+    <%= render partial: 'partials/footer' %>
+
+    
+    
+  <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+  <script src="firebase.js"></script>
+    <script>
+  window.intercomSettings = {
+    app_id: "i68br1b8"
+  };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/i68br1b8';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+</body>
+</html>

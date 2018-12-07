@@ -18,8 +18,7 @@
                 <a href="#account" class="list-group-item list-group-item-action list-group-item-default">Me</a>
                 <a href="#application" class="list-group-item list-group-item-action list-group-item-default">My Applications</a>
                 <a href="#favorites" class="list-group-item list-group-item-action list-group-item-default">My Favorites</a>
-                <a href="#files" class="list-group-item list-group-item-action list-group-item-default"> My Files </a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-default"> Settings </a>
+                <a href="#tasks" class="list-group-item list-group-item-action list-group-item-default"> My Tasks </a>
             </div>
         </div>
 
@@ -80,9 +79,13 @@
         <tr class="table-warning" data-toggle="collapse" data-target=".order<%= startedscholarship.id %>">
           <% end %>
           <% if startedscholarship.aasm_state == "completed" %>
+
+
         <tr class="table-success" data-toggle="collapse" data-target=".order<%= startedscholarship.id %>">
           <% end %>
           <% if startedscholarship.aasm_state == "submitted" %>
+
+
         <tr class="table-success" data-toggle="collapse" data-target=".order<%= startedscholarship.id %>">
           <% end %>
 
@@ -114,26 +117,30 @@
         </tr>
 
         <% @tasks.each do |task| %>
+          <% if task.scholarship_id == startedscholarship.id %>
+            <tr class="order<%= startedscholarship.id %> collapse">
+              <td><%= task.text %></td>
+              <% if task.file %>
+                <td><%= link_to "Download File", task.file %></td>
+              <% end %>
+              <td><%= form_for task, :url => {:controller => "user_task_items", :action => "add_file"}, :html => {:method => :patch, :class => 'form-horizontal'} do |f| %>
+                <td><%= select_tag( :file_id, options_for_select(@files, task.file_id), prompt: "Choose File" ) %></td>
+                <%= hidden_field_tag "user_id", current_user.id %>
+                <%= hidden_field_tag "id", task.id %>
+                <td><%= f.submit 'Okay'%></td>
+              <% end %>
+            </td>
+              <% if task.status == "in_progress" %>
+                <td><%= button_to 'Complete Task', complete_user_task_path(user_id: current_user.id, id: task.id) %></td>
+              <% end %>
+              <% if task.status == "completed" %>
+                <td><%= button_to 'Back to In Progress', incomplete_user_task_path(user_id: current_user.id, id: task.id) %></td>
+              <% end %>
+            </tr>
+          <% end %>
 
-       <!--  <% if task.scholarship_id == startedscholarship.scholarship_guide_id %> -->
 
-         <tr class="order<%= startedscholarship.id %> collapse table-warning table-sm">
-                        
-            <td><%= task.text %></td>
-            <td><%= task.status %></td>
-            <td><%= task.file_given_name %>: <% if task.file %> <%= link_to "Download File", task.file_url %> <% end %></td>
-            <% if task.status == "in_progress" %>
-              <td><%= button_to "Complete",  complete_task_path(id: task.id), class: "btn" %></td>
-            <% end %>
-            <% if task.status == "completed" %>
-              <td><%= button_to "Incomplete",  incomplete_task_path(id: task.id), class: "btn" %></td>
-            <% end %>
-            <td><%= button_to "Delete",  task, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete this task?" %></td>
-         </tr>
-         <% end %>
-
-      <% end %>
-
+        <% end %>
       <% end %>
   </tbody>
 </table>
@@ -162,54 +169,7 @@
 </table>
 </div>
 
-<div>
-<h4>Tasks</h4>
-<table class="table table-hover col-md-6 offset-md-3">
-  <thead>
-    <tr>
-      <<th>Scholarship_ID</th>
-      <th>Task Text</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-      <% @tasks.each do |task| %>
-        <tr>
-          <td><%= task.scholarship_guide_id %></td>
-          <td><%= task.text %></td>
-        </tr>
-      <% end %>
-  </tbody>
-</table>
-</div>
-
-<table class = "table table-bordered table-striped">
-   <thead>.
-      <tr>
-         <th>Given Name</th>
-         <th>Download Link</th>
-         <th>File Name</th>
-         <th> </th>
-      </tr>
-   </thead>
-
-   <tbody>
-      <% @file_uploads.each do |file_upload| %>
-
-         <tr>
-            <td><%= file_upload.given_name %></td>
-            <td><%= button_to "Download", file_upload.attachment_url, :class => 'btn btn-primary' %></td>
-            <td><%= file_upload.attachment %>
-            <td><%= button_to "Delete",  file_upload, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{file_upload.given_name}?" %></td>
-         </tr>
-
-      <% end %>
-   </tbody>
-
-</table>
-
-<h1>Tasks</h1>
+<h4 align="left" id="tasks">Tasks</h4>
 
 <table class = "table table-bordered table-striped">
    <thead>.
@@ -240,8 +200,7 @@
             <% if task.status == "completed" %>
               <td><%= button_to "Incomplete",  incomplete_task_path(id: task.id), class: "btn" %></td>
             <% end %>
-            <td><%= button_to "Delete",  task, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete this task?" %></td>
-         </tr>
+          </tr>
 
       <% end %>
    </tbody>
@@ -254,11 +213,18 @@
 <div class="col-sm-2 sidenav">
             <h4> To do list: </h4>
             <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action list-group-item-default">Task 1 </a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Deadline 2 </a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Deadline 3</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-default">Task 4 </a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Deadline 5 </a>
+              <% @tasks.each do |task| %>
+                
+                <% if task.status == "completed" %>
+                <div class="list-group-item list-group-item-action list-group-item-default bg-success"><%= task.text %> </div>
+                <% end %>
+                
+                <% if task.status == "in_progress" %>
+                <div class="list-group-item list-group-item-action list-group-item-default bg-warning"><%= task.text %> </div>
+                
+                <% end %>
+                <% end %>
+
             </div>
           </div>
 

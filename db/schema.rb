@@ -109,10 +109,10 @@ ActiveRecord::Schema.define(version: 2018_12_06_195827) do
     t.string "status"
     t.integer "file_id"
     t.string "file_given_name"
-    t.string "file"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "started_scholarship_id"
+    t.string "file"
     t.index ["file_id"], name: "index_user_task_items_on_file_id"
     t.index ["scholarship_id"], name: "index_user_task_items_on_scholarship_id"
     t.index ["task_id"], name: "index_user_task_items_on_task_id"

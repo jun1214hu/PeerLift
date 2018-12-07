@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, maximum-scale=1">
+	<meta property="og:image" content="https://peerlift.org/img/Peerlift_FB_Logo.png" />
+	<meta property="og:description" content="We're a simple online platform and youth-driven 501(c)(3) nonprofit making access to high school opportunities faster and fairer than ever before. " />
+	<meta property="og:url"content="https://peerlift.org/index.html" />
+	<meta property="og:title" content="Peerlift" />
+  <title>Peerlift</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="/app/assets/stylesheets/static_pages.scss" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-104681104-1', 'auto');
+	  ga('send', 'pageview');
+      
+      window['_fs_debug'] = false;
+      window['_fs_host'] = 'fullstory.com';
+      window['_fs_org'] = 'B0XAZ';
+      window['_fs_namespace'] = 'FS';
+      (function(m,n,e,t,l,o,g,y){
+        if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+        g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+        o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+        y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+        g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+        y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+        g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+        g.clearUserCookie=function(){};
+      })(window,document,window['_fs_namespace'],'script','user');
+  </script>
+  <style>
+  body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/media/images/donate.png");
+    height: 100%;/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  .hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .hero-text button:hover {
+    background-color: #555;
+    color: white;
+  }
+  </style>
+</head>
+<body>
+
+<div class="hero-image">
+  <div class="hero-text">
+  <h1>Peers Over Profit</h1>
+  <a href="#representatives" class="scroll-arrow" style="margin-bottom:20px"><i class="fa fa-caret-down"></i></a>
+  <h2>We rely on small contributions like yours to help students across the US.</h2>
+  <br>
+  <br>
+  <p>Click the button below to donate to Peerlift.</p>
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="NR8XWXHRYU4AG">
+    <button id="donate-button"><input type="image" src="/media/images/paypal.png" name="submit" alt="PayPal - The safer, easier way to pay online!"></button>
+  </form>
+  </div>
+
+ </div>
+  
+
+  <%= render partial: 'partials/navbar2' %>
+  </div>
+  <div class="body">
+    <div id="representatives" class="representatives">
+      <div class="container">
+        <h1>Your Contribution Allows Us To:</h1>
+        <h2>Expand student partnerships within public schools in all 50 states within 6 months.</h2>
+        <h3>Our current representatives:</h3>
+        <img src="/media/images/map.png">
+      </div>
+    </div>
+    <a href="#donate"><button class="donateFixed">Donate</button></a>
+    <div class="pageviews">
+      <div class="container">
+        <h2>Reach 1,000,000 pageviews within 6 months of launch.</h2>
+        <img src="/media/images/graph.png">
+      </div>
+    </div>
+    <div class="donation">
+      <div class="container">
+        <h1>Where Your Donation Goes:</h1>
+        <h2>Our team doesn't accept compensation. Your donation lets us reach students in need.</h2>
+        <img src="/media/images/chart.png">
+      </div>
+    </div>
+    <div class="pledge">
+      <div class="container">
+        <h1>The Peerlift Pledge</h1>
+        <h2>Our core values ensure we’re transparent and accountable.</h2>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="NR8XWXHRYU4AG">
+          <button>
+            <div class="donate-icon">
+              <img src="/media/images/donatepeer.png">
+            </div>
+          </button>
+        </form>
+        <div class="column-wrapper">
+          <div class="tenet">
+            <h2>Free</h2>
+            <p style="color:black">Our platform will always be free to all.</p>
+          </div>
+          <div class="tenet">
+            <h2>Diverse</h2>
+            <p style="color:black">We champion diversity on our team and in our movement.</p>
+          </div>
+        </div>
+        <div class="column-wrapper">
+          <div class="tenet">
+            <h2>Curated</h2>
+            <p style="color:black">We curate our set of proven opportunities by value and financial aid.</p>
+          </div>
+          <div class="tenet">
+            <h2>Independent</h2>
+            <p style="color:black">No outside companies or groups influence our selection. Our nonprofit values merit, not corporate money.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <%= render partial: 'partials/footer' %>
+
+	
+  <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+  <script src="firebase.js"></script>
+    
+  <script>
+	  $("#donate-button").click(function() {
+		  ga('send', 'event', 'Donate', 'click', "DonateTop");
+	  });
+	  $(".donate-icon").click(function() {
+		  ga('send', 'event', 'Donate', 'click', "DonateBottom");
+	  });
+	  $(".donateFixed").click(function () {
+		  ga('send', 'event', 'Donate', 'click', "DonateSide");
+	  });
+  </script>
+	<script>
+  window.intercomSettings = {
+    app_id: "i68br1b8"
+  };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/i68br1b8';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+</body>
+</html>
