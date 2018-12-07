@@ -119,6 +119,7 @@
         <% @tasks.each do |task| %>
           <% if task.scholarship_id == startedscholarship.id %>
             <tr class="order<%= startedscholarship.id %> collapse">
+              <td> </td>
               <td><%= task.text %></td>
               <% if task.file %>
                 <td><%= link_to "Download File", task.file %></td>
