@@ -14,10 +14,9 @@ namespace :import do
       user_id = row[1]
       scholarship_id = row[2] # Selectivity
       text = row[3] # Amount
-      task_description = row[4] # Due date
-      
+            
       UserTaskItem.create!(user_id:user_id, scholarship_id:scholarship_id,
-        text:text, task_description:task_description)
+        text:text)
     end
   end
 end

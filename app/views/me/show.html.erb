@@ -128,12 +128,16 @@
             <tr class="order<%= startedscholarship.id %> collapse">
               <td> </td>
               <td><%= task.text %></td>
-              <td><% if task.file %>
-                    <%= button_to "Download File", task.file, :class => "btn btn-primary" %>
-                  <% end %></td>
-              <%= form_for task, :url => {:controller => "user_task_items", :action => "add_file"}, :html => {:method => :patch, :class => 'form-horizontal'} do |f| %>
+              
+              <% if task.file %>                
+                <td><%= button_to "Download File", task.file, :class => "btn btn-primary" %></td>                     
               <% end %>
-                <td><%= select_tag( :file_id, options_for_select(@files, task.file_id), prompt: "Choose File" ) %></td>
+
+              <%= form_for task, :url => {:controller => "user_task_items", :action => "add_file"}, :html => {:method => :patch, :class => 'form-horizontal'} do |f| %>
+              <% if !task.file %>
+              <td> </td>
+              <% end %>
+                            <td><%= select_tag( :file_id, options_for_select(@files, task.file_id), prompt: "Choose File" ) %></td>
                 <%= hidden_field_tag "user_id", current_user.id %>
                 <%= hidden_field_tag "id", task.id %>
                 <td><%= f.submit 'Okay'%></td>
