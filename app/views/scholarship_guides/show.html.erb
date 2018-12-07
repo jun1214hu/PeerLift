@@ -29,7 +29,7 @@
 </div>
 
       <div class="flex-container">
-        <div class="grade"><h3>Selectivity <br> <%= @scholarship_guide.metric_box1 %> </h3></div>
+        <div class="grade"><h3>Grades <br> <%= @scholarship_guide.metric_box1 %> </h3></div>
         <div class="selectivity"><h3>Amount <br> <%= @scholarship_guide.metric_box2 %></h3></div>
         <div class="deadline"><h3>Deadline <br><%= @scholarship_guide.metric_box3 %></h3></div>
       </div>
@@ -93,7 +93,7 @@
           </div>
           <div class="applicationBody">
             <i class="fa fa-clock-o"></i>
-            <h2 id="timeEstimate">Approximately <%= @scholarship_guide.location %> minutes to complete</h2>
+            <h2 id="timeEstimate">Approximately <%= @scholarship_guide.time_estimate %> minutes to complete</h2>
             <div class="componentWrapper" id="componentWrapper">
               <div class="essay">
                 <i class="fa fa-pencil"></i>

@@ -1,0 +1,43 @@
+task_id,user_id,scholarship_guide_id,text,task_description,status,file_given_name,file,created_at,updated_at,,Ron Brown,,,,task_deadline
+1,1,1,Sign up for SAT or ACT,"If you have not taken the SAT or ACT yet, sign up as soon as possible. You should take the SAT or ACT no later than the November test administration date so that the scores are available by the final application deadline of January 9.",,,,,,,,,,,9/1/2019
+2,1,1,Ask for 2 rec letters,"Please ask two individuals who know you well to submit letters of recommendation. At least one letter should be from a teacher or
+other school professional.",,,,,,,,,,,9/15/2019
+3,1,1,Fill out personal data,"Print out page 1 of the application and fill out the personal data section. If you don't have standardized test scores yet, leave that blank for now and fill it out later. ",,,,,,,,,,,10/1/2019
+4,2,1,Request Transcript,"Ask your guidance counselor to get you a printed copy of your official transcript. Keep in mind that no application materials, including transcripts, may be emailed or faxed in. You must have a paper copy. ",,,,,,,,,,,10/5/2019
+5,3,1,Ask for guidance counselor to fill out their part of form,Print out page 1 of the application and ask your guidance counselor to fill out the bottom portion. ,,,,,,,,,,,10/5/2019
+6,3,1,List activities,"Please list your extracurricular, community, employment or other activities in order of their importance to you. Indicate the dates you participated in the activity, positions held and the number of hours per week you spend on each activity. We realize that the way you spend your time outside the classroom may be affected by factors beyond your control, such as the need to work.",,,,,,,,,,,10/20/2019
+7,3,1,List significant awards or honors,List any significant awards or honors you have received during high school for academic or extracurricular achievements.,,,,,,,,,,,11/1/2019
+8,2,1,Write Essay A (500 words), Each essay should be no longer than 500 words. (A) Choose the one activity you listed as most important in question #1 and tell us why it is significant.,,,,,,,,,,,11/15/2019
+9,3,1,Write Essay B (500 words),"Each essay should be no longer than 500 words. (B) Submit one essay that you plan to send or have sent as part of a college application. This may be on any topic. If your college
+application did not require an essay, please submit an essay on the topic of your choice.",,,,,,,,,,,12/1/2019
+10,4,1,Ask parent/guardian to fill out their part,Print out page 2 of the application and ask your parents/guardians to fill out the bottom portion. ,,,,,,,,,,,12/5/2019
+11,2,1,Record SAT and ACT scores,"Record the required scores on page one of your
+application in case they don?€?t appear on your high school
+transcript. A copy of your score report may also be included
+with your materials. ",,,,,,,,,,,12/20/2019
+12,4,1,Compile application packet,"Application materials must be mailed in one packet. Please make sure your mailed application is postmarked by January 9, 2019 or earlier. Transcripts and letters of recommendation should not be sent under separate cover. To verify receipt of your application, include a self-addressed stamped envelope. A photograph is optional. Incomplete, emailed or faxed applications will not be considered. We suggest that you keep copies of your application materials. Semifinalists will be contacted in early March and winners will be announced on our website in May. We regret that we are unable to individually notify other applicants of the decision on their applications.",,,,,,,,,,,1/3/2019
+13,1,2,Request transcript from high school ,Ask your guidance counselor to get you a copy of your official transcript. ,,,,,,,Coca Cola,,,,9/15/2019
+14,2,2,Complete Part 1 of application,"Fill out Part 1: Biographical information. You will need your high school code, contact information for your principal and counselor, and your family's financial information",,,,,,,,,,,9/20/2010
+15,2,2,Complete Part 2 ,Fill out Part 2: School Activities,,,,,,,,,,,9/25/2019
+16,4,2,Complete Part 3,Fill out Part 3: Community Activities,,,,,,,,,,,9/30/2019
+17,5,2,Complete Part 4,"Fill out Part 4: Academic Information. You will need to know how many Honors, IB, and AP courses your school offers. You will also need to reference your transcript to fill out your grades in each course. ",,,,,,,,,,,10/5/2019
+18,3,2,Complete Part 5,Fill out Part 5: Employment Information. ,,,,,,,,,,,10/10/2019
+19,2,3,Sign up to take SAT or ACT,"If you don't have SAT or ACT scores, sign up to take them as soon as possible. Please note that you must have EITHER an SAT Total Score of 1200 or above OR an ACT composite score of 26 or above to be eligible.",,,,,,,Jack Kent Cooke,,,,9/1/2019
+20,3,3,Create Common account,Visit commonapp.org and create an account as a student,,,,,,,,,,,9/5/2019
+21,4,3,Ask for 2 letters of rec,Please ask two teachers at your school to submit one letter of recommendation each for you. See this video for more information about recommenders: https://www.youtube.com/watch?v=LljaIgSa_Xw&feature=youtu.be,,,,,,,,,,,9/10/2019
+22,5,3,Fill out FERPA,"Ask your counselor about waiving your FERPA rights. Then, fill out the FERPA form. ",,,,,,,,,,,9/15/2019
+23,6,3,Additional Application Support,Go to Recommenders and FERPA -> Additional Application Support. You may invite an advisor to assist with your application. An advisor can be anyone who is assisting you with your application process. You may invite up to 3 advisors using the 'Invite Advisor' link. An advisor can view your application information and give you personalized feedback. An advisor does not submit any forms on your behalf.,,,,,,,,,,,9/15/2019
+24,4,3,Request Transcript,Ask your guidance counselor to get you a copy of your official transcript. ,,,,,,,,,,,10/1/2019
+25,5,3,Finances,"Go to Questions -> Finances on the application. Answer the questions about your family's financial status. You will need their tax returns from the past three years. If you do not have this information, give an estimate and provide an explanation in the provided box. ",,,,,,,,,,,10/5/2019
+26,6,3,Write Short Answer 1,Go to Questions -> Writing. Answer the first short answer prompt: The Cooke scholar community is a thriving group of talented individuals from around the country. Click here to listen to some of our Scholars and alumni describe what the community means to them. What excites you about becoming part of this community? What do you think you will contribute to this community? Word Count: 100,,,,,,,,,,,10/10/2019
+27,7,3,General,Go to Questions -> General. Fill out the questions. ,,,,,,,,,,,10/15/2019
+28,5,3,Eligibility,Go to Questions -> Eligibility. Fill out the questions. ,,,,,,,,,,,10/15/2019
+29,4,3,Write Short Answer 2,"Go to Questions -> Writing. Answer the second short answer prompt: Our unofficial motto is ""Think Big, Work Hard, Achieve."" Tell us about how you demonstrate any of these characteristics in your life. Word Count: 100",,,,,,,,,,,10/25/2019
+30,3,3,Recommendations,"Go to Questions -> Recommendations. Check off that you have asked for two recommendation letters. If you have not yet asked for these recommendations yet, do so immediately.",,,,,,,,,,,10/20/2019
+31,2,3,Testing,Go to Questions -> Testing. Check the box that you will send in your scores. Please note that you must have EITHER an SAT Total Score of 1200 or above OR an ACT composite score of 26 or above to be eligible.,,,,,,,,,,,10/25/2019
+32,1,3,Contacts,Go to Questions -> Contacts. Fill out the questions. ,,,,,,,,,,,10/25/2019
+33,3,3,Family,Go to Questions-> Family. Fill out the questions. ,,,,,,,,,,,10/25/2019
+34,4,3,Write Short Answer 3,Go to Questions -> Writing. Answer the second short answer prompt: Select any extracurricular activity that you listed in your Common Application and describe a goal you set for yourself with this activity. What steps are you taking/have you taken toward reaching this goal? Word Count: 100,,,,,,,,,,,11/1/2019
+35,5,3,Activities and Honors,"Go to Questions -> Activities and Honors. Check off that you will fill out the corresponding sections in the Common App. Then, navigate to the central part of the Common App and fill them out. ",,,,,,,,,,,11/5/2019
+36,6,3,College Plans,"Go to Questions -> College Plans. List your top three colleges and your intended majors, minors, and future careers.",,,,,,,,,,,11/10/2019
+37,7,3,Waivers and Conditions,Go to Questions -> Waivers and Conditions. Fill out the questions. ,,,,,,,,,,,11/10/2019
