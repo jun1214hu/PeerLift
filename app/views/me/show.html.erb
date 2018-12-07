@@ -97,8 +97,11 @@
           <% if task.scholarship_id == startedscholarship.id %>
             <tr>
               <td><%= task.text %></td>
+              <% if task.file %>
+                <td><%= link_to "Download File", task.file %></td>
+              <% end %>
               <td><%= form_for task, :url => {:controller => "user_task_items", :action => "add_file"}, :html => {:method => :patch, :class => 'form-horizontal'} do |f| %>
-                <td><%= select_tag(:file_id, options_for_select(@files, task.file_id), prompt: "Choose File" ) %></td>
+                <td><%= select_tag( :file_id, options_for_select(@files, task.file_id), prompt: "Choose File" ) %></td>
                 <%= hidden_field_tag "user_id", current_user.id %>
                 <%= hidden_field_tag "id", task.id %>
                 <td><%= f.submit 'Okay'%></td>

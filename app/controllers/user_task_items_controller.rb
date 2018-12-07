@@ -18,8 +18,10 @@ class UserTaskItemsController < ApplicationController
   end
 
   def add_file
-    task = UserTaskItem.find_by(id: params[:id], user_id: params[:user_id])
-    task.update(file_id: params[:file_id])
+    if params[:file_id]
+      task = UserTaskItem.find_by(id: params[:id], user_id: params[:user_id])
+      task.update!(file_id: params[:file_id], file: FileUpload.find_by_id(params[:file_id]).attachment.url )
+    end
   end
 
   private
