@@ -33,8 +33,9 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="/auth/google_oauth2">Sign in</a>
                     <a class="dropdown-item" href="/me">My Overview</a>
-                    <a class="dropdown-item" href="#">My Scholarships</a>
-                    <a class="dropdown-item" href="#">My Task</a>
+                    <a class="dropdown-item" href="/me#applications">My Scholarships</a>
+                    <a class="dropdown-item" href="/me#favorites">My Favorites</a>
+                    <a class="dropdown-item" href="/me#tasks">My Task</a>
                     <a class="dropdown-item" href="/file_uploads">My Files</a>
                     <a class="dropdown-item"> <%= link_to 'Log Out', destroy_path, method: :post if current_user %> </a>
 

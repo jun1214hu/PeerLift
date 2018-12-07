@@ -31,11 +31,12 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     My Account
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="/auth/google_oauth2">Sign in</a>
                     <a class="dropdown-item" href="/me">My Overview</a>
-                    <a class="dropdown-item" href="#">My Scholarships</a>
-                    <a class="dropdown-item" href="/tasks">My Task</a>
+                    <a class="dropdown-item" href="/me#applications">My Scholarships</a>
+                    <a class="dropdown-item" href="/me#favorites">My Favorites</a>
+                    <a class="dropdown-item" href="/me#tasks">My Task</a>
                     <a class="dropdown-item" href="/file_uploads">My Files</a>
                     <a class="dropdown-item"> <%= link_to 'Log Out', destroy_path, method: :post if current_user %> </a>
 
@@ -48,107 +49,4 @@
         </form>
     </div>
 </nav>
-
-<!--     <div id="opportunities-menu-div" style="background-color:#6393ce; display:none">
-                  <div class="col-xs-6" style="float:left;width:15%">
-                    <a href="#">
-                      <i><img src="/media/images/icons/awards.png" width=50px/></i>Awards
-                    </a>
-                  </div>
-                  <div class="col-xs-6" style="float:left;width:15%">
-                    <a href="#">
-                    <i><img src="/media/images/icons/flyins.png" width=50px/></i>College Fly-Ins
-                    </a>
-                  </div>
-                  <div class="col-xs-6" style="float:left;width:15%">
-                    <a href="#">
-                      <i><img src="/media/images/icons/internships.png" width=50px/></i>Internships
-                    </a>
-                  </div>
-                  <div class="col-xs-6" style="float:left;width:15%">
-                    <a href="#">
-                      <i><img src="/media/images/icons/scholarships.png" width=50px/></i>Awards
-                    </a>
-                  </div>
-                  <div class="col-xs-6" style="float:left;width:15%">
-                    <a href="#">
-                    <i><img src="/media/images/icons/studyAbroad.png" width=50px/></i>College Fly-Ins
-                    </a>
-                  </div>
-                  <div class="col-xs-6">
-                    <a href="#">
-                      <i><img src="/media/images/icons/summerPrograms.png" width=50px/></i>Internships
-                    </a>
-                  </div>
-
-              </div>
-
-<!-- This is Jerry's -->
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">
-      <img src="/media/logo/grayText.png" width="170" alt="">
-    </a>
-      <div class="container">
-          <ul class="navbar-nav mr-auto">
-            <a id="loginMobile" href="login.html"><div>Sign Up / Login</div></a>
-            <li class="nav-item">
-              <a class="nav-link dropdown-toggle" id="opportunities-nav-button" onclick="alertnow()">Opportunities</a>
-            </li>
-            <li class="nav-item" >
-              <a class="nav-link" href="#">Mission</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Our Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Get Involved</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Donate</a>
-            </li>
-            <li class="nav-item">
-              <a id="loginBTN" href="#"><button>Sign Up</button></a>
-            </li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-              <a href="#"><span class="glyphicon glyphicon-log-in">Sign Up / Sign In</span></a>
-            </li>
-          </ul>
-      </div>
-</nav>
-
-<div id="opportunities-menu-div" style="background-color:powderblue; display:none">
-                  <div class="col-xs-6" style="float:left;width:15%">
-                    <a href="#">
-                      <i><img src="/media/images/icons/awards.png" width=50px/></i>Awards
-                    </a>
-                  </div>
-                  <div class="col-xs-6" style="float:left;width:15%">
-                    <a href="#">
-                    <i><img src="/media/images/icons/flyins.png" width=50px/></i>College Fly-Ins
-                    </a>
-                  </div>
-                  <div class="col-xs-6" style="float:left;width:15%">
-                    <a href="#">
-                      <i><img src="/media/images/icons/internships.png" width=50px/></i>Internships
-                    </a>
-                  </div>
-                  <div class="col-xs-6" style="float:left;width:15%">
-                    <a href="#">
-                      <i><img src="/media/images/icons/scholarships.png" width=50px/></i>Awards
-                    </a>
-                  </div>
-                  <div class="col-xs-6" style="float:left;width:15%">
-                    <a href="#">
-                    <i><img src="/media/images/icons/studyAbroad.png" width=50px/></i>College Fly-Ins
-                    </a>
-                  </div>
-                  <div class="col-xs-6">
-                    <a href="#">
-                      <i><img src="/media/images/icons/summerPrograms.png" width=50px/></i>Internships
-                    </a>
-                  </div>
-</div> -->
 
