@@ -174,35 +174,40 @@
 <table class = "table table-bordered table-striped">
    <thead>.
       <tr>
-         <th>User ID</th>
-         <th>Scholarship ID</th>
-         <th>Scholarship Name</th>
-         <th>Task (text)</th>
-         <th>Status</th>
-         <th>File</th>
+         <th>Task </th>
          <th> </th>
+         <th>File</th>
+         <th>Submit</th>
+         <th>Status</th>
       </tr>
    </thead>
 
    <tbody>
-      <% @tasks.each do |task| %>
-
-         <tr>
-            <td><%= task.user_id %></td>
-            <td><%= task.scholarship_id %></td>
-            <td><%= task.scholarship_name %></td>
-            <td><%= task.text %></td>
-            <td><%= task.status %></td>
-            <td><%= task.file_given_name %>: <% if task.file %> <%= link_to "Download File", task.file_url %> <% end %></td>
-            <% if task.status == "in_progress" %>
-              <td><%= button_to "Complete",  complete_task_path(id: task.id), class: "btn" %></td>
-            <% end %>
-            <% if task.status == "completed" %>
-              <td><%= button_to "Incomplete",  incomplete_task_path(id: task.id), class: "btn" %></td>
-            <% end %>
-          </tr>
-
-      <% end %>
+    <% @started_scholarships.each do |startedscholarship| %>
+       <% @tasks.each do |task| %>
+          <% if task.scholarship_id == startedscholarship.id %>
+            <tr>
+              <td><%= task.text %></td>
+              <% if task.file %>
+                <td><%= link_to "Download", task.file %></td>
+              <% end %>
+              <td><%= form_for task, :url => {:controller => "user_task_items", :action => "add_file"}, :html => {:method => :patch, :class => 'form-horizontal'} do |f| %>
+                <td><%= select_tag( :file_id, options_for_select(@files, task.file_id), prompt: "Choose File" ) %></td>
+                <%= hidden_field_tag "user_id", current_user.id %>
+                <%= hidden_field_tag "id", task.id %>
+                <td><%= f.submit 'Okay', :class => "btn btn-default" %></td>
+              <% end %>
+            </td>
+              <% if task.status == "in_progress" %>
+                <td><%= button_to 'Complete Task', complete_user_task_path(user_id: current_user.id, id: task.id), :class => "btn btn-success" %></td>
+              <% end %>
+              <% if task.status == "completed" %>
+                <td><%= button_to 'Back to In Progress', incomplete_user_task_path(user_id: current_user.id, id: task.id), :class => "btn btn-primary" %></td>
+              <% end %>
+            </tr>
+          <% end %>
+        <% end %>
+        <% end %>
    </tbody>
 
 </table>
@@ -213,7 +218,9 @@
 <div class="col-sm-2 sidenav">
             <h4> To do list: </h4>
             <div class="list-group">
-              <% @tasks.each do |task| %>
+              <% @started_scholarships.each do |startedscholarship| %>
+       <% @tasks.each do |task| %>
+          <% if task.scholarship_id == startedscholarship.id %>
                 
                 <% if task.status == "completed" %>
                 <div class="list-group-item list-group-item-action list-group-item-default bg-success"><%= task.text %> </div>
@@ -224,6 +231,9 @@
                 
                 <% end %>
                 <% end %>
+                 <% end %>
+                 <% end %>
+
 
             </div>
           </div>
