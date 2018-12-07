@@ -113,15 +113,28 @@
           <td><%= button_to 'Delete Application', unstart_path(user_id: current_user.id, scholarship_guide_id: startedscholarship.scholarship_guide_id), method: :delete, :class => 'btn btn-danger' %></td>
         </tr>
 
+      <thead class="order<%= startedscholarship.id %> collapse">
+          <th>  </th>
+          <th> Description </th>
+          <th> Download </th>
+          <th> Add a file </th>
+          <th> Save </th>
+          <th> Finish </th>
+        </thead>
+
         <% @tasks.each do |task| %>
-          <% if task.scholarship_id == startedscholarship.id %>
+                  <% if task.scholarship_id == startedscholarship.id %>
+
             <tr class="order<%= startedscholarship.id %> collapse">
               <td> </td>
               <td><%= task.text %></td>
               <% if task.file %>
-                <td><%= link_to "Download File", task.file %></td>
+                <td><%= button_to "Download File", task.file, :class => "btn btn-primary" %></td>
               <% end %>
-              <td><%= form_for task, :url => {:controller => "user_task_items", :action => "add_file"}, :html => {:method => :patch, :class => 'form-horizontal'} do |f| %>
+              <%= form_for task, :url => {:controller => "user_task_items", :action => "add_file"}, :html => {:method => :patch, :class => 'form-horizontal'} do |f| %>
+              <% if !task.file %>
+              <td> </td>
+              <% end %>
                 <td><%= select_tag( :file_id, options_for_select(@files, task.file_id), prompt: "Choose File" ) %></td>
                 <%= hidden_field_tag "user_id", current_user.id %>
                 <%= hidden_field_tag "id", task.id %>
@@ -170,11 +183,11 @@
 <h4 align="left" id="tasks">Tasks</h4>
 
 <table class = "table table-bordered table-striped">
-   <thead>.
+   <thead>
       <tr>
-         <th>Task </th>
+         <th class="col-5">Task </th>
          <th> </th>
-         <th>File</th>
+         <th>Add a File</th>
          <th>Submit</th>
          <th>Status</th>
       </tr>
@@ -185,11 +198,15 @@
        <% @tasks.each do |task| %>
           <% if task.scholarship_id == startedscholarship.id %>
             <tr>
-              <td><%= task.text %></td>
+              <td class="col-5""><%= task.text %></td>
               <% if task.file %>
-                <td><%= link_to "Download", task.file %></td>
+                <td><%= button_to "Download", task.file, :class => "btn btn-primary" %></td>
               <% end %>
-              <td><%= form_for task, :url => {:controller => "user_task_items", :action => "add_file"}, :html => {:method => :patch, :class => 'form-horizontal'} do |f| %>
+              <% if !task.file %>
+              <td> </td>
+              <% end %>
+
+              <%= form_for task, :url => {:controller => "user_task_items", :action => "add_file"}, :html => {:method => :patch, :class => 'form-horizontal'} do |f| %>
                 <td><%= select_tag( :file_id, options_for_select(@files, task.file_id), prompt: "Choose File" ) %></td>
                 <%= hidden_field_tag "user_id", current_user.id %>
                 <%= hidden_field_tag "id", task.id %>
