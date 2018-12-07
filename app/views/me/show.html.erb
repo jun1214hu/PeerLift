@@ -231,7 +231,10 @@
 </div>
             </div>
 <div class="col-sm-2 sidenav">
-            <h4> To do list: </h4>
+  <div style="max-height: 200px; overflow-y: scroll">
+
+    <h4> To do </h4>
+            
             <div class="list-group">
               <% @started_scholarships.each do |startedscholarship| %>
        <% @tasks.each do |task| %>
@@ -249,7 +252,7 @@
                  <% end %>
                  <% end %>
 
-
+</div>
             </div>
           </div>
 
