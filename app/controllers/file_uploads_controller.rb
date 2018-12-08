@@ -1,10 +1,10 @@
 class FileUploadsController < ApplicationController
   before_action :set_file_upload, only: [:show, :edit, :update, :destroy]
-
+ before_action :authenticate
   # GET /file_uploads
   # GET /file_uploads.json
   def index
-    @file_uploads = FileUpload.all
+    @file_uploads = FileUpload.where("user_id = ?", current_user.id)
   end
 
   # GET /file_uploads/1

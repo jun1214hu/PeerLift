@@ -1,14 +1,14 @@
 class StartedScholarship < ApplicationRecord
+  belongs_to :scholarship_guide
+  belongs_to :user
+  has_many :user_task_items, dependent: :destroy
+
   include AASM
 
   aasm do
     state :in_progress, :initial => true
     state :completed
     state :submitted
-
-    event :complete do
-      transitions :from => :in_progress, :to => :completed
-    end
 
     event :complete do
       transitions :from => :in_progress, :to => :completed

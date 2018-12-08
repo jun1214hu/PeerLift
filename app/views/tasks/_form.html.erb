@@ -1,0 +1,28 @@
+<% if !@task.errors.empty? %>
+   <div class = "alert alert-error">
+
+      <ul>
+         <% @task.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+         <% end %>
+      </ul>
+
+   </div>
+<% end %>
+
+
+<div class = "well">
+   <%= form_for @task, html: { multipart: true } do |f| %>
+      <%= f.label :user_id %>
+      <%= f.number_field :user_id %>
+      <%= f.label :scholarship_id %>
+      <%= f.number_field :scholarship_id %>
+      <%= f.label :scholarship_name %>
+      <%= f.text_field :scholarship_name %>
+      <%= f.label :text %>
+      <%= f.text_field :text %>
+      <%= f.label :file %>
+      <%= f.file_field :file %>
+      <%= f.submit "Create/Save", class: "btn btn-primary" %>
+   <% end %>
+</div>

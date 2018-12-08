@@ -1,3 +1,5 @@
+<%= render partial: 'partials/navbar2' %>
+
 <p id="notice"><%= notice %></p>
 
 <% if !flash[:notice].blank? %>
@@ -15,7 +17,6 @@
 <table class = "table table-bordered table-striped">
    <thead>.
       <tr>
-         <th>User Id</th>
          <th>Given Name</th>
          <th>Download Link</th>
          <th>File Name</th>
@@ -27,9 +28,8 @@
       <% @file_uploads.each do |file_upload| %>
 
          <tr>
-            <td><%= file_upload.user_id %></td>
             <td><%= file_upload.given_name %></td>
-            <td><%= link_to "Download Resume", file_upload.attachment_url %></td>
+            <td><%= button_to "Download", file_upload.attachment_url, :class => 'btn btn-primary' %></td>
             <td><%= file_upload.attachment %>
             <td><%= button_to "Delete",  file_upload, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{file_upload.given_name}?" %></td>
          </tr>

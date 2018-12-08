@@ -5,6 +5,15 @@ class MeController < ApplicationController
       #@savedscholarships = RecordLog.where(user_id: current_user.id )
       @saved_scholarships = SavedScholarship.where("user_id = ?", current_user.id)
       @started_scholarships = StartedScholarship.where("user_id = ?", current_user.id)
+      @tasks_reference = []
+      @started_scholarships.each do |s|
+        @tasks_reference += Task.where("scholarship_id = ?", s.scholarship_guide_id).pluck(:id)
+      
+      end
+      @tasks = UserTaskItem.all
+      @files = FileUpload.all.map{|a| [ a.given_name, a.id] }
+      #@task_files = FileUpload.where(id: @tasks.file_id)
+
     end
 
     def start
@@ -17,6 +26,16 @@ class MeController < ApplicationController
         @started_scholarship.save!
         respond_to do |format|
           if @started_scholarship.save
+            #@new_user_task = UserTaskItem.new(user_id: 1, task_id: 3, scholarship_id: 1)
+            @is_there2 = UserTaskItem.where("started_scholarship_id = ?", @started_scholarship.id)
+            if @is_there2[0]
+            else
+              @tasks = Task.where("scholarship_id = ?", params[:scholarship_guide_id])
+              @tasks.each do |task|
+                @new_user_task = UserTaskItem.new(user_id: current_user.id, task_id: task.id, scholarship_id: params[:scholarship_guide_id], started_scholarship_id: @started_scholarship.id, text: task.text)
+                @new_user_task.save!
+              end
+            end
             format.html { redirect_to request.referrer, notice: 'Started Scholarship was successfully created.' }
           else
             format.html { redirect_to request.referrer, notice: 'Started Scholarship was not successfully created.' }
@@ -27,8 +46,8 @@ class MeController < ApplicationController
 
   def unsave_from_saved
     @saved_scholarship = SavedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
-    @log_save = RecordLog.new(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id], scholarship_name: params[:scholarship_name], deleted: 1)
-    @log_save.save!
+    #@log_save = RecordLog.new(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id], scholarship_name: params[:scholarship_name], deleted: 1)
+    #@log_save.save!
 
     @saved_scholarship.destroy
     respond_to do |format|
@@ -39,8 +58,8 @@ class MeController < ApplicationController
 
   def unstart
     @started_scholarship = StartedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
-    @log_save = RecordLog.new(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id], scholarship_name: params[:scholarship_name], deleted: 1)
-    @log_save.save!
+    #@log_save = RecordLog.new(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id], scholarship_name: params[:scholarship_name], deleted: 1)
+    #@log_save.save!
 
     @started_scholarship.destroy
     respond_to do |format|
@@ -56,19 +75,27 @@ class MeController < ApplicationController
     end
   end
 
-  def submit
-    scholarship = StartedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
-    scholarship.submit!
-    respond_to do |format|
-      format.html { redirect_to request.referrer, notice: 'Completed!' }
-    end
-  end
-
   def incomplete
     scholarship = StartedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
     scholarship.incomplete!
     respond_to do |format|
       format.html { redirect_to request.referrer, notice: 'Back to In Progress!' }
+    end
+  end
+
+  def submit
+    scholarship = StartedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
+    scholarship.submit!
+    respond_to do |format|
+      format.html { redirect_to request.referrer, notice: 'Submitted!' }
+    end
+  end
+
+  def unsubmit
+    scholarship = StartedScholarship.find_by(user_id: params[:user_id], scholarship_guide_id: params[:scholarship_guide_id])
+    scholarship.unsubmit!
+    respond_to do |format|
+      format.html { redirect_to request.referrer, notice: 'Back to Completed!' }
     end
   end
 

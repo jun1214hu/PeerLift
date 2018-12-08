@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   # define a public page
 
 #check_admin for index and edit. Test by making an admin user
-  before_action :user_is_admin?, only: [:index, :edit, :destroy]
+  before_action :user_is_admin?, only: [:index, :destroy]
 
   # GET /users
   # GET /users.json
@@ -32,7 +32,6 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    #only admins should be able to do this
   end
 
   # POST /users
@@ -42,7 +41,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to "/me", notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -56,8 +55,8 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
+        format.html { redirect_to "/me", notice: 'User was successfully updated.' }
+        format.json { render :show, status: :ok, location: @current_user }
       else
         format.html { render :edit }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -96,6 +95,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :string,)
+      params.require(:user).permit(:first_name, :school, :grade)
     end
 end

@@ -1,7 +1,7 @@
 <!-- This is Jung's -->
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">
       <img src="/media/logo/grayText.png" width="170" alt="">
     </a>
@@ -14,17 +14,17 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                <li class="nav-item">
-              <a class="nav-link dropdown-toggle" id="opportunities-nav-button" onclick="alertnow()">Opportunities</a>
+              <a class="nav-link"href="/scholarship_guides">Scholarships</a>
             </li>
                 <!-- <a class="nav-link" href="/scholarship_guides"> Opportunities <span class="sr-only">(current)</span></a> -->
             <li class="nav-item">
-                <a class="nav-link" href="#"> Our Team </a>
+                <a class="nav-link" href="/static_pages/team"> Our Team </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"> Get Involved </a>
+                <a class="nav-link" href="/static_pages/getinvolved"> Get Involved </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"> Donate </a>
+                <a class="nav-link" href="/static_pages/donate"> Donate </a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -33,11 +33,12 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="/auth/google_oauth2">Sign in</a>
                     <a class="dropdown-item" href="/me">My Overview</a>
-                    <a class="dropdown-item" href="#">My Scholarships</a>
-                    <a class="dropdown-item" href="#">My Task</a>
+                    <a class="dropdown-item" href="/me#applications">My Scholarships</a>
+                    <a class="dropdown-item" href="/me#favorites">My Favorites</a>
+                    <a class="dropdown-item" href="/me#tasks">My Task</a>
                     <a class="dropdown-item" href="/file_uploads">My Files</a>
                     <a class="dropdown-item"> <%= link_to 'Log Out', destroy_path, method: :post if current_user %> </a>
-                        
+
                 </div>
             </li>
         </ul>

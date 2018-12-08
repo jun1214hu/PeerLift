@@ -1,6 +1,8 @@
 class User < ApplicationRecord
 	has_many :user_tasks
-	has_many :scholarship_guides, :through => :user_tasks
+	has_many :saved_scholarships, dependent: :destroy
+	has_many :started_scholarships, dependent: :destroy
+	has_many :file_uploads, dependent: :destroy
 
  	validates :email, uniqueness: true
 
@@ -20,7 +22,6 @@ class User < ApplicationRecord
 	:uid,
 	:email,
 	:first_name,
-	:last_name,
 	presence: true
-	
+
 end

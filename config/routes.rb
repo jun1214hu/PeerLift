@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :file_uploads
+  resources :tasks
   get 'home/index', as: 'home'
   get 'login', to: redirect('/auth/google_oauth2'), as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
@@ -12,16 +13,18 @@ Rails.application.routes.draw do
   get 'static_pages/home'
   get 'static_pages/help'
   get 'static_pages/about'
+  get 'static_pages/team'
+  get 'static_pages/getinvolved'
+  get 'static_pages/donate'
   # get '/users/:id', to: 'users#show', as: 'user'
   resources :scholarship_guides
 
 
   root 'static_pages#home'
 
-  resources :users do
-      resources :user_tasks
-    end
 
+  resources :users do
+        end
 
   #resources :users do
   # 	resources :user_tasks
@@ -38,7 +41,7 @@ Rails.application.routes.draw do
 
   patch 'me' => 'me#complete', as: :scholarship_completed
 
-  post 'me' => 'me#start', as: :scholarship_start
+  post 'me9' => 'me#start', as: :scholarship_start
   delete 'me1' => 'me#unsave_from_saved', as: :unsave_scholarship_me_saved
   delete 'me2' => 'me#unstart', as: :unstart
 
@@ -46,5 +49,14 @@ Rails.application.routes.draw do
   post 'me4' => 'me#incomplete', as: :incomplete
   post 'me5' => 'me#submit', as: :submit
   post 'me6' => 'me#unsubmit', as: :unsubmit
+  post 'me7' => 'user_task_items#complete', as: :complete_user_task
+  post 'me8' => 'user_task_items#incomplete', as: :incomplete_user_task
+post 'me' => 'me#show'
+
+  post 'taskdone' => 'tasks#complete', as: :complete_task
+  post 'tasknotdone' => 'tasks#incomplete', as: :incomplete_task
+
+  patch 'taskfile' => 'user_task_items#add_file', as: :add_task_file
+
 
 end
