@@ -5,7 +5,7 @@
 <h1 style="text-align: center;margin-left:auto;margin-right:auto;width:300px"> Hello, <%= current_user.first_name %>! </h1>
 
 <br>
-<br>  
+<br>
 
 <div class="container-fluid text-center">
     <div class="row content">
@@ -23,7 +23,7 @@
 
 <h4 align="left" id="account"> My Account </h4>
 
-          
+
               <table class="table table-sm table-hover table-bordered">
                 <thead>
               <% if current_user %>
@@ -69,7 +69,7 @@
     </tr>
   </thead>
   <tbody>
-    
+
       <% @started_scholarships.each do |startedscholarship| %>
 
       <% if startedscholarship.aasm_state == "in_progress" %>
@@ -128,9 +128,9 @@
             <tr class="order<%= startedscholarship.id %> collapse">
               <td> </td>
               <td><%= task.text %></td>
-              
-              <% if task.file %>                
-                <td><%= button_to "Download File", task.file, :class => "btn btn-primary", :method => 'get' %></td>                     
+
+              <% if task.file %>
+                <td><%= link_to "Download File", task.file, :class => "btn btn-primary" %></td>
               <% end %>
 
               <%= form_for task, :url => {:controller => "user_task_items", :action => "add_file"}, :html => {:method => :patch, :class => 'form-horizontal'} do |f| %>
@@ -202,7 +202,7 @@
             <tr>
               <td class="col-5""><%= task.text %></td>
               <% if task.file %>
-                <td><%= button_to "Download", task.file, :class => "btn btn-primary" %></td>
+                <td><%= link_to "Download", task.file, :class => "btn btn-primary" %></td>
               <% end %>
               <% if !task.file %>
               <td> </td>
@@ -236,19 +236,19 @@
   <div style="max-height: 200px; overflow-y: scroll">
 
     <h4> To do </h4>
-            
+
             <div class="list-group">
               <% @started_scholarships.each do |startedscholarship| %>
        <% @tasks.each do |task| %>
           <% if task.scholarship_id == startedscholarship.scholarship_guide_id %>
-                
+
                 <% if task.status == "completed" %>
                 <div class="list-group-item list-group-item-action list-group-item-default bg-success"><%= task.text %> </div>
                 <% end %>
-                
+
                 <% if task.status == "in_progress" %>
                 <div class="list-group-item list-group-item-action list-group-item-default bg-warning"><%= task.text %> </div>
-                
+
                 <% end %>
                 <% end %>
                  <% end %>
@@ -274,7 +274,7 @@
 
 
 
-<!-- 
+<!--
 <div>
   <h4>My Saved Scholarships:</h4>
 
@@ -359,4 +359,3 @@
 </table>
 </div>
 </div>  -->
-
