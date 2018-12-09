@@ -3,11 +3,15 @@
 Steps on terminal:
 
 git clone https://github.com/cs276/peerlift.git
+
 bundle install
+
 rails db:migrate
 
 rake import: becina_scholarships
+
 rake import:tasks
+
 rails s
 
 Steps to use website:
