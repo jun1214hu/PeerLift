@@ -8,7 +8,7 @@ bundle install
 
 rails db:migrate
 
-rake import: becina_scholarships
+rake import:becina_scholarships
 
 rake import:tasks
 
