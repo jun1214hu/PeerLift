@@ -130,7 +130,7 @@
               <td><%= task.text %></td>
               
               <% if task.file %>                
-                <td><%= button_to "Download File", task.file, :class => "btn btn-primary" %></td>                     
+                <td><%= button_to "Download File", task.file, :class => "btn btn-primary", :method => 'get' %></td>                     
               <% end %>
 
               <%= form_for task, :url => {:controller => "user_task_items", :action => "add_file"}, :html => {:method => :patch, :class => 'form-horizontal'} do |f| %>
