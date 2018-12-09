@@ -128,15 +128,8 @@
             <tr class="order<%= startedscholarship.id %> collapse">
               <td> </td>
               <td><%= task.text %></td>
-<<<<<<< HEAD
-
-              <% if task.file %>
-                <td><%= link_to "Download File", task.file, :class => "btn btn-primary" %></td>
-=======
-              
               <% if task.file %>                
                 <td><%= link_to "Download File", task.file, :class => "btn btn-primary" %></td>                     
->>>>>>> f031b9ae73f059821d7ee0f4401f9d9ad509732d
               <% end %>
 
               <%= form_for task, :url => {:controller => "user_task_items", :action => "add_file"}, :html => {:method => :patch, :class => 'form-horizontal'} do |f| %>
