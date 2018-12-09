@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Steps on terminal:
 
-Things you may want to cover:
+git clone https://github.com/cs276/peerlift.git
+bundle install
+rails db:migrate
 
-* Ruby version
+rake import: becina_scholarships
+rake import:tasks
+rails s
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Steps to use website:
+Open web browser
+Go to localhost:3000/
+Once you’re on the website, log in (on navigate bar, under "My Account"
+Go to localhost:3000/file_uploads
+Upload at least 2 files for testing (just something from your computer, like a PDF or word doc)
+then go back to localhost:3000/ 
+Test the website 
