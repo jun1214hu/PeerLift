@@ -29,7 +29,7 @@
 
          <tr>
             <td><%= file_upload.given_name %></td>
-            <td><%= button_to "Download", file_upload.attachment_url, :class => 'btn btn-primary' %></td>
+            <td><%= button_to "Download", file_upload.attachment_url, :class => 'btn btn-primary', :method => 'get' %></td>
             <td><%= file_upload.attachment %>
             <td><%= button_to "Delete",  file_upload, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{file_upload.given_name}?" %></td>
          </tr>
