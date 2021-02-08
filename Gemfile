@@ -24,7 +24,7 @@ gem 'mini_racer', platforms: :ruby
 
 gem "minitest-stub_any_instance"
 
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 
 gem 'aasm'
 
